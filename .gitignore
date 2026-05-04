@@ -1,0 +1,14 @@
+.gradle
+bin
+Reports
+Libs
+output
+!output/.gitkeep
+build
+.classpath
+.project
+.cache
+.temp-*.txt
+
+# Credenciales locales — NUNCA subir
+Include/config/templet-credentials.properties
