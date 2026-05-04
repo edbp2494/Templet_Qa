@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validar objetos comunes de acceso (Microsoft login) en Sheets/Decks/Email para TEST y PROD</description>
+   <name>TC-CROSS-URLS-OBJECTS-001</name>
+   <tag>CrossUrl</tag>
+   <tag>ValidacionElementos</tag>
+   <comment>Recorre URLs y valida presencia de botón Microsoft o campos de Microsoft login.</comment>
+   <testCaseGuid>a1535304-b9b2-4d18-b8b4-e14ce4d6a001</testCaseGuid>
+</TestCaseEntity>

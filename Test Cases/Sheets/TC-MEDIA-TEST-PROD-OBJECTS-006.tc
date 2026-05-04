@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Comparación de objetos estables entre Media TEST y PROD. Se omite si Media TEST no está deployado.</description>
+   <name>TC-MEDIA-TEST-PROD-OBJECTS-006</name>
+   <tag>Media</tag>
+   <tag>CrossPlatform</tag>
+   <tag>Comparison</tag>
+   <comment>Valida que los elementos visibles de Media son equivalentes en TEST y PROD.</comment>
+   <testCaseGuid>tc-media-test-prod-objects-006</testCaseGuid>
+</TestCaseEntity>

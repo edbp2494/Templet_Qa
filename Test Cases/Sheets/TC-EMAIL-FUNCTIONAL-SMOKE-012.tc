@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Email: login Microsoft, dashboard, acceso a creación y logout</description>
+   <name>TC-EMAIL-FUNCTIONAL-SMOKE-012</name>
+   <tag>Email</tag>
+   <tag>Smoke</tag>
+   <tag>Fase2</tag>
+   <tag>Functional</tag>
+   <comment>Valida el flujo técnico básico de Email sobre TEST.</comment>
+   <testCaseGuid>tc-email-functional-smoke-012</testCaseGuid>
+</TestCaseEntity>

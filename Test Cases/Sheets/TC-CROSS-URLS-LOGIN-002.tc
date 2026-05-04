@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Intentar login Microsoft en Sheets, Decks y Email para TEST y PROD</description>
+   <name>TC-CROSS-URLS-LOGIN-002</name>
+   <tag>CrossUrl</tag>
+   <tag>Login</tag>
+   <comment>Valida login real multi-URL usando Microsoft SSO.</comment>
+   <testCaseGuid>e974605d-4ae4-4e5d-b50e-77c2bd97f002</testCaseGuid>
+</TestCaseEntity>
