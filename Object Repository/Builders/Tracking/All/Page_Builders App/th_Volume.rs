@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>th_Volume</name>
+   <tag></tag>
+   <elementGuidId>bc077506-4f77-45bd-80b5-f9fd181bd993</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Error %'])[1]/following::th[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>th.pb-3.text-left.text-xs.font-medium.text-gray-400.uppercase.tracking-wider.pl-4</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>th</value>
+      <webElementGuid>0e4489a1-9a1c-42ab-aaef-a3d71a6def4c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>pb-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider pl-4</value>
+      <webElementGuid>ba3687b9-2830-42bf-8304-e201ada1bdef</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Volume</value>
+      <webElementGuid>d1023531-edee-4b75-acd0-d4708c34c990</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;text-card-foreground p-6 bg-white border border-gray-200 rounded-xl shadow-sm&quot;]/div[@class=&quot;overflow-x-auto&quot;]/table[@class=&quot;w-full text-sm&quot;]/thead[1]/tr[@class=&quot;border-b border-gray-100&quot;]/th[@class=&quot;pb-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider pl-4&quot;]</value>
+      <webElementGuid>b10e650d-31d2-4299-acaa-b59d13c9431b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Error %'])[1]/following::th[1]</value>
+      <webElementGuid>21e61a7c-89e3-4673-8005-ddaeb223e579</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Errors'])[1]/following::th[2]</value>
+      <webElementGuid>9b025ec7-12e5-468b-ab68-0077d0c1aa79</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='eduardo.baptista@templet.io'])[1]/preceding::th[1]</value>
+      <webElementGuid>af970e6a-77d8-4c63-b410-862121c69b6a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[5]/preceding::th[1]</value>
+      <webElementGuid>5c18dd99-0273-4425-b82f-c8726b96be13</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Volume']/parent::*</value>
+      <webElementGuid>f8efd193-aa8b-420c-b64f-53ec02993dbc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//th[8]</value>
+      <webElementGuid>5f89e7f5-7415-4fe7-bb4c-27ae0706ee81</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//th[(text() = 'Volume' or . = 'Volume')]</value>
+      <webElementGuid>23001d3f-c41b-42ac-bf55-281de7781fae</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

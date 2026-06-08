@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida que acciones de List abren modales en Decks. FALLA si modales no aparecen.</description>
+   <name>list-actions-modal-response</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b2c3d4e5-5678-90ef-ghij-234567890abc</testCaseGuid>
+</TestCaseEntity>

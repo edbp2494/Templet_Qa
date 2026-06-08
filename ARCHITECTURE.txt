@@ -1,0 +1,289 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    KATALON SHEETS QA - ARQUITECTURA V1.0                      ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ DIAGRAMA: FLUJO DE TEST CASE (Maquetación & Validación)                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                              TEST CASE INSTANCE
+                                   |
+                    ┌──────────────┴──────────────┐
+                    |                             |
+              SETUP PHASE                   EXECUTION PHASE
+                    |                             |
+         ┌──────────┴───────────┐      ┌─────────┴──────────┐
+         |                      |      |                    |
+    Load Profile          Initialize  Perform Tests    Capture Evidence
+    (ENV_TEST)            WebDriver    (Validations)   (Screenshots/Logs)
+         |                      |      |                    |
+         v                      v      v                    v
+    [Profile Variables]  [Browser]  [Keywords]      [Screenshot Files]
+    • SHEETS_URL                    • Login              • metadata
+    • USERNAME          ────────>  • waitPageLoad   ──> • timestamp
+    • PASSWORD                      • captureScreenshot  • filepath
+    • THRESHOLD                     • verifyElements
+    • DIRS                          • scrollToTop
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ MODELO: Object Repository → Keywords → Test Cases → Suite                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+ ┏─────────────────────────────────────────────────────────────────────────┓
+ ║                         OBJECT REPOSITORY                               ║
+ ║  [Centralized Element Locators - Single Source of Truth]                ║
+ ├─────────────────────────────────────────────────────────────────────────┤
+ │                                                                         │
+ │  Common/                    │ Sheets/                                   │
+ │  ├─ login_username.xml      │ ├─ table_main.xml                        │
+ │  ├─ login_password.xml      │ ├─ table_headers.xml                     │
+ │  ├─ login_button.xml        │ ├─ table_data_rows.xml                   │
+ │  └─ logout_button.xml       │ ├─ filter_date_filter.xml                │
+ │                              │ ├─ filter_status_filter.xml              │
+ │  XPath Pattern:              │ ├─ filter_user_filter.xml                │
+ │  //input[@name='username']   │ ├─ main_header.xml                       │
+ │  //button[@type='submit']    │ └─ main_toolbar.xml                      │
+ │                              │                                         │
+ │  Advantage: Change one place,│  Advantage: Re-use across cases         │
+ │  ALL cases updated           │  Maintainable & scalable                │
+ │                              │                                         │
+ └─────────────────────────────────────────────────────────────────────────┘
+                                    ▲
+                                    │
+                                USED BY
+                                    │
+ ┏─────────────────────────────────────────────────────────────────────────┐
+ ║                         KEYWORDS (Groovy)                                ║
+ ║  [Reusable Test Logic - Functions across all Test Cases]                ║
+ ├─────────────────────────────────────────────────────────────────────────┤
+ │                                                                         │
+ │  CommonKeywords.groovy:          SheetsKeywords.groovy:                 │
+ │                                                                         │
+ │  loginUser(usr, pwd, url)       verifyTableStructure(table, cols)      │
+ │    • Navigate to URL              • Count columns                       │
+ │    • Input credentials            • Verify headers                      │
+ │    • Click login                  • Check rows exist                     │
+ │    • Wait for page load                                                │
+ │                               verifyFiltersPresent()                   │
+ │  captureScreenshot(...)          • Check 3 filters                      │
+ │    • Generate filename            • Verify enabled                      │
+ │    • Create path                  • Log results                         │
+ │    • Take screenshot                                                   │
+ │    • Return filepath             scrollToTop()                         │
+ │                                    • Execute JS                         │
+ │  verifyElementPresent(obj)        • Wait stabilize                      │
+ │    • Find element                                                      │
+ │    • Check text (optional)                                              │
+ │    • Return boolean                                                    │
+ │                                                                         │
+ │  Benefit: No code duplication                                          │
+ │  Maintainable: Update once, used everywhere                            │
+ │                                                                         │
+ └─────────────────────────────────────────────────────────────────────────┘
+                                    ▲
+                                    │
+                                CALLED BY
+                                    │
+ ┏─────────────────────────────────────────────────────────────────────────┐
+ ║                         TEST CASES (.tc files)                           ║
+ ║  [Executable Test Scripts - Orchestrate workflow]                       ║
+ ├─────────────────────────────────────────────────────────────────────────┤
+ │                                                                         │
+ │  TC-SHEETS-LAYOUT-001 (Maquetación)                                    │
+ │  ├─ Step 1: openBrowser + navigate TEST                                │
+ │  ├─ Step 2: CommonKeywords.loginUser(...)                              │
+ │  ├─ Step 3: waitForPageLoad(10)                                        │
+ │  ├─ Step 4: SheetsKeywords.scrollToTop()                               │
+ │  ├─ Step 5: CommonKeywords.captureScreenshot(...TEST...)               │
+ │  ├─ Step 6: logout + closeBrowser                                      │
+ │  ├─ [Repeat Steps 1-6 for PROD]                                        │
+ │  └─ Step 13: markPassed("Diff visual ≤ 3%")                            │
+ │                                                                         │
+ │  TC-SHEETS-ELEMENT-002 (Validación)                                    │
+ │  ├─ Step 1-3: Login + Wait                                             │
+ │  ├─ Step 4: SheetsKeywords.verifyFiltersPresent()                      │
+ │  ├─ Step 5-7: CommonKeywords.verifyElementPresent(...)                 │
+ │  ├─ Step 8: CommonKeywords.captureScreenshot(...)                      │
+ │  └─ Step 9: markPassed(...)                                            │
+ │                                                                         │
+ │  [Similar pattern for TC-003, TC-004, TC-005]                          │
+ │                                                                         │
+ │  Key Pattern:                                                           │
+ │  - Each step is either Keywords call OR assertion                      │
+ │  - Never hardcoded logic; always Keywords                              │
+ │  - Result tracked: ✅ PASS or ❌ FAIL                                   │
+ │                                                                         │
+ └─────────────────────────────────────────────────────────────────────────┘
+                                    ▲
+                                    │
+                              ORGANIZED IN
+                                    │
+ ┏─────────────────────────────────────────────────────────────────────────┐
+ ║                      TEST SUITE (.ts file)                               ║
+ ║  [Orchestrates multiple test cases with Profile]                        ║
+ ├─────────────────────────────────────────────────────────────────────────┤
+ │                                                                         │
+ │  Suite-Sheets-Phase1-MVP.ts                                            │
+ │                                                                         │
+ │  ┌─ Profile Selection: ENV_TEST (or ENV_PROD)                         │
+ │  │                                                                     │
+ │  ├─ TEST CASE #1                                                       │
+ │  │  ID: TC-SHEETS-LAYOUT-001                                          │
+ │  │  Type: Maquetación                                                  │
+ │  │  Duration: ~5 min                                                   │
+ │  │  Status: 🟢 PASS / 🔴 FAIL / 🟡 SKIP                               │
+ │  │                                                                     │
+ │  ├─ TEST CASE #2                                                       │
+ │  │  ID: TC-SHEETS-ELEMENT-002                                         │
+ │  │  Type: Validación                                                   │
+ │  │  Duration: ~2 min                                                   │
+ │  │                                                                     │
+ │  ├─ TEST CASE #3                                                       │
+ │  │  ID: TC-SHEETS-ELEMENT-003                                         │
+ │  │  Type: Validación                                                   │
+ │  │  Duration: ~2 min                                                   │
+ │  │                                                                     │
+ │  ├─ TEST CASE #4                                                       │
+ │  │  ID: TC-SHEETS-COMPARE-004                                         │
+ │  │  Type: Comparación                                                  │
+ │  │  Duration: ~6 min                                                   │
+ │  │                                                                     │
+ │  └─ TEST CASE #5                                                       │
+ │     ID: TC-SHEETS-COMPARE-005                                         │
+ │     Type: Comparación                                                  │
+ │     Duration: ~6 min                                                   │
+ │                                                                         │
+ │  Total Duration: ~21 min                                               │
+ │  Result: 🟢 ALL PASSED                                                 │
+ │                                                                         │
+ │  📊 Output:                                                             │
+ │     Reports/                                                            │
+ │     ├─ execution_report.html (Resumen)                                 │
+ │     └─ execution_report.xml  (Detallado)                               │
+ │                                                                         │
+ │     Resources/Screenshots/                                             │
+ │     ├─ TC-SHEETS-LAYOUT-001_full_render_TEST_*.png                    │
+ │     ├─ TC-SHEETS-LAYOUT-001_full_render_PROD_*.png                    │
+ │     ├─ TC-SHEETS-ELEMENT-002_filters_section_TEST_*.png               │
+ │     └─ [... más screenshots]                                           │
+ │                                                                         │
+ └─────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ DIAGRAMA: Reutilización entre Plataformas                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                            COMMON INFRASTRUCTURE
+                                    ▲
+                    ┌───────────────┼───────────────┐
+                    │               │               │
+                    v               v               v
+                SHEETS           DECKS           EMAIL
+              (Phase 1)        (Phase 2)       (Phase 2)
+                ✅                📋              📋
+              
+         ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+         │ Keywords:    │  │ Keywords:    │  │ Keywords:    │
+         │ • Common✅   │  │ • Common✅   │  │ • Common✅   │
+         │ • Sheets✅   │  │ • Decks📋    │  │ • Email📋    │
+         └──────────────┘  └──────────────┘  └──────────────┘
+         
+         ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+         │ ObjectRepo:  │  │ ObjectRepo:  │  │ ObjectRepo:  │
+         │ • Common✅   │  │ • Common✅   │  │ • Common✅   │
+         │ • Sheets✅   │  │ • Decks📋    │  │ • Email📋    │
+         └──────────────┘  └──────────────┘  └──────────────┘
+         
+         ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+         │ Profiles:    │  │ Profiles:    │  │ Profiles:    │
+         │ • ENV_TEST✅ │  │ • ENV_TEST📋 │  │ • ENV_TEST📋 │
+         │ • ENV_PROD✅ │  │ • ENV_PROD📋 │  │ • ENV_PROD📋 │
+         └──────────────┘  └──────────────┘  └──────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ WORKFLOW: Desde Requisito hasta Ejecución                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+REQUISITO
+   |
+   v
+"Validar que Sheets render es consistente entre TEST y PROD"
+   |
+   v
+ANÁLISIS QA
+   |
+   ├─ Tipo de prueba: MAQUETACIÓN
+   ├─ Plataforma: WEB
+   ├─ Prioridad: ALTA
+   └─ Umbral: 3%
+   |
+   v
+DISEÑO TEST CASE
+   |
+   ├─ TC-SHEETS-LAYOUT-001
+   ├─ Pasos: Login → Captura TEST → Login PROD → Captura PROD → Comparar
+   ├─ Datos: Credenciales de Profile
+   └─ Validación: Diff visual ≤ 3%
+   |
+   v
+IMPLEMENTAR
+   |
+   ├─ Object Repository XML (elementos)
+   ├─ Keywords Groovy (funciones)
+   ├─ Test Case XML (orquestación)
+   └─ Agregar a Suite
+   |
+   v
+EJECUTAR
+   |
+   ├─ $ katalon --run --suite Suite-Sheets-Phase1-MVP --profile ENV_TEST
+   ├─ Katalon inicia navegador
+   ├─ Ejecuta pasos en secuencia
+   ├─ Captura logs
+   └─ Genera reportes
+   |
+   v
+RESULTADOS
+   |
+   ├─ HTML Report: Reports/execution_report.html
+   ├─ Screenshots: Resources/Screenshots/*.png
+   └─ Status: ✅ PASS / ❌ FAIL
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ MATRIZ DE COBERTURA: Casos Iniciales                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Caso            | Tipo          | Ambiente    | Focus           | Status
+────────────────┼───────────────┼─────────────┼─────────────────┼────────
+TC-001          | Maquetación   | TEST→PROD   | Full render     | ✅
+TC-002          | Validación    | TEST        | Filtros presentes| ✅
+TC-003          | Validación    | TEST        | Estructura tabla| ✅
+TC-004          | Comparación   | TEST→PROD   | Header+Toolbar  | ✅
+TC-005          | Comparación   | TEST→PROD   | Grilla          | ✅
+────────────────┴───────────────┴─────────────┴─────────────────┴────────
+
+COBERTURA FASE 1:
+  • Maquetación: 40% (header, toolbar, grilla)
+  • Validación: 30% (filtros, tabla)
+  • Comparación Visual: 100% (areas críticas)
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+CONFIGURACIÓN RECOMENDADA PARA KATALON
+
+Tools > Preferences > Katalon > WebUI
+  □ Default timeout: 10 segundos
+  □ Screenshot on failure: ON
+  □ Smart wait: ON
+
+Project Settings > Desired Capabilities > Chrome
+  ✓ Disable notifications
+  ✓ Disable images (opcional para velocidad)
+  ✓ No default browser arguments
+
+═════════════════════════════════════════════════════════════════════════════════

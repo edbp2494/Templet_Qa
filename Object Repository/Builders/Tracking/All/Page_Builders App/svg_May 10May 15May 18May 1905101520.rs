@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>svg_May 10May 15May 18May 1905101520</name>
+   <tag></tag>
+   <elementGuidId>9b804e50-f617-47d2-bee1-db8a64257527</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Task Creation'])[2]/following::*[name()='svg'][1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.recharts-wrapper > svg.recharts-surface</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>svg</value>
+      <webElementGuid>ce8f1d13-e531-4e44-8ce5-8ea00b163744</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>application</value>
+      <webElementGuid>9acb3fa8-27e9-494d-883b-b64928de1289</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>16871e7b-3edb-409d-a306-8bd7d574f0bc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>recharts-surface</value>
+      <webElementGuid>e886961a-82fd-4a31-b1fe-5c4233a4cd3c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>width</name>
+      <type>Main</type>
+      <value>1551</value>
+      <webElementGuid>698377e9-2de7-4227-8aff-5b94f5c7f9e2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>350</value>
+      <webElementGuid>7bf02380-e005-4741-b063-ebe1a2ba6f87</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>viewBox</name>
+      <type>Main</type>
+      <value>0 0 1551 350</value>
+      <webElementGuid>35718d69-f251-4bed-a1f6-6b3ae274d434</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>May 10May 15May 18May 1905101520</value>
+      <webElementGuid>5297402b-d525-416a-88e1-5510cc6a55fb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;grid grid-cols-1 gap-6 mb-6&quot;]/div[1]/div[@class=&quot;text-card-foreground p-6 bg-white border border-gray-200 rounded-xl shadow-sm h-full&quot;]/div[@class=&quot;recharts-responsive-container&quot;]/div[1]/div[@class=&quot;recharts-wrapper&quot;]/svg[@class=&quot;recharts-surface&quot;]</value>
+      <webElementGuid>0b04ac22-3bf7-4ff5-b54f-993c0a50b899</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Task Creation'])[2]/following::*[name()='svg'][1]</value>
+      <webElementGuid>b8834c5f-3ab4-4607-8850-25acf7e48479</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[3]/following::*[name()='svg'][2]</value>
+      <webElementGuid>f0f612d9-ea3c-4e95-a468-16dc28a56d44</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//svg[(text() = 'May 10May 15May 18May 1905101520' or . = 'May 10May 15May 18May 1905101520')]</value>
+      <webElementGuid>e6160734-e52a-497d-8765-30e215ff6d29</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>path</name>
+   <tag></tag>
+   <elementGuidId>e57c598f-0265-4e67-a7f8-70ae296e654e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>path</value>
+      <webElementGuid>11795156-15e8-450b-9fbc-d9b16dd96d0e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>d</name>
+      <type>Main</type>
+      <value>m6 9 6 6 6-6</value>
+      <webElementGuid>6dc6e0a1-062f-4142-8ba8-fce00d67f568</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/header[@class=&quot;bg-gray-50 px-6 py-4 mb-2&quot;]/div[@class=&quot;flex items-center justify-between&quot;]/div[@class=&quot;flex items-center gap-2&quot;]/div[@class=&quot;flex items-center gap-3&quot;]/div[@class=&quot;flex items-center gap-2&quot;]/button[@class=&quot;flex items-center justify-between rounded-md border border-input px-3 py-2 ring-offset-background data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1 h-9 w-[90px] bg-white text-sm&quot;]/svg[@class=&quot;lucide lucide-chevron-down h-4 w-4 opacity-50&quot;]/path[1]</value>
+      <webElementGuid>2573190e-af90-4ce6-8fb2-6ff5cf92261a</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida que acciones de List (Edit, Rename, Delete, etc.) abren modales/subwindows. FALLA si modales no aparecen.</description>
+   <name>list-actions-modal-response</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a1b2c3d4-5678-90ef-ghij-1234567890ab</testCaseGuid>
+</TestCaseEntity>

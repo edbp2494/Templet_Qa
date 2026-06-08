@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke base de Schedulers TEST.</description>
+   <name>smoke</name>
+   <tag>smoke,schedulers</tag>
+   <comment>Validación inicial de carga de landing pública</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3e75f2f9-5088-4e7b-af07-9d8d8dd04103</testCaseGuid>
+</TestCaseEntity>

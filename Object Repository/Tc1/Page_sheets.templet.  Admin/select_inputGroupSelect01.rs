@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_inputGroupSelect01</name>
+   <tag></tag>
+   <elementGuidId>996a1ec7-c5f4-4e3c-8bf4-691d4c219b5d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>.row .form-group:nth-child(1) [data-toggle=&quot;drop-clients&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' row ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' form-group ') and (position() = 1)]//*[@data-toggle = 'drop-clients']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value></value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>a4416f56-6d80-40f3-841a-cd4e4751a41d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>custom-select</value>
+      <webElementGuid>b5300bb4-8a3a-48a1-a6de-c8b92c106780</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>inputGroupSelect01</value>
+      <webElementGuid>9b702cb3-8c3d-492b-b89f-91bf39abcd26</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-toggle</name>
+      <type>Main</type>
+      <value>drop-clients</value>
+      <webElementGuid>c12cab24-a0fa-49fb-95de-2ac3a018598d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>- Select Client -BRAVA</value>
+      <webElementGuid>ccbccba0-14e8-406d-b93b-d45910e92094</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-9fd90a82b2011858cc7b842945e172a3</value>
+      <webElementGuid>828274a9-3c5d-4798-ad39-3d8b8bf1e788</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' row ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' form-group ') and (position() = 1)]//*[@data-toggle = 'drop-clients']</value>
+      <webElementGuid>b4c36b06-e6e2-4b04-89d6-669a20a58ecb</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' row ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' form-group ') and (position() = 1)]//*[@data-toggle = 'drop-clients']</value>
+      <webElementGuid>bd2349ac-3df9-4385-b380-5b45713eb93b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@id = 'inputGroupSelect01' and (text() = '- Select Client -BRAVA' or . = '- Select Client -BRAVA')]</value>
+      <webElementGuid>db05479e-751c-4556-ae8a-64d4dcabc9f4</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

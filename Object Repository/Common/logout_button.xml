@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestObject>
+    <description>Botón de logout</description>
+    <name>logout_button</name>
+    <tag></tag>
+    <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+    <selectorCollection>
+        <entry>
+            <key>XPATH</key>
+            <value>//button[contains(text(), 'Logout') or contains(text(), 'Sign Out') or @id='logout-btn']</value>
+        </entry>
+        <entry>
+            <key>CSS</key>
+            <value>button[class*='logout']</value>
+        </entry>
+    </selectorCollection>
+    <webElementProperties>
+        <isSelected>false</isSelected>
+        <matchCondition>equals</matchCondition>
+        <name>tag</name>
+        <type>Main</type>
+        <value>button</value>
+        <webElementGuid>00000000-0000-0000-0000-000000000001</webElementGuid>
+    </webElementProperties>
+</TestObject>

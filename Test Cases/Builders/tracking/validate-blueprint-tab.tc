@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida click y contenido visual del tab Blueprint en Tracking.</description>
+   <name>validate-blueprint-tab</name>
+   <tag>builders,tracking,blueprint,tab,visual</tag>
+   <comment>Verifica color activo, cards esperadas, textos y scroll hasta tabla.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-tracking-blueprint-tab-001</testCaseGuid>
+</TestCaseEntity>

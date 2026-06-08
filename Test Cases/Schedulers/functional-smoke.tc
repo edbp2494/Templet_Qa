@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Schedulers sobre landing pública y acceso a sign-in.</description>
+   <name>functional-smoke</name>
+   <tag>smoke,functional,schedulers</tag>
+   <comment>Validación rápida de heading, CTA de sign-in y soporte</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>923d4db9-0438-45af-a401-38ad7e664104</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Login</name>
+   <tag></tag>
+   <elementGuidId>63b42c3f-ca63-4215-9263-196ec5571bf8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Task Creation'])[1]/following::button[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>e7742892-5061-4a30-a657-6ba416226fff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors bg-white text-gray-600 border-gray-200 hover:bg-gray-50</value>
+      <webElementGuid>6b923a9c-6d0a-4de3-9ab7-88adf1ee65a9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Login</value>
+      <webElementGuid>e246f53a-113f-4c89-80db-b6f03755ee2c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;flex justify-between mb-3&quot;]/div[@class=&quot;flex items-center gap-1 mb-4 flex-wrap&quot;]/button[@class=&quot;px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors bg-white text-gray-600 border-gray-200 hover:bg-gray-50&quot;]</value>
+      <webElementGuid>f5b3bb83-530e-4e04-8b2d-5fabce6cd049</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Task Creation'])[1]/following::button[1]</value>
+      <webElementGuid>605152ab-37ad-449c-be9a-15eb2a1d1c77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Blueprint'])[1]/following::button[2]</value>
+      <webElementGuid>374f71cc-b156-40ee-993e-beda3b22d170</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Showing stats for'])[1]/preceding::button[1]</value>
+      <webElementGuid>18487eeb-1909-48cc-a16e-8a66a8eb4c70</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='All Groups'])[1]/preceding::button[1]</value>
+      <webElementGuid>7e50afc3-7c3e-434b-a91c-a3e358b19e90</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Login']/parent::*</value>
+      <webElementGuid>6cb92e2c-e7f6-436b-94e9-7f9ec8868822</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//button[4]</value>
+      <webElementGuid>ba0d5776-55fb-4618-901c-3afdf6cd406d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[(text() = 'Login' or . = 'Login')]</value>
+      <webElementGuid>2c7eb61c-bdbc-447f-8dff-1f1fe6c3ac17</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida los objetos visibles del home autenticado de Schedulers.</description>
+   <name>validate-objects-visible</name>
+   <tag>objects,visible,schedulers,landing</tag>
+   <comment>TC base para validar objetos visibles después del login Microsoft.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>schedulers-objects-visible-001</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_eduardo.baptistatemplet.io</name>
+   <tag></tag>
+   <elementGuidId>1398a938-fa5b-40cc-81cf-30232d848b30</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Volume'])[1]/following::span[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.font-medium.text-gray-800</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>b0f4184b-ccd3-4ecc-ab1c-8ab07294dfc9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>font-medium text-gray-800</value>
+      <webElementGuid>77622a5f-422f-4e5a-9925-60850d126e8c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>eduardo.baptista@templet.io</value>
+      <webElementGuid>fdd79687-034d-4e80-809a-e42796782171</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;text-card-foreground p-6 bg-white border border-gray-200 rounded-xl shadow-sm&quot;]/div[@class=&quot;overflow-x-auto&quot;]/table[@class=&quot;w-full text-sm&quot;]/tbody[1]/tr[@class=&quot;border-b border-gray-50 hover:bg-gray-50 transition-colors&quot;]/td[@class=&quot;py-3 pr-4&quot;]/span[@class=&quot;font-medium text-gray-800&quot;]</value>
+      <webElementGuid>1944db0c-aebf-4cce-94ea-2f564151a58b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Volume'])[1]/following::span[1]</value>
+      <webElementGuid>8333f8c7-4b78-4639-b7c1-aeb62ce69bd4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Error %'])[1]/following::span[1]</value>
+      <webElementGuid>119407ca-5efc-4b20-9d01-1b1152c53237</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[5]/preceding::span[1]</value>
+      <webElementGuid>d19caeb4-40db-493d-b359-c845df467be8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='eduardo.baptista@templet.io']/parent::*</value>
+      <webElementGuid>55a9ba42-bd1c-40a4-a64e-08ea0dcea6d1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[2]/span</value>
+      <webElementGuid>4c87bf35-bf8e-463e-b9da-7e98d899f25a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'eduardo.baptista@templet.io' or . = 'eduardo.baptista@templet.io')]</value>
+      <webElementGuid>13cd59f2-75ea-4c53-bbdf-999000502713</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

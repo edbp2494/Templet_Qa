@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida initiatives en Decks con y sin objetos por mensaje de contenido vacío.</description>
+   <name>initiative-content-validation</name>
+   <tag>decks,initiative,regression,filters</tag>
+   <comment>Migrado desde TC-DECKS-FILTERS-INITIATIVE-VALIDATION-008</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2ca93f1c-05dc-49bd-a168-60c89b7255c3</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Flujo de filtros Client-Initiative-Sort en Email.</description>
+   <name>client-initiative-sort</name>
+   <tag>email,regression,filters</tag>
+   <comment>Migrado desde TC-EMAIL-FILTERS-CLIENT-INITIATIVE-SORT-007</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c39304ce-6c06-44ea-a48c-e8a8bb624943</testCaseGuid>
+</TestCaseEntity>

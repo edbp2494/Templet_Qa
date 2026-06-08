@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>td_26</name>
+   <tag></tag>
+   <elementGuidId>caf32c92-46e5-4313-8ffe-0c26f2568363</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[5]/following::td[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>td.py-3.text-right.font-semibold.text-gray-900</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>td</value>
+      <webElementGuid>c5b9edb7-9ea9-4468-94a3-68f7212693ab</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>py-3 text-right font-semibold text-gray-900</value>
+      <webElementGuid>a445c37d-5e1b-4a71-b907-661cfffdbaad</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>26</value>
+      <webElementGuid>92be789d-bf72-4d40-bc2a-e24e9b5347fe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;text-card-foreground p-6 bg-white border border-gray-200 rounded-xl shadow-sm&quot;]/div[@class=&quot;overflow-x-auto&quot;]/table[@class=&quot;w-full text-sm&quot;]/tbody[1]/tr[@class=&quot;border-b border-gray-50 hover:bg-gray-50 transition-colors&quot;]/td[@class=&quot;py-3 text-right font-semibold text-gray-900&quot;]</value>
+      <webElementGuid>78834ee0-6f40-4a35-b6c4-47450fb668a5</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[5]/following::td[1]</value>
+      <webElementGuid>57b9146c-1006-410f-8c20-78adc25db47e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='eduardo.baptista@templet.io'])[1]/following::td[2]</value>
+      <webElementGuid>053324db-ac4c-4fa0-afb1-14dd11759093</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[4]</value>
+      <webElementGuid>65084648-a966-40f0-97c6-bd92dffe550d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//td[(text() = '26' or . = '26')]</value>
+      <webElementGuid>457a04c6-b5c3-4755-b732-eab1e3dcd72d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

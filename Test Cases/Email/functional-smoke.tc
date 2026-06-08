@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Email.</description>
+   <name>functional-smoke</name>
+   <tag>smoke,functional,email</tag>
+   <comment>Migrado desde TC-EMAIL-FUNCTIONAL-SMOKE-012</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4f3cd2e7-1e95-43d6-9a44-ecdc0e5f1012</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h4_Dashboard</name>
+   <tag></tag>
+   <elementGuidId>e219f1f1-d010-425b-a969-34101177c1b0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>.title-body</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//h4[contains(normalize-space(.), 'Dashboard')] | //*[@id='navbarsExample07']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value></value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h4</value>
+      <webElementGuid>984d1490-9117-4fc9-ba26-33c7da5b0713</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>title-body</value>
+      <webElementGuid>c6a26519-cf64-49ee-b7cd-e8a57dba6f0b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Dashboard</value>
+      <webElementGuid>7eaf5637-1149-458a-a2e7-96df834874ae</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-a9e8648c8cac0203c96d1c1cfd3cc173</value>
+      <webElementGuid>5d1892fe-b52c-477a-9cbf-6f1565882d97</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' title-body ')]</value>
+      <webElementGuid>a821a983-dda9-489c-bb1f-c47107810eeb</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' title-body ')]</value>
+      <webElementGuid>910a23e9-58e3-4144-afe1-d882897bd50e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//h4[(text() = 'Dashboard' or . = 'Dashboard')]</value>
+      <webElementGuid>1731c511-ec96-4fc3-a7e4-9810d213aba8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

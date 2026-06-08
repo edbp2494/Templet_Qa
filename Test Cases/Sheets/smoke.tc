@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke base de Sheets TEST.</description>
+   <name>smoke</name>
+   <tag>smoke,sheets</tag>
+   <comment>Migrado desde TC-SHEETS-SMOKE-000</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f3cd2e7-1e95-43d6-9a44-ecdc0e5f1000</testCaseGuid>
+</TestCaseEntity>

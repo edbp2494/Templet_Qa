@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Comparación de objetos entre TEST y PROD para Sheets.</description>
+   <name>objects-test-prod</name>
+   <tag>compare,test,prod,sheets</tag>
+   <comment>Migrado desde TC-SHEETS-TEST-PROD-OBJECTS-003</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f3cd2e7-1e95-43d6-9a44-ecdc0e5f1003</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Hace click en List y valida que objetos clave de la vista list sean visibles y clickeables.</description>
+   <name>list-view-visible-clickable</name>
+   <tag>objects,clickable,list,email</tag>
+   <comment>TC para validar cambio a vista List y estado de interacción de controles y elementos.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7d9692ee-95cc-4d34-8469-4f8db8fe9a34</testCaseGuid>
+</TestCaseEntity>

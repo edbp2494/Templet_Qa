@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>th_Total</name>
+   <tag></tag>
+   <elementGuidId>0c5604a9-e5a9-455f-aa15-a097b8753724</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Primary Trace'])[1]/following::th[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>th.pb-3.text-right.text-xs.font-medium.text-gray-400.uppercase.tracking-wider</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>th</value>
+      <webElementGuid>7fdb3524-04e5-4e6d-8aaf-cede67fc4815</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>pb-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider</value>
+      <webElementGuid>30069467-8894-4ead-a6fd-fffe1ded93f5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Total</value>
+      <webElementGuid>c0d10a34-26b0-4ffc-8c8c-6d76cfbcfb85</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;text-card-foreground p-6 bg-white border border-gray-200 rounded-xl shadow-sm&quot;]/div[@class=&quot;overflow-x-auto&quot;]/table[@class=&quot;w-full text-sm&quot;]/thead[1]/tr[@class=&quot;border-b border-gray-100&quot;]/th[@class=&quot;pb-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider&quot;]</value>
+      <webElementGuid>f46a9bb5-322a-42c1-903b-c14b958f39b6</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Primary Trace'])[1]/following::th[1]</value>
+      <webElementGuid>2f8636ef-21b3-4449-a739-cefe3ab65657</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::th[2]</value>
+      <webElementGuid>8581f3b7-d99b-4038-9480-9583ee74561b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Completed'])[1]/preceding::th[1]</value>
+      <webElementGuid>b3133267-f248-4fab-9168-1ebf69031517</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Errors'])[1]/preceding::th[2]</value>
+      <webElementGuid>a0cd0c4b-7237-45a3-b673-85e3c303221f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Total']/parent::*</value>
+      <webElementGuid>7c3e0589-0159-4cef-88d0-1d1b283930cf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//th[4]</value>
+      <webElementGuid>efad48f3-887e-463b-858c-a05eca90e603</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//th[(text() = 'Total' or . = 'Total')]</value>
+      <webElementGuid>7fc924f6-d7cf-40e2-8783-5c40bd4a53cd</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

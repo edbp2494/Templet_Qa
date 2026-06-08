@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Hace click en los objetos visibles seguros del home autenticado de Schedulers y vuelve al home.</description>
+   <name>click-visible-objects-return-home</name>
+   <tag>objects,click,return-home,schedulers,landing</tag>
+   <comment>Click sobre objetos visibles seguros después del login Microsoft con retorno al home tras cada interacción.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>schedulers-objects-click-002</testCaseGuid>
+</TestCaseEntity>

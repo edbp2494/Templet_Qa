@@ -1,0 +1,36 @@
+.gradle
+bin
+Reports
+Libs
+output
+!output/.gitkeep
+build
+.classpath
+.project
+.cache
+.temp-*.txt
+.settings/
+Drivers/
+tmp/
+*.log
+*.lck
+
+# Worktrees de agentes y backups locales — nunca versionar
+Editores/
+
+# Archivos locales/sensibles
+console.properties
+Include/config/templet-credentials.properties
+Include/config/lupe-credentials.properties
+
+# Credenciales locales — NUNCA subir
+Include/config/templet-credentials.properties
+
+# Excluir descubrimiento real y snapshots visuales
+Reports/Tracking/snapshots/
+Reports/Tracking/discovery/*.json
+Reports/Screenshots/
+
+# No subir archivos de configuración globales ni credenciales
+Profiles/*.glbl
+Include/config/*.properties

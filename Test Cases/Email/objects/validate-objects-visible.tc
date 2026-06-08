@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida visibilidad y orden de sidebar autenticada de Email tras login.</description>
+   <name>validate-objects-visible</name>
+   <tag>email,objects,sidebar,visibility</tag>
+   <comment>TC para verificar sidebar autenticada, apertura por hamburguesa y orden visual de items.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5f67c7d1-4121-4ad3-b03a-9c1f2392d8c1</testCaseGuid>
+</TestCaseEntity>

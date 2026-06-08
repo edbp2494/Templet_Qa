@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Flujo de filtros Client-Initiative-Sort en Decks.</description>
+   <name>client-initiative-sort</name>
+   <tag>decks,regression,filters</tag>
+   <comment>Migrado desde TC-DECKS-FILTERS-CLIENT-INITIATIVE-SORT-007</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d5365d7a-8d2a-47fb-b3a3-9e90299daa21</testCaseGuid>
+</TestCaseEntity>

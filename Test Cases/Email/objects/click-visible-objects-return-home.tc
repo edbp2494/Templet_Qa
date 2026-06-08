@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Recorre los items visibles de la sidebar autenticada en Email, valida navegacion item por item, vuelve a Home y finaliza con Logout.</description>
+   <name>click-visible-objects-return-home</name>
+   <tag>objects,click,return-home,email,sidebar</tag>
+   <comment>Flujo autenticado con click por item en sidebar, manejo de nuevas pestanas y cierre de sesion al final.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>email-objects-click-002</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,187 @@
+name: Builders Tracking - Regression Suite
+
+# Triggers disponibles (comentados por ahora - activar cuando esté listo)
+on:
+  # push:
+  #   branches: [ main, develop ]
+  #   paths:
+  #     - 'Test Cases/Builders/**'
+  #     - 'Keywords/**'
+  # schedule:
+  #   - cron: '0 2 * * *'  # Ejecutar daily a las 2 AM UTC
+  workflow_dispatch:  # Ejecutar manualmente desde Actions tab
+
+env:
+  BUILDERS_TEST_URL: 'https://testing-templet-builders.vercel.app/'
+  SHEETS_TEST_URL: 'https://sheets-test.templet.io/admin/manager.php'
+  DECKS_TEST_URL: 'https://decks-test.templet.io/admin/manager.php'
+  EMAIL_TEST_URL: 'https://emails-test.templet.io/admin/manager.php'
+  SCHEDULERS_TEST_URL: 'https://testing-templet-schedulers.vercel.app/'
+
+jobs:
+  builders-tracking-regression:
+    name: Builders Tracking - Full Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Set up Katalon CLI
+        id: katalon-setup
+        run: |
+          # Descargar Katalon Runtime Engine
+          mkdir -p ~/katalon
+          cd ~/katalon
+          wget -q https://download.katalon.com/v1/public/download/linux/katalon-9.1.0.zip
+          unzip -q katalon-9.1.0.zip
+          echo "KATALON_HOME=$(pwd)/katalon-9.1.0" >> $GITHUB_ENV
+          echo "KATALON_HOME path set"
+
+      - name: Verify Katalon Installation
+        run: |
+          ${{ env.KATALON_HOME }}/bin/katalon -version || echo "Katalon version check"
+
+      - name: Run Builders Tracking Suite
+        id: test-execution
+        run: |
+          cd ${{ github.workspace }}
+          
+          # Ejecutar suite con profile TEST
+          ${{ env.KATALON_HOME }}/bin/katalon \
+            -noSplash \
+            -runMode=console \
+            -projectPath="." \
+            -testSuitePath="Test Suites/Platforms/Builders/Tracking/Tracking-Full-Flow.ts" \
+            -executionProfile=global \
+            -browserType=Chrome \
+            -reportFolder=${{ github.workspace }}/Reports \
+            -reportFileName=execution-report.html \
+            --config -webui.autoUpdateXpathUsedForSpying=true
+          
+          TEST_EXIT_CODE=$?
+          echo "TEST_EXIT_CODE=${TEST_EXIT_CODE}" >> $GITHUB_OUTPUT
+          exit 0  # No fallar aquí para procesar errores después
+
+      - name: Generate Asana Tickets from Errors
+        id: process-errors
+        if: always()
+        run: |
+          cd ${{ github.workspace }}
+          
+          echo "═══════════════════════════════════════════════════════════"
+          echo "Procesando errores y generando tickets Asana..."
+          echo "═══════════════════════════════════════════════════════════"
+          
+          # El Test Listener (BuildersTrackingSuiteListener) ejecutó automáticamente
+          # la generación de tickets. Solo necesitamos validar el archivo generado.
+          
+          TICKETS_FILE=$(find Reports/asana_tickets -name "asana_tickets_*.json" -type f 2>/dev/null | tail -1)
+          
+          if [ -f "$TICKETS_FILE" ]; then
+            echo "✓ Archivo de tickets generado: $TICKETS_FILE"
+            echo "Contenido:"
+            cat "$TICKETS_FILE"
+          else
+            echo "⚠ No se encontró archivo de tickets (suite sin errores)"
+          fi
+
+      - name: Upload Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: katalon-reports
+          path: |
+            Reports/
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Create GitHub Issue if Failed
+        if: failure() || steps.test-execution.outputs.TEST_EXIT_CODE != '0'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const ticketsFile = 'Reports/asana_tickets/asana_tickets_*.json';
+            
+            // Buscar archivo de tickets más reciente
+            const glob = require('glob');
+            const files = glob.sync(ticketsFile);
+            
+            if (files.length > 0) {
+              const latestFile = files.sort().pop();
+              const tickets = JSON.parse(fs.readFileSync(latestFile, 'utf8'));
+              
+              let issueBody = `# Builders Tracking - Test Failures\n\n`;
+              issueBody += `**Run:** [${context.runId}](${context.payload.repository.html_url}/actions/runs/${context.runId})\n`;
+              issueBody += `**Triggered by:** ${context.actor}\n`;
+              issueBody += `**Timestamp:** ${new Date().toISOString()}\n\n`;
+              issueBody += `## Summary\n`;
+              issueBody += `- **Total Tickets:** ${tickets.tickets.length}\n`;
+              issueBody += `- **High Severity:** ${tickets.tickets.filter(t => t.severity === 'HIGH').length}\n`;
+              issueBody += `- **Medium Severity:** ${tickets.tickets.filter(t => t.severity === 'MEDIUM').length}\n\n`;
+              issueBody += `## Tickets\n`;
+              
+              tickets.tickets.slice(0, 5).forEach(ticket => {
+                issueBody += `\n### ${ticket.title}\n`;
+                issueBody += `**Severity:** ${ticket.severity}\n`;
+                issueBody += `**Test Case:** ${ticket.caseId}\n`;
+                issueBody += `\`\`\`\n${ticket.description}\n\`\`\`\n`;
+              });
+              
+              if (tickets.tickets.length > 5) {
+                issueBody += `\n_... y ${tickets.tickets.length - 5} tickets más_\n`;
+              }
+              
+              github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Builders Tracking] ${tickets.tickets.length} errores en ejecución ${context.runId}`,
+                body: issueBody,
+                labels: ['builders', 'tracking', 'automated', 'test-failure']
+              });
+            }
+
+      - name: Publish Test Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report-html
+          path: Reports/execution-report.html
+          if-no-files-found: ignore
+
+      - name: Fail Job if Tests Failed
+        if: steps.test-execution.outputs.TEST_EXIT_CODE != '0'
+        run: |
+          echo "❌ Builders Tracking Suite falló. Ver Reports y GitHub Issues."
+          exit 1
+
+  notify-completion:
+    name: Notificar Finalización
+    runs-on: ubuntu-latest
+    needs: builders-tracking-regression
+    if: always()
+
+    steps:
+      - name: Print Summary
+        run: |
+          echo "═══════════════════════════════════════════════════════════"
+          echo "Suite: Builders Tracking - Full Validation"
+          echo "Status: ${{ needs.builders-tracking-regression.result }}"
+          echo "═══════════════════════════════════════════════════════════"
+          echo ""
+          echo "Artefactos disponibles en GitHub Actions:"
+          echo "  • katalon-reports: Reports/ completos"
+          echo "  • test-report-html: Reporte HTML ejecutable"
+          echo ""
+          echo "Tickets Asana: Generados en Reports/asana_tickets/"
+          echo "═══════════════════════════════════════════════════════════"

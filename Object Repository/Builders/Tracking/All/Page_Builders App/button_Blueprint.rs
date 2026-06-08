@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Blueprint</name>
+   <tag></tag>
+   <elementGuidId>cddf0219-7f53-42ce-ab53-0e4a4574f66c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='All'])[1]/following::button[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>c1455dee-d3e6-4ec5-8a9a-ea0b12f51dbd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors bg-white text-gray-600 border-gray-200 hover:bg-gray-50</value>
+      <webElementGuid>58f3929c-1bfb-429c-a475-33d39c81ee2e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Blueprint</value>
+      <webElementGuid>c49e6945-437e-447d-9069-bb1cc83348a4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/div[@class=&quot;px-6 py-4 flex-1&quot;]/div[@class=&quot;flex justify-between mb-3&quot;]/div[@class=&quot;flex items-center gap-1 mb-4 flex-wrap&quot;]/button[@class=&quot;px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors bg-white text-gray-600 border-gray-200 hover:bg-gray-50&quot;]</value>
+      <webElementGuid>c2417f4e-da31-41b5-9850-a1c9d4dbbae7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='All'])[1]/following::button[1]</value>
+      <webElementGuid>75bcbabb-34b5-4b38-8244-2be3b192ec59</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Load Data'])[1]/following::button[2]</value>
+      <webElementGuid>c411efbf-e9be-467a-b2aa-a0a8cddbba8b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Task Creation'])[1]/preceding::button[1]</value>
+      <webElementGuid>176c6617-e534-4a31-8fc4-c00ed9f277fc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[1]/preceding::button[2]</value>
+      <webElementGuid>3939deee-2f37-4228-bef4-43d7cc7f2387</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Blueprint']/parent::*</value>
+      <webElementGuid>e93be903-6844-4a91-b130-04704172af45</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div/button[2]</value>
+      <webElementGuid>4217329e-e36f-4ec1-ae1d-05f017994857</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[(text() = 'Blueprint' or . = 'Blueprint')]</value>
+      <webElementGuid>f2a96899-e73d-4fbd-a78a-204339e2e431</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

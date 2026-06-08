@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida redirección directa de Tracking en Builder y carga de objetos visibles.</description>
+   <name>all-options</name>
+   <tag>builders,tracking,direct-redirect</tag>
+   <comment>Valida redireccion directa para todas las opciones criticas de Builders. Mantener este ID de caso en suites: Test Cases/Builders/direct-redirect/all-options (no usar /tracking).</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-direct-redirect-all-options-001</testCaseGuid>
+</TestCaseEntity>

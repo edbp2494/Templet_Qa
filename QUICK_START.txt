@@ -1,0 +1,246 @@
+===============================================================================
+GUÍA RÁPIDA: Katalon QA Sheets - Fase 1 MVP
+===============================================================================
+
+📍 UBICACIÓN DEL PROYECTO
+C:\Users\e2494\Katalon Studio\Templet\Editores\Sheet\Sheets
+
+⚠️  RUTA CORREGIDA: El proyecto Katalon real está en la subcarpeta "Sheets"
+    (generada automáticamente por Katalon Studio al crear el proyecto)
+
+===============================================================================
+🚀 CÓMO COMENZAR (3 pasos)
+===============================================================================
+
+PASO 1: Abrir Katalon Studio
+  → File > Open Project
+  → Navegar a: C:\Users\e2494\Katalon Studio\Templet\Editores\Sheet\Sheets
+  → Seleccionar el archivo: Sheets.prj
+  → Aceptar
+
+PASO 2: Configurar Credenciales (IMPORTANTE)
+  → Project > Settings > Profiles
+  → ENV_TEST.glbl:
+    • USERNAME: [Tu usuario QA para TEST]
+    • PASSWORD: [Tu password TEST]
+  → ENV_PROD.glbl:
+    • USERNAME: [Tu usuario QA para PROD]
+    • PASSWORD: [Tu password PROD]
+  → Save
+
+PASO 3: Ejecutar Suite
+  → Test Suites > Suite-Sheets-Phase1-MVP
+  → Click derecho > Run > Seleccionar Profile "ENV_TEST"
+  → Monitor: Katalon ejecutará 5 casos secuencialmente
+
+===============================================================================
+📊 LOS 5 TEST CASES INCLUIDOS
+===============================================================================
+
+✅ TC-SHEETS-LAYOUT-001
+   Tipo: MAQUETACIÓN
+   Compara: Render completo (TEST vs PROD)
+   Duracion: ~5 min
+   Resultado Esperado: Diferencia visual ≤ 3%
+
+✅ TC-SHEETS-ELEMENT-002
+   Tipo: VALIDACIÓN DE ELEMENTOS
+   Valida: Filtros (Fecha, Estado, Usuario)
+   Duracion: ~2 min
+   Resultado Esperado: Todos los filtros presentes y habilitados
+
+✅ TC-SHEETS-ELEMENT-003
+   Tipo: VALIDACIÓN DE ELEMENTOS
+   Valida: Estructura de tabla (headers y filas)
+   Duracion: ~2 min
+   Resultado Esperado: 6 columnas, al menos 1 fila, headers correctos
+
+✅ TC-SHEETS-COMPARE-004
+   Tipo: COMPARACIÓN VISUAL
+   Compara: Header + Toolbar (TEST vs PROD)
+   Duracion: ~6 min
+   Resultado Esperado: Ambas regiones ≤ 3% diferencia
+
+✅ TC-SHEETS-COMPARE-005
+   Tipo: COMPARACIÓN VISUAL
+   Compara: Grilla/tabla principal (TEST vs PROD)
+   Duracion: ~6 min
+   Resultado Esperado: Grilla ≤ 3% diferencia visual
+
+===============================================================================
+📁 ESTRUCTURA DE ARCHIVOS CLAVE
+===============================================================================
+
+Sheets/                              ← RAÍZ DEL PROYECTO KATALON
+  ├── Object Repository/
+  │   ├── Common/
+  │   │   └── login_username.rs, login_password.rs, login_button.rs
+  │   └── Sheets/
+  │       ├── table_main.rs, table_headers.rs, table_data_rows.rs
+  │       ├── filter_date_filter.rs, filter_status_filter.rs
+  │       ├── filter_user_filter.rs
+  │       ├── main_header.rs, main_toolbar.rs
+  │
+  ├── Keywords/
+  │   ├── CommonKeywords.groovy    (loginUser, captureScreenshot, etc)
+  │   └── SheetsKeywords.groovy    (verifyTableStructure, verifyFilters, etc)
+  │
+  ├── Profiles/
+  │   ├── default.glbl             (perfil por defecto de Katalon)
+  │   ├── ENV_TEST.glbl            (Variables para ambiente TEST)
+  │   └── ENV_PROD.glbl            (Variables para ambiente PROD)
+  │
+  ├── Test Cases/
+  │   └── Sheets/
+  │       ├── Layout/              TC-SHEETS-LAYOUT-001.tc
+  │       ├── Elements/            TC-SHEETS-ELEMENT-002.tc, 003.tc
+  │       └── Comparison/          TC-SHEETS-COMPARE-004.tc, 005.tc
+  │
+  ├── Scripts/                     ← Scripts Groovy ejecutables
+  │   └── Sheets/
+  │       ├── Layout/              TC-SHEETS-LAYOUT-001/Script.groovy
+  │       ├── Elements/            TC-SHEETS-ELEMENT-002/Script.groovy, ...
+  │       └── Comparison/          TC-SHEETS-COMPARE-004/Script.groovy, ...
+  │
+  └── Test Suites/
+      └── Suite-Sheets-Phase1-MVP.ts   (Ejecuta los 5 casos)
+
+===============================================================================
+🔧 AJUSTES IMPORTANTES ANTES DE EJECUTAR
+===============================================================================
+
+1. XPATHS DE ELEMENTOS
+   Los XPath en Object Repository están basados en estructura HTML típica.
+   Si tu aplicación tiene estructura diferente:
+   
+   a) Abre la página en navegador (F12 - DevTools)
+   b) Inspecciona el elemento (Click derecho > Inspect)
+   c) Copia el XPath correcto
+   d) Actualiza Object Repository XML correspondiente
+   
+   Ejemplo:
+   Antes:  //table[@id='main-table']
+   Después: //div[@class='data-container']//table
+   
+2. SELECTORES DE LOGIN
+   Actualizar si los campos de login usan atributos diferentes:
+   
+   - username field: name, id, placeholder
+   - password field: name, id, type
+   - login button: text, id, class
+   
+3. URLs CORRECTAS
+   Verificar que URLs en Profiles coincidan:
+   - ENV_TEST: https://sheets-test.templet.io/admin/manager.php
+   - ENV_PROD: https://sheets.templet.io/admin/manager.php
+
+===============================================================================
+📸 DÓNDE ENCONTRAR RESULTADOS
+===============================================================================
+
+Tras ejecutar, busca:
+
+✅ REPORTES
+   Reports/ 
+   → Archivo HTML con resumen de ejecución
+   → Logs en XML
+
+✅ SCREENSHOTS
+   Resources/Screenshots/
+   → TC-SHEETS-LAYOUT-001_full_render_TEST_20260426_120530.png
+   → TC-SHEETS-LAYOUT-001_full_render_PROD_20260426_120610.png
+   → ... etc
+
+✅ BASELINES PARA FUTURO
+   Resources/Baselines/
+   → Guardar screenshots de PROD aquí para futuras comparaciones
+
+===============================================================================
+❌ TROUBLESHOOTING COMÚN
+===============================================================================
+
+Problema: "Element not found"
+Solución:
+  1. Verificar XPath en Object Repository
+  2. Aumentar timeout: WebUI.waitForElementVisible(obj, 15)
+  3. Abrir en navegador y confirmar elemento existe
+
+Problema: "Login fails"
+Solución:
+  1. Verificar credentials en Profile
+  2. Confirmar usuario tiene acceso en TEST/PROD
+  3. Checar si login URL es correcta
+
+Problema: "Screenshots no se guardan"
+Solución:
+  1. Crear carpeta: Resources/Screenshots/
+  2. Verificar permisos de escritura
+  3. Revisar valor de SCREENSHOT_DIR en Profile
+
+Problema: "Test case toma demasiado tiempo"
+Solución:
+  1. Reducir timeout: WebUI.waitForPageLoad(5) en lugar de 10
+  2. Usar WebUI.delay(1) en lugar de 2
+  3. Ejecutar casos individuales en lugar de suite
+
+===============================================================================
+📝 PRÓXIMOS PASOS (BACKLOG)
+===============================================================================
+
+SEMANA 2:
+  [ ] Ejecutar Suite-Phase1 completa
+  [ ] Validar baselines visuales (3% umbral)
+  [ ] Documentar diferencias encontradas
+  [ ] Ajustar XPaths según necesidad
+
+SEMANA 3-4 (Decks):
+  [ ] Crear TestCases similares para módulo Decks
+  [ ] Reutilizar Keywords comunes
+  [ ] Agregar filtros específicos de Decks
+
+SEMANA 5-6 (Email):
+  [ ] Crear TestCases para Email
+  [ ] Reutilizar Keywords comunes
+  [ ] Agregar validaciones de composer
+
+FASE 2:
+  [ ] WebAPI test cases (validar endpoints)
+  [ ] Pruebas funcionales end-to-end
+  [ ] Integraciones con CI/CD
+
+===============================================================================
+🆘 PREGUNTAS FRECUENTES
+===============================================================================
+
+P: ¿Puedo ejecutar un solo test case?
+R: Sí. Click derecho en TestCase > Run > Seleccionar Profile
+
+P: ¿Cómo cambio entre TEST y PROD?
+R: Seleccionar Profile diferente antes de ejecutar
+   - ENV_TEST → Ejecuta en https://sheets-test.templet.io
+   - ENV_PROD → Ejecuta en https://sheets.templet.io
+
+P: ¿Qué significa "umbral 3%"?
+R: Permite diferencia visual de hasta 3% entre TEST y PROD
+   Útil para antialiasing de fonts, rendering ligero
+   Valores >3% = brechas detectadas a investigar
+
+P: ¿Cómo agrego nuevas columnas a la validación?
+R: Editar TC-SHEETS-ELEMENT-003.tc
+   Variable expectedColumns: "ID,Name,Status,Created,Modified,Actions,NewColumn"
+
+P: ¿Puedo ejecutar desde línea de comandos?
+R: Sí. Ver README.md para comandos katalon CLI
+
+===============================================================================
+
+¿ LISTO PARA EMPEZAR ?
+
+1. Abre Katalon Studio
+2. Carga proyecto: C:\Users\e2494\Katalon Studio\Templet\Editores\Sheet\Sheets\Sheets.prj
+3. Actualiza credenciales en Profiles > ENV_TEST.glbl (USERNAME y PASSWORD)
+4. Ejecuta: Test Suites > Suite-Sheets-Phase1-MVP
+
+¡Éxito!
+
+===============================================================================

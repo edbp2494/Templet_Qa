@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Recorre items de la toolbar izquierda de Builders, valida carga por item, vuelve a Home y termina con Logout.</description>
+   <name>click-visible-objects-return-home</name>
+   <tag>objects,click,return-home,builders,landing</tag>
+   <comment>Navega Home, Tracking, Configure/Create/Edit/Track y ejecuta logout al final.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-objects-click-002</testCaseGuid>
+</TestCaseEntity>

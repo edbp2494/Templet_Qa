@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke base de Builders TEST.</description>
+   <name>smoke</name>
+   <tag>smoke,builders</tag>
+   <comment>Validación inicial de carga de landing pública</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8be8d5dd-0dc6-4c8a-8d28-84edda0b4101</testCaseGuid>
+</TestCaseEntity>

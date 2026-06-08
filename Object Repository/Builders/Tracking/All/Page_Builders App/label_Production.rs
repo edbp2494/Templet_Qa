@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_Production</name>
+   <tag></tag>
+   <elementGuidId>1cf7a6fa-1a08-43c6-85ce-5aa7a740cff9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Execution Tracking'])[1]/following::label[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+      <webElementGuid>2d60ced6-a8f9-4c20-947c-a298dc3f0ebc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-gray-500 cursor-pointer select-none</value>
+      <webElementGuid>fc14de6f-6ab8-4b1a-9d11-6be28e8689af</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>data-source-switch</value>
+      <webElementGuid>5ec219e9-86f2-428b-8533-b00f3de28141</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Production</value>
+      <webElementGuid>1e9e655f-a6bd-45d8-ac77-80f43112a70f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[@class=&quot;flex h-screen bg-gray-50&quot;]/main[@class=&quot;flex-1 min-w-0 overflow-auto&quot;]/div[@class=&quot;bg-gray-50&quot;]/div[@class=&quot;flex flex-col min-h-screen bg-gray-50&quot;]/header[@class=&quot;bg-gray-50 px-6 py-4 mb-2&quot;]/div[@class=&quot;flex items-center justify-between&quot;]/div[@class=&quot;flex items-center gap-2&quot;]/div[@class=&quot;flex items-center gap-3&quot;]/div[@class=&quot;flex items-center gap-2&quot;]/label[@class=&quot;font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-gray-500 cursor-pointer select-none&quot;]</value>
+      <webElementGuid>0e62842a-ffa5-468a-8502-6f0517b5d611</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Execution Tracking'])[1]/following::label[1]</value>
+      <webElementGuid>2a5c5b22-a450-43c0-aae5-ffe9f1223123</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[1]/following::label[1]</value>
+      <webElementGuid>2137e951-2940-4bce-bb81-886bf4313e38</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Testing'])[1]/preceding::label[1]</value>
+      <webElementGuid>641deb5e-2cde-4064-9408-2f8d6f66b093</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='May'])[1]/preceding::label[2]</value>
+      <webElementGuid>b2dbe8af-d11d-4bf1-9495-ae1c8940d3c8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Production']/parent::*</value>
+      <webElementGuid>9a226fc2-8bd6-493a-b952-2e0e4b4e10aa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//label</value>
+      <webElementGuid>edb7b3e2-aaab-400a-897b-c9ed0a4b1758</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//label[(text() = 'Production' or . = 'Production')]</value>
+      <webElementGuid>cfb9a3d3-b97c-4b35-9f7d-6bd7856c0cf6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

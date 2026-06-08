@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Sheets.</description>
+   <name>functional-smoke</name>
+   <tag>smoke,functional,sheets</tag>
+   <comment>Migrado desde TC-SHEETS-FUNCTIONAL-SMOKE-010</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f3cd2e7-1e95-43d6-9a44-ecdc0e5f1010</testCaseGuid>
+</TestCaseEntity>

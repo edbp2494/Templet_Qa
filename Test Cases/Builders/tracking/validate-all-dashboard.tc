@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Tracking All: texto, forma, color, posicion de objetos y snapshot de metricas.</description>
+   <name>validate-all-dashboard</name>
+   <tag>builders,tracking,all,ui,visual,metrics</tag>
+   <comment>Incluye validacion de titulo/subtitulo dinamico, switch en Production apagado, mes/anio, boton Load Data y comparacion con baseline previo.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-tracking-all-dashboard-001</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestObject>
+    <description>Botón de login</description>
+    <name>login_button</name>
+    <tag></tag>
+    <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+    <selectorCollection>
+        <entry>
+            <key>BASIC</key>
+            <value>//button[contains(text(), 'Login') or contains(text(), 'Sign In') or @id='login-btn']</value>
+        </entry>
+        <entry>
+            <key>CSS</key>
+            <value>button[type='submit']</value>
+        </entry>
+        <entry>
+            <key>XPATH</key>
+            <value>//button[@type='submit' or contains(@class, 'login')]</value>
+        </entry>
+    </selectorCollection>
+    <webElementProperties>
+        <isSelected>false</isSelected>
+        <matchCondition>equals</matchCondition>
+        <name>tag</name>
+        <type>Main</type>
+        <value>button</value>
+        <webElementGuid>00000000-0000-0000-0000-000000000001</webElementGuid>
+    </webElementProperties>
+</TestObject>

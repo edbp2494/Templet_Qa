@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida click y contenido visual del tab Task Creation en Tracking.</description>
+   <name>validate-task-creation-tab</name>
+   <tag>builders,tracking,task-creation,tab,visual</tag>
+   <comment>Verifica color activo, cards esperadas, textos y scroll hasta tabla.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-tracking-taskcreation-tab-001</testCaseGuid>
+</TestCaseEntity>

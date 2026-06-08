@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida toolbar izquierda autenticada de Builders, incluyendo orden esperado de items.</description>
+   <name>validate-objects-visible</name>
+   <tag>objects,visible,builders,landing</tag>
+   <comment>Abre sesión, despliega menú hamburguesa y valida orden de iconos/texto de Home a Logout.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-objects-visible-001</testCaseGuid>
+</TestCaseEntity>

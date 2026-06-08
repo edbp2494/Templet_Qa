@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Decks.</description>
+   <name>functional-smoke</name>
+   <tag>smoke,functional,decks</tag>
+   <comment>Migrado desde TC-DECKS-FUNCTIONAL-SMOKE-011</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3f3cd2e7-1e95-43d6-9a44-ecdc0e5f1011</testCaseGuid>
+</TestCaseEntity>

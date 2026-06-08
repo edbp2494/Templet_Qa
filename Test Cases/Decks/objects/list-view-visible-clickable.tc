@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validación de objetos visibles en lista de Decks (con reutilización de sesión).</description>
+   <name>list-view-visible-clickable</name>
+   <tag>objects,listview,decks,reusedriver</tag>
+   <comment>Script para validar visibilidad/clickeabilidad de objetos tras click en List.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>decks-objects-listview-0002</testCaseGuid>
+</TestCaseEntity>

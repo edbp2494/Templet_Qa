@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida initiatives en Email con y sin objetos por mensaje de contenido vacío.</description>
+   <name>initiative-content-validation</name>
+   <tag>email,initiative,regression,filters</tag>
+   <comment>Migrado desde TC-EMAIL-FILTERS-INITIATIVE-VALIDATION-008</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>59a84cec-040d-4297-b9e7-376583d456e5</testCaseGuid>
+</TestCaseEntity>

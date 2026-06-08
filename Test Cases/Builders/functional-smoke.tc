@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Builders sobre landing pública y acceso a sign-in.</description>
+   <name>functional-smoke</name>
+   <tag>smoke,functional,builders</tag>
+   <comment>Validación rápida de heading, CTA de sign-in y soporte</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0a35b7f6-e250-4e7b-9d31-4ccb708c4102</testCaseGuid>
+</TestCaseEntity>

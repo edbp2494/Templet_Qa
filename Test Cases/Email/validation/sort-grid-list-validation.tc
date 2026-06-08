@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida que Sort (Grid y List) reordena documentos correctamente en Email. FALLA si Sort no funciona.</description>
+   <name>sort-grid-list-validation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f2g3h4i5-5678-90ab-cdef-567890abcdef</testCaseGuid>
+</TestCaseEntity>

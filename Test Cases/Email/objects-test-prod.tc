@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Comparación de objetos entre TEST y PROD para Email.</description>
+   <name>objects-test-prod</name>
+   <tag>compare,test,prod,email</tag>
+   <comment>Migrado desde TC-EMAIL-TEST-PROD-OBJECTS-005</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4f3cd2e7-1e95-43d6-9a44-ecdc0e5f1005</testCaseGuid>
+</TestCaseEntity>

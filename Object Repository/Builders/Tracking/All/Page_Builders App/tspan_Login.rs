@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>tspan_Login</name>
+   <tag></tag>
+   <elementGuidId>f9563428-7bb9-44ce-9e92-5eb8dfc60ea6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//tspan[(text() = 'Login' or . = 'Login')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#recharts-zindex-2000-_r_1a_ > g.recharts-cartesian-axis-tick-labels.recharts-yAxis-tick-labels > g.recharts-layer.recharts-cartesian-axis-tick-label > text.recharts-text.recharts-cartesian-axis-tick-value > tspan</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>tspan</value>
+      <webElementGuid>34dec34b-3807-4b95-b144-ebf11054ac9a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>x</name>
+      <type>Main</type>
+      <value>200</value>
+      <webElementGuid>472003fd-1c42-4404-8a92-c43e8f7e069a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>dy</name>
+      <type>Main</type>
+      <value>0.355em</value>
+      <webElementGuid>7f75860b-c2ff-40e0-afd1-4e1f094910d5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Login</value>
+      <webElementGuid>64377be7-8e92-4995-bc94-5e03a80460e5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;recharts-zindex-2000-_r_1a_&quot;)/g[@class=&quot;recharts-cartesian-axis-tick-labels recharts-yAxis-tick-labels&quot;]/g[@class=&quot;recharts-layer recharts-cartesian-axis-tick-label&quot;]/text[@class=&quot;recharts-text recharts-cartesian-axis-tick-value&quot;]/tspan[1]</value>
+      <webElementGuid>374d12c9-7a9e-4f56-89ea-0d9038f4bcf1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//tspan[(text() = 'Login' or . = 'Login')]</value>
+      <webElementGuid>f79f3845-d46b-42ce-86eb-a0799537786a</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

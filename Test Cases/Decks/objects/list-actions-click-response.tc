@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Hace click en cada acción del menú de List View y valida señal de respuesta UI.</description>
+   <name>list-actions-click-response</name>
+   <tag>objects,listview,actions,response,decks,reusedriver</tag>
+   <comment>TC separado para validación activa de acciones (Edit/Rename/URL/Duplicate/Download/Move/Delete).</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>decks-list-actions-response-0003</testCaseGuid>
+</TestCaseEntity>

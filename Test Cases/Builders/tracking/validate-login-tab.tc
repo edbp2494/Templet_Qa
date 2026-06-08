@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida click y contenido visual del tab Login en Tracking.</description>
+   <name>validate-login-tab</name>
+   <tag>builders,tracking,login,tab,visual</tag>
+   <comment>Verifica color activo, card esperada, textos y scroll hasta tabla.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-tracking-login-tab-001</testCaseGuid>
+</TestCaseEntity>
