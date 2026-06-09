@@ -2609,39 +2609,86 @@ class TempletPortalKeywords {
 				return false;
 			};
 
-			clickTab(targetLabel);
+			var TAB_LABELS = ['all', 'blueprint', 'task creation', 'login'];
+			var allButtons = Array.from(document.querySelectorAll('button'));
+
+			// Click the target tab using exact TAB_LABELS match (avoids sidebar buttons)
+			var tabButtons = allButtons.filter(function(b) {
+				var txt = normalize(b.innerText || b.textContent || '').toLowerCase();
+				return TAB_LABELS.indexOf(txt) >= 0;
+			});
+			var targetBtn = tabButtons.find(function(b) {
+				return normalize(b.innerText || b.textContent || '').toLowerCase() === targetLabel;
+			});
+			if (targetBtn) { targetBtn.scrollIntoView({block: 'center', inline: 'nearest'}); targetBtn.click(); }
+			else { clickTab(targetLabel); }
 
 			var discover = {
 				tabLabel: targetLabel,
-				tabs: [],
+				tabs: tabButtons.map(function(b) {
+					return {
+						text: normalize(b.innerText || b.textContent || ''),
+						cls: String(b.className || '').substring(0, 140),
+						bg: window.getComputedStyle(b).backgroundColor
+					};
+				}),
 				chips: [],
 				cards: [],
 				dailySections: []
 			};
 
-			var buttons = Array.from(document.querySelectorAll('button')).slice(0, 10).map(function(b) {
-				return {text: normalize(b.textContent || ''), className: String(b.className || '').substring(0, 100)};
+			// Chips — "Showing stats for" text
+			var chipEls = Array.from(document.querySelectorAll('*')).filter(function(el) {
+				if (!(el instanceof HTMLElement)) return false;
+				var txt = normalize(el.textContent || '').toLowerCase();
+				return txt.indexOf('showing stats for') >= 0;
+			});
+			discover.chips = chipEls.map(function(el) {
+				return {tag: el.tagName, cls: String(el.className || '').substring(0, 80), text: normalize(el.textContent || '').substring(0, 120)};
 			});
 
-			var allText = Array.from(document.querySelectorAll('*')).map(function(el) {
-				var txt = normalize(el.textContent || '');
-				if (txt.length > 5 && txt.length < 80 && txt.indexOf('SHOWING') >= 0) {
-					return {element: el.tagName, text: txt, className: String(el.className || '').substring(0, 80)};
-				}
-			}).filter(Boolean);
+			// Cards — short heading-like text in rounded containers
+			var cardDivs = Array.from(document.querySelectorAll('div[class*="rounded-xl"], div[class*="p-5"], div[class*="p-6"]'));
+			var cardTitles = [];
+			cardDivs.forEach(function(card) {
+				Array.from(card.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span')).forEach(function(el) {
+					if (!(el instanceof HTMLElement)) return;
+					var style = window.getComputedStyle(el);
+					if (style.display === 'none' || style.visibility === 'hidden') return;
+					var txt = normalize(el.textContent || '').trim();
+					if (txt.length > 3 && txt.length < 80 && el.children.length < 3 && cardTitles.indexOf(txt) < 0) {
+						cardTitles.push(txt);
+					}
+				});
+			});
+			discover.cards = cardTitles;
+
+			// Daily sections
+			var dailyEls = Array.from(document.querySelectorAll('*')).filter(function(el) {
+				return el.children && el.children.length > 0 && normalize(el.textContent || '').indexOf('Daily Executions') >= 0;
+			});
+			discover.dailySections = dailyEls.map(function(el) {
+				return {tag: el.tagName, cls: String(el.className || '').substring(0, 100), textStart: normalize(el.textContent || '').substring(0, 120)};
+			});
+
+			// Button sample (top 10 non-tab buttons for context)
+			discover.buttonsSample = allButtons.filter(function(b) {
+				var txt = normalize(b.innerText || b.textContent || '').toLowerCase();
+				return TAB_LABELS.indexOf(txt) < 0;
+			}).slice(0, 10).map(function(b) {
+				return {text: normalize(b.textContent || '').substring(0, 60), className: String(b.className || '').substring(0, 100)};
+			});
+
+			discover.chipsContaining_SHOWING = discover.chips;
 
 			var cardElements = Array.from(document.querySelectorAll('div[class*="rounded"], div[class*="card"], section, article')).slice(0, 10).map(function(el) {
-				var txt = normalize(el.textContent || '').substring(0, 100);
-				return {className: String(el.className || '').substring(0, 100), textStart: txt, tag: el.tagName};
+				return {className: String(el.className || '').substring(0, 100), textStart: normalize(el.textContent || '').substring(0, 100), tag: el.tagName};
 			});
+			discover.cardSample = cardElements;
 
 			var dailyEl = Array.from(document.querySelectorAll('*')).find(function(el) {
 				return normalize(el.textContent || '').indexOf('Daily') >= 0;
 			});
-
-			discover.buttonsSample = buttons;
-			discover.chipsContaining_SHOWING = allText;
-			discover.cardSample = cardElements;
 			discover.dailyElementTag = dailyEl ? dailyEl.tagName : 'NOT_FOUND';
 
 			return discover;
@@ -2657,6 +2704,7 @@ class TempletPortalKeywords {
 	static Map<String, Object> collectTrackingTabState(String tabLabel) {
 		Map<String, Object> state = (Map<String, Object>) WebUI.executeJavaScript('''
 			var targetLabel = String(arguments[0] || '').toLowerCase();
+			var TAB_LABELS = ['all', 'blueprint', 'task creation', 'login'];
 			var normalize = function(value) {
 				var raw = String(value || '');
 				var out = '';
@@ -2665,38 +2713,128 @@ class TempletPortalKeywords {
 					var ch = raw.charAt(i);
 					var code = raw.charCodeAt(i);
 					var isWs = code === 9 || code === 10 || code === 13 || code === 32;
-					if (isWs) {
-						if (!space) {
-							out += ' ';
-							space = true;
-						}
-					} else {
-						out += ch;
-						space = false;
-					}
+					if (isWs) { if (!space) { out += ' '; space = true; } }
+					else { out += ch; space = false; }
 				}
 				return out.trim();
 			};
 
-			var clickTab = function(label) {
-				var buttons = Array.from(document.querySelectorAll('button'));
-				for (var i = 0; i < buttons.length; i++) {
-					var txt = normalize(buttons[i].innerText || buttons[i].textContent || '').toLowerCase();
-					if (txt === label) {
-						buttons[i].scrollIntoView({block: 'center', inline: 'nearest'});
-						buttons[i].click();
-						return true;
-					}
-				}
-				return false;
-			};
+			// Find tracking tab buttons by exact text match
+			var allButtons = Array.from(document.querySelectorAll('button'));
+			var tabButtons = allButtons.filter(function(b) {
+				var txt = normalize(b.innerText || b.textContent || '').toLowerCase();
+				return TAB_LABELS.indexOf(txt) >= 0;
+			});
+			var targetBtn = tabButtons.find(function(b) {
+				return normalize(b.innerText || b.textContent || '').toLowerCase() === targetLabel;
+			});
+			var clicked = false;
+			if (targetBtn) {
+				targetBtn.scrollIntoView({block: 'center', inline: 'nearest'});
+				targetBtn.click();
+				clicked = true;
+			} else {
+				// Fallback: click any button with matching text (includes sidebar)
+				var fallback = allButtons.find(function(b) {
+					return normalize(b.innerText || b.textContent || '').toLowerCase() === targetLabel;
+				});
+				if (fallback) { fallback.scrollIntoView({block: 'center', inline: 'nearest'}); fallback.click(); clicked = true; }
+			}
 
-			var clicked = clickTab(targetLabel);
-			var allElements = Array.from(document.querySelectorAll('*')).slice(0, 200);
+			// Read tab visual state
+			var tabs = tabButtons.map(function(b) {
+				var txt = normalize(b.innerText || b.textContent || '');
+				var cls = String(b.className || '');
+				var style = window.getComputedStyle(b);
+				return { text: txt, cls: cls.substring(0, 140), bg: style.backgroundColor };
+			});
+			var activeTab = tabs.find(function(t) { return t.text.toLowerCase() === targetLabel; });
+			var activeBg    = activeTab ? (activeTab.bg || '') : '';
+			var activeClass = activeTab ? (activeTab.cls || '') : '';
+
+			// "Showing stats for" chip
+			var chipEl = Array.from(document.querySelectorAll('*')).find(function(el) {
+				if (!(el instanceof HTMLElement)) return false;
+				var txt = normalize(el.textContent || '').toLowerCase();
+				return txt.indexOf('showing stats for') >= 0;
+			});
+			var activeChip = '';
+			if (chipEl) {
+				var m = normalize(chipEl.textContent || '').match(/showing stats for\s+(.+)/i);
+				activeChip = m ? m[1].trim() : normalize(chipEl.textContent || '');
+			}
+
+			// Production switch
+			var switchEl = Array.from(document.querySelectorAll('[role="switch"], input[type="checkbox"], button[role="switch"]')).find(function(el) {
+				var host = el.closest('label,div,span') || el;
+				var txt = normalize(host.textContent || '').toLowerCase();
+				var lbl = (el.getAttribute('aria-label') || '').toLowerCase();
+				return txt.indexOf('production') >= 0 || lbl.indexOf('production') >= 0 ||
+				       (el.getAttribute('data-testid') || '').toLowerCase().indexOf('switch') >= 0;
+			});
+			var switchAria  = switchEl ? (switchEl.getAttribute('aria-checked') || '') : '';
+			var switchState = switchEl ? (switchEl.getAttribute('data-state') || '') : '';
+
+			// Month, year, Load Data buttons
+			var MONTHS = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+			var monthBtn = allButtons.find(function(b) {
+				var txt = normalize(b.textContent || '').toLowerCase().trim();
+				return MONTHS.indexOf(txt) >= 0 || MONTHS.some(function(m) { return txt === m.substring(0,3); });
+			});
+			var monthText = monthBtn ? normalize(monthBtn.textContent || '').trim() : '';
+			var yearBtn = allButtons.find(function(b) { return /^20\d{2}$/.test(normalize(b.textContent || '').trim()); });
+			var yearText = yearBtn ? normalize(yearBtn.textContent || '').trim() : '';
+			var loadBtn = allButtons.find(function(b) { return normalize(b.textContent || '').toLowerCase().trim() === 'load data'; });
+			var loadDataText = loadBtn ? normalize(loadBtn.textContent || '').trim() : '';
+
+			// Card titles — short text nodes inside rounded card divs
+			var cardTitles = [];
+			var cardDivs = Array.from(document.querySelectorAll('div[class*="rounded-xl"], div[class*="p-5"], div[class*="p-6"]'));
+			cardDivs.forEach(function(card) {
+				Array.from(card.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span')).forEach(function(el) {
+					if (!(el instanceof HTMLElement)) return;
+					var style = window.getComputedStyle(el);
+					if (style.display === 'none' || style.visibility === 'hidden') return;
+					var txt = normalize(el.textContent || '').trim();
+					if (txt.length > 3 && txt.length < 80 && el.children.length < 3 && cardTitles.indexOf(txt) < 0) {
+						cardTitles.push(txt);
+					}
+				});
+			});
+
+			// Daily Executions section
+			var dailyEl = Array.from(document.querySelectorAll('*')).find(function(el) {
+				return el.children.length > 0 && normalize(el.textContent || '').indexOf('Daily Executions') >= 0;
+			});
+			var dailyPresent = dailyEl != null;
+			var dailySubtitle = '';
+			if (dailyEl) {
+				var subEl = Array.from(dailyEl.querySelectorAll('p,span,div,h2,h3')).find(function(el) {
+					return normalize(el.textContent || '').toLowerCase().indexOf('operations per day') >= 0;
+				});
+				dailySubtitle = subEl ? normalize(subEl.textContent || '') : normalize(dailyEl.textContent || '').substring(0, 120);
+			}
+
+			// Top Active Users
+			var topUsersPresent = Array.from(document.querySelectorAll('*')).some(function(el) {
+				return normalize(el.textContent || '').indexOf('Top Active Users') >= 0;
+			});
 
 			return {
 				clicked: clicked,
-				dom_sample: allElements.map(function(el) { return {tag: el.tagName, text: normalize(el.textContent || '').substring(0, 60), cls: String(el.className || '').substring(0, 80)}; }).slice(0, 20)
+				tabs: tabs,
+				activeBg: activeBg,
+				activeClass: activeClass,
+				activeChip: activeChip,
+				switchAria: switchAria,
+				switchState: switchState,
+				monthText: monthText,
+				yearText: yearText,
+				loadDataText: loadDataText,
+				cardTitles: cardTitles,
+				dailyPresent: dailyPresent,
+				topUsersPresent: topUsersPresent,
+				dailySubtitle: dailySubtitle
 			};
 		''', [tabLabel ?: ''])
 
@@ -2875,12 +3013,16 @@ class TempletPortalKeywords {
 
 			captureCaseScreenshot(caseId, 'tracking_tab_' + tabLabel.toLowerCase().replaceAll('[^a-z0-9]+', '_'))
 
-			KeywordUtil.markWarning(caseId + ' INFO: Estructura DOM del tab ' + tabLabel + ' guardada en ' + discoveryOutputPath + '. Revisa para identificar selectores correctos.')
-			if (!warnings.isEmpty()) {
-				KeywordUtil.markWarning(caseId + ' warnings: ' + warnings.join(' | '))
-			}
+			KeywordUtil.logInfo(caseId + ' [DISCOVERY] estructura guardada en ' + discoveryOutputPath)
 
-			KeywordUtil.markPassed(caseId + ' OK (DISCOVERY). Tab ' + tabLabel + ' estructura capturada para debug en ' + platformLabel)
+			CustomKeywords.'CommonKeywords.logCaseSummary'(caseId, failures, warnings)
+			if (!failures.isEmpty()) {
+				KeywordUtil.markFailedAndStop('[' + caseId + '] FAILED: ' + failures.join(' | '))
+			} else if (!warnings.isEmpty()) {
+				KeywordUtil.markWarning('[' + caseId + '] PASSED con ' + warnings.size() + ' warnings: ' + warnings.join(' | '))
+			} else {
+				KeywordUtil.markPassed('[' + caseId + '] PASSED — tab ' + tabLabel + ' OK en ' + platformLabel)
+			}
 		} finally {
 			safeCloseBrowser()
 		}
