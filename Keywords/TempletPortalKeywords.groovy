@@ -3420,6 +3420,19 @@ class TempletPortalKeywords {
 		boolean msEmailVisible = existsByXPath("//input[@name='loginfmt' or @id='i0116']")
 		boolean onMicrosoftHost = currentUrlSafe().contains('login.microsoftonline.com') || currentUrlSafe().contains('microsoftonline.com')
 
+		// "Pick an account": si hay tile de la cuenta (sesion previa en el perfil), click directo
+		if (onMicrosoftHost && !msEmailVisible) {
+			boolean accountTileClicked = clickFirstPresent([
+				xpathObject('ms_account_tile_exact', "//div[@data-test-id='" + username + "']"),
+				xpathObject('ms_account_tile_generic', "//div[@role='button' and .//small[contains(normalize-space(.),'" + username + "')]]")
+			], 3)
+			if (accountTileClicked) {
+				KeywordUtil.logInfo('[LOGIN] Tile de cuenta existente clickeado para ' + username)
+				WebUI.delay(2)
+				msEmailVisible = existsByXPath("//input[@name='loginfmt' or @id='i0116']")
+			}
+		}
+
 		if (msEmailVisible) {
 			WebUI.setText(findTestObject('Object Repository/Common/input_ms_email'), username)
 			clickFirstPresent([
@@ -3427,13 +3440,33 @@ class TempletPortalKeywords {
 				xpathObject('ms_next_button', "//button[contains(.,'Next') or contains(.,'Siguiente')]")
 			], 5)
 
-			WebUI.waitForElementVisible(findTestObject('Object Repository/Common/input_ms_password'), 15)
-			WebUI.setText(findTestObject('Object Repository/Common/input_ms_password'), password)
-			clickFirstPresent([
-				xpathObject('ms_signin_input', "//input[@id='idSIButton9' and @type='submit']"),
-				xpathObject('ms_signin_button', "//button[contains(.,'Sign in') or contains(.,'Iniciar')]")
-			], 5)
+			// Espera adaptativa post-Next: password / SSO silencioso / tile de cuenta / link "Use your password"
+			boolean passwordHandled = false
+			boolean flowResolved = false
+			for (int waitTick = 0; waitTick < 20 && !flowResolved; waitTick++) {
+				WebUI.delay(1)
+				if (existsByXPath("//input[@name='passwd' or @id='i0118' or (@type='password' and not(@aria-hidden='true'))]")) {
+					WebUI.setText(findTestObject('Object Repository/Common/input_ms_password'), password)
+					clickFirstPresent([
+						xpathObject('ms_signin_input', "//input[@id='idSIButton9' and @type='submit']"),
+						xpathObject('ms_signin_button', "//button[contains(.,'Sign in') or contains(.,'Iniciar')]")
+					], 5)
+					passwordHandled = true
+					flowResolved = true
+				} else if (existsByXPath("//div[@data-test-id='" + username + "']")) {
+					clickIfPresent(xpathObject('ms_account_tile_retry', "//div[@data-test-id='" + username + "']"), 3)
+				} else if (existsByXPath("//*[@id='idA_PWD_SwitchToPassword']")) {
+					clickIfPresent(xpathObject('ms_use_password_link', "//*[@id='idA_PWD_SwitchToPassword']"), 3)
+				} else if (!currentUrlSafe().contains('microsoftonline') && isValidAppSession()) {
+					KeywordUtil.logInfo('[LOGIN] Sesion resuelta via SSO silencioso sin password.')
+					flowResolved = true
+				}
+			}
+			if (!flowResolved) {
+				KeywordUtil.logInfo('[LOGIN] Password no aparecio tras espera adaptativa (20s); se continua para validacion de sesion.')
+			}
 
+			// KMSI "Stay signed in?" -> Yes (aplica tanto a flujo con password como SSO)
 			clickFirstPresent([
 				xpathObject('ms_yes_input', "//input[@id='idSIButton9' and @type='submit']"),
 				xpathObject('ms_yes_button', "//button[contains(.,'Yes') or contains(.,'Si')]")
