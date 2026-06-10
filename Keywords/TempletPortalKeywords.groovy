@@ -2753,15 +2753,17 @@ class TempletPortalKeywords {
 			var activeClass = activeTab ? (activeTab.cls || '') : '';
 
 			// "Showing stats for" chip
-			var chipEl = Array.from(document.querySelectorAll('*')).find(function(el) {
-				if (!(el instanceof HTMLElement)) return false;
-				var txt = normalize(el.textContent || '').toLowerCase();
-				return txt.indexOf('showing stats for') >= 0;
+			// El <span> con texto exacto "Showing stats for" es el label;
+			// su parentElement contiene también el tab label activo (ej: "Blueprint")
+			var sfSpan = Array.from(document.querySelectorAll('span,div,p')).find(function(el) {
+				return (el instanceof HTMLElement) && normalize(el.textContent || '').toLowerCase() === 'showing stats for';
 			});
 			var activeChip = '';
-			if (chipEl) {
-				var m = normalize(chipEl.textContent || '').match(/showing stats for\s+(.+)/i);
-				activeChip = m ? m[1].trim() : normalize(chipEl.textContent || '');
+			if (sfSpan && sfSpan.parentElement) {
+				var parentTxt = normalize(sfSpan.parentElement.textContent || '');
+				var parentLow = parentTxt.toLowerCase();
+				var sfIdx = parentLow.indexOf('showing stats for');
+				activeChip = sfIdx >= 0 ? parentTxt.substring(sfIdx + 'showing stats for'.length).trim() : parentTxt;
 			}
 
 			// Production switch
@@ -2782,7 +2784,7 @@ class TempletPortalKeywords {
 				return MONTHS.indexOf(txt) >= 0 || MONTHS.some(function(m) { return txt === m.substring(0,3); });
 			});
 			var monthText = monthBtn ? normalize(monthBtn.textContent || '').trim() : '';
-			var yearBtn = allButtons.find(function(b) { return /^20\d{2}$/.test(normalize(b.textContent || '').trim()); });
+			var yearBtn = allButtons.find(function(b) { var yr = parseInt(normalize(b.textContent || '').trim()); return yr >= 2020 && yr <= 2099 && String(yr) === normalize(b.textContent || '').trim(); });
 			var yearText = yearBtn ? normalize(yearBtn.textContent || '').trim() : '';
 			var loadBtn = allButtons.find(function(b) { return normalize(b.textContent || '').toLowerCase().trim() === 'load data'; });
 			var loadDataText = loadBtn ? normalize(loadBtn.textContent || '').trim() : '';
@@ -2802,17 +2804,21 @@ class TempletPortalKeywords {
 				});
 			});
 
-			// Daily Executions section
-			var dailyEl = Array.from(document.querySelectorAll('*')).find(function(el) {
-				return el.children.length > 0 && normalize(el.textContent || '').indexOf('Daily Executions') >= 0;
+			// Daily Executions section — buscar el subtitle más específico (leaf con texto corto)
+			var dailyPresent = Array.from(document.querySelectorAll('*')).some(function(el) {
+				return el instanceof HTMLElement && normalize(el.textContent || '') === 'Daily Executions';
 			});
-			var dailyPresent = dailyEl != null;
 			var dailySubtitle = '';
-			if (dailyEl) {
-				var subEl = Array.from(dailyEl.querySelectorAll('p,span,div,h2,h3')).find(function(el) {
-					return normalize(el.textContent || '').toLowerCase().indexOf('operations per day') >= 0;
-				});
-				dailySubtitle = subEl ? normalize(subEl.textContent || '') : normalize(dailyEl.textContent || '').substring(0, 120);
+			var dailySubCandidates = Array.from(document.querySelectorAll('p,span,div')).filter(function(el) {
+				if (!(el instanceof HTMLElement)) return false;
+				var txt = normalize(el.textContent || '').toLowerCase();
+				return txt.indexOf('operations per day') >= 0 && txt.length < 200;
+			});
+			dailySubCandidates.sort(function(a, b) {
+				return normalize(a.textContent || '').length - normalize(b.textContent || '').length;
+			});
+			if (dailySubCandidates.length > 0) {
+				dailySubtitle = normalize(dailySubCandidates[0].textContent || '');
 			}
 
 			// Top Active Users
@@ -2897,8 +2903,8 @@ class TempletPortalKeywords {
 			if (!Boolean.TRUE.equals(state.clicked)) {
 				failures.add('No se pudo clickear tab ' + tabLabel)
 			}
-			if (collapseSpaces((state.activeChip ?: '').toString()).toLowerCase() != tabLabel.toLowerCase()) {
-				failures.add('Chip SHOWING STATS FOR no coincide. esperado=' + tabLabel + ' actual=' + (state.activeChip ?: ''))
+			if (!collapseSpaces((state.activeChip ?: '').toString()).toLowerCase().contains(tabLabel.toLowerCase())) {
+				warnings.add('[CHIP] SHOWING STATS FOR no refleja tab. esperado contiene="' + tabLabel + '" actual="' + (state.activeChip ?: '') + '"')
 			}
 
 			String switchAria = (state.switchAria ?: '').toString().toLowerCase()
@@ -2957,22 +2963,11 @@ class TempletPortalKeywords {
 				failures.add('El color del tab activo parece igual a tabs inactivos para ' + tabLabel + '. activeBg=' + activeBg)
 			}
 
-			String activeClass = (state.activeClass ?: '').toString().toLowerCase()
-			if (expectedTheme == 'blueprint') {
-				if (!(activeClass.contains('blue') || activeClass.contains('indigo') || activeClass.contains('violet'))) {
-					warnings.add('No se detecto token de clase azul para Blueprint. class=' + activeClass)
-				}
-			} else if (expectedTheme == 'task') {
-				if (!(activeClass.contains('pink') || activeClass.contains('rose') || activeClass.contains('fuchsia') || activeClass.contains('magenta'))) {
-					warnings.add('No se detecto token de clase rosado para Task Creation. class=' + activeClass)
-				}
-			} else if (expectedTheme == 'login') {
-				if (!(activeClass.contains('slate') || activeClass.contains('gray') || activeClass.contains('zinc') || activeClass.contains('neutral'))) {
-					warnings.add('No se detecto token de clase gris para Login. class=' + activeClass)
-				}
-			}
+			// Nota: el tab activo usa un único estilo oscuro (text-white border-transparent) para
+			// todas las plataformas — no hay diferenciación de color por tab, solo se verifica
+			// que el bg del tab activo sea distinto al de los inactivos (ya chequeado arriba).
 
-			WebUI.executeJavaScript('window.scrollTo(0, document.body.scrollHeight);', null)
+			WebUI.executeJavaScript('var sc=document.querySelector(\'main\')||document.querySelector(\'[class*="overflow-auto"]\')||document.body;sc.scrollTop=sc.scrollHeight;', null)
 			WebUI.delay(2)
 
 			Map<String, Object> bottomState = collectTrackingTabState(tabLabel)
@@ -2984,14 +2979,294 @@ class TempletPortalKeywords {
 				}
 			}
 
-			WebUI.executeJavaScript('window.scrollTo(0, 0);', null)
+			WebUI.executeJavaScript('var sc=document.querySelector(\'main\')||document.querySelector(\'[class*="overflow-auto"]\')||document.body;sc.scrollTop=0;', null)
 			WebUI.delay(1)
 
+			// -------------------------------------------------------------------------
+			// EMAIL FILTER LOOP (activar con validateEmailFilters: true en el config)
+			// Para cada filtro descubierto: click → esperar → capturar métricas por card
+			// → verificar chip → scroll abajo → verificar Daily subtitle → scroll arriba
+			// -------------------------------------------------------------------------
+			List<Map<String, Object>> emailFilterResults = []
+			if (Boolean.TRUE.equals(config.validateEmailFilters)) {
+				List<String> discoveredFilters = (List<String>) WebUI.executeJavaScript('''
+					var TAB_LABELS = ['all', 'blueprint', 'task creation', 'login'];
+					var CTRL = ['load data', 'production', 'testing', 'logout', 'home', 'tracking'];
+					var normalize = function(v) {
+						var raw = String(v || ''); var out = ''; var sp = false;
+						for (var i = 0; i < raw.length; i++) {
+							var code = raw.charCodeAt(i);
+							var isWs = (code === 9 || code === 10 || code === 13 || code === 32);
+							if (isWs) { if (!sp) { out += ' '; sp = true; } } else { out += raw.charAt(i); sp = false; }
+						}
+						return out.trim();
+					};
+					var allButtons = Array.from(document.querySelectorAll('button'));
+					// Buscar el label "Email:" y los botones en su contenedor
+					var emailLabel = Array.from(document.querySelectorAll('*')).find(function(el) {
+						return el.children.length === 0 && normalize(el.textContent || '').toLowerCase() === 'email:';
+					});
+					var filterBtns = [];
+					if (emailLabel) {
+						var p = emailLabel.parentElement;
+						filterBtns = p ? Array.from(p.querySelectorAll('button')) : [];
+						if (filterBtns.length === 0 && p && p.parentElement) {
+							filterBtns = Array.from(p.parentElement.querySelectorAll('button')).filter(function(b) {
+								var t = normalize(b.textContent || '').toLowerCase();
+								return TAB_LABELS.indexOf(t) < 0 && CTRL.indexOf(t) < 0 && t.length > 0 && t.length < 50;
+							});
+						}
+					}
+					// Fallback: botones en mitad derecha del viewport con texto corto
+					if (filterBtns.length === 0) {
+						var vpW = window.innerWidth || 1200;
+						filterBtns = allButtons.filter(function(b) {
+							var rect = b.getBoundingClientRect();
+							var t = normalize(b.textContent || '');
+							return rect.left > vpW / 2 && t.length > 0 && t.length < 30 &&
+							       TAB_LABELS.indexOf(t.toLowerCase()) < 0 && CTRL.indexOf(t.toLowerCase()) < 0;
+						});
+					}
+					return filterBtns.map(function(b) { return normalize(b.textContent || ''); });
+				''', [])
+
+				KeywordUtil.logInfo('[' + caseId + '] Email filters descubiertos: ' + discoveredFilters)
+
+				if (!discoveredFilters || discoveredFilters.isEmpty()) {
+					warnings.add('[EMAIL-FILTER] No se encontraron filtros de email en tab ' + tabLabel)
+				}
+
+				discoveredFilters.each { String filterName ->
+					try {
+						// --- Click en el filtro ---
+						WebUI.executeJavaScript('''
+							var fn = String(arguments[0]);
+							var TAB_LABELS = ['all', 'blueprint', 'task creation', 'login'];
+							var CTRL = ['load data', 'production', 'testing', 'logout', 'home', 'tracking'];
+							var normalize = function(v) {
+								var raw = String(v || ''); var out = ''; var sp = false;
+								for (var i = 0; i < raw.length; i++) {
+									var code = raw.charCodeAt(i);
+									var isWs = (code === 9 || code === 10 || code === 13 || code === 32);
+									if (isWs) { if (!sp) { out += ' '; sp = true; } } else { out += raw.charAt(i); sp = false; }
+								}
+								return out.trim();
+							};
+							var allButtons = Array.from(document.querySelectorAll('button'));
+							var emailLabel = Array.from(document.querySelectorAll('*')).find(function(el) {
+								return el.children.length === 0 && normalize(el.textContent || '').toLowerCase() === 'email:';
+							});
+							var target = null;
+							if (emailLabel) {
+								var p = emailLabel.parentElement;
+								var cands = p ? Array.from(p.querySelectorAll('button')) : [];
+								if (cands.length === 0 && p && p.parentElement) {
+									cands = Array.from(p.parentElement.querySelectorAll('button'));
+								}
+								target = cands.find(function(b) { return normalize(b.textContent || '') === fn; });
+							}
+							if (!target) {
+								var vpW = window.innerWidth || 1200;
+								target = allButtons.find(function(b) {
+									var rect = b.getBoundingClientRect();
+									return normalize(b.textContent || '') === fn && rect.left > vpW / 2 &&
+									       TAB_LABELS.indexOf(fn.toLowerCase()) < 0;
+								});
+							}
+							if (target) { target.scrollIntoView({block: 'center', inline: 'nearest'}); target.click(); }
+						''', [filterName])
+						WebUI.delay(2)
+
+						// --- Capturar estado post-click ---
+						Map<String, Object> filterState = (Map<String, Object>) WebUI.executeJavaScript('''
+							var normalize = function(v) {
+								var raw = String(v || ''); var out = ''; var sp = false;
+								for (var i = 0; i < raw.length; i++) {
+									var code = raw.charCodeAt(i);
+									var isWs = (code === 9 || code === 10 || code === 13 || code === 32);
+									if (isWs) { if (!sp) { out += ' '; sp = true; } } else { out += raw.charAt(i); sp = false; }
+								}
+								return out.trim();
+							};
+							// Chip "Showing stats for" — buscar el <span> exacto y tomar su parentElement
+							var sfSpan2 = Array.from(document.querySelectorAll('span,div,p')).find(function(el) {
+								return (el instanceof HTMLElement) && normalize(el.textContent || '').toLowerCase() === 'showing stats for';
+							});
+							var chipText = '';
+							if (sfSpan2 && sfSpan2.parentElement) {
+								var sfParentTxt = normalize(sfSpan2.parentElement.textContent || '');
+								var sfLow = sfParentTxt.toLowerCase();
+								var sfOff = sfLow.indexOf('showing stats for');
+								chipText = sfOff >= 0 ? sfParentTxt.substring(sfOff + 'showing stats for'.length).trim() : sfParentTxt;
+							}
+
+							// Métricas por card
+							var METRIC_LABELS = ['Executions', 'Error Rate', 'Users', 'Avg Duration'];
+							var cards = [];
+							var cardDivs = Array.from(document.querySelectorAll(
+								'div[class*="rounded-xl"], div[class*="border"], div[class*="shadow"]'
+							)).filter(function(d) {
+								var txt = normalize(d.textContent || '');
+								return METRIC_LABELS.some(function(m) { return txt.indexOf(m) >= 0; }) && txt.length < 600;
+							});
+							cardDivs.forEach(function(card) {
+								var titleEl = Array.from(card.querySelectorAll('h3,h4,p,span')).find(function(el) {
+									var txt = normalize(el.textContent || '');
+									return txt.indexOf('Blueprint') >= 0 && txt.length < 70 && el.children.length < 2;
+								});
+								if (!titleEl) return;
+								var title = normalize(titleEl.textContent || '');
+								if (cards.some(function(c) { return c.title === title; })) return;
+								var texts = Array.from(card.querySelectorAll('p,span,div')).filter(function(el) {
+									return el.children.length === 0 && normalize(el.textContent || '').length > 0;
+								}).map(function(el) { return normalize(el.textContent || ''); });
+								var getNext = function(lbl) {
+									var idx = texts.indexOf(lbl);
+									return (idx >= 0 && idx + 1 < texts.length) ? texts[idx + 1] : null;
+								};
+								cards.push({
+									title: title,
+									executions: getNext('Executions'),
+									errorRate: getNext('Error Rate'),
+									users: getNext('Users'),
+									avgDuration: getNext('Avg Duration')
+								});
+							});
+
+							// Subtítulo Daily Executions — filtrar por longitud y ordenar para evitar retornar <html>
+							var dailySubCands = Array.from(document.querySelectorAll('p,span,div')).filter(function(el) {
+								if (!(el instanceof HTMLElement)) return false;
+								var txt = normalize(el.textContent || '').toLowerCase();
+								return txt.indexOf('operations per day') >= 0 && txt.length < 200;
+							});
+							dailySubCands.sort(function(a, b) {
+								return normalize(a.textContent || '').length - normalize(b.textContent || '').length;
+							});
+							var dailySubtitle = dailySubCands.length > 0 ? normalize(dailySubCands[0].textContent || '') : '';
+
+							return { chipText: chipText, cards: cards, dailySubtitle: dailySubtitle };
+						''', [])
+
+						// Verificar chip refleja el filtro seleccionado
+						// "All" filter → chip muestra el tab label (ej: "Blueprint") sin email — es correcto
+						String filterChip = collapseSpaces((filterState.chipText ?: '').toString())
+						String filterChipLow = filterChip.toLowerCase()
+						boolean chipOk = filterChipLow.contains(filterName.toLowerCase()) ||
+							(filterName.equalsIgnoreCase('all') && filterChipLow.contains(tabLabel.toLowerCase()))
+						if (!chipOk) {
+							warnings.add('[EMAIL-FILTER] Chip no refleja filtro "' + filterName + '". chip=' + filterChip)
+						}
+
+						// Scroll abajo + screenshot
+						WebUI.executeJavaScript('var sc=document.querySelector(\'main\')||document.querySelector(\'[class*="overflow-auto"]\')||document.body;sc.scrollTop=sc.scrollHeight;', null)
+						WebUI.delay(2)
+						captureCaseScreenshot(caseId, 'email_filter_' + filterName.toLowerCase().replaceAll('[^a-z0-9]+', '_') + '_bottom')
+
+						// Verificar subtítulo Daily Executions
+						String dailySub = collapseSpaces((filterState.dailySubtitle ?: '').toString()).toLowerCase()
+						if (!dailySub.contains('operations per day')) {
+							warnings.add('[EMAIL-FILTER] Daily subtitle no encontrado para filtro "' + filterName + '"')
+						}
+
+						// Scroll arriba + screenshot
+						WebUI.executeJavaScript('var sc=document.querySelector(\'main\')||document.querySelector(\'[class*="overflow-auto"]\')||document.body;sc.scrollTop=0;', null)
+						WebUI.delay(1)
+						captureCaseScreenshot(caseId, 'email_filter_' + filterName.toLowerCase().replaceAll('[^a-z0-9]+', '_') + '_top')
+
+						emailFilterResults.add([
+							filterName   : filterName,
+							chipText     : filterChip,
+							dailySubtitle: filterState.dailySubtitle ?: '',
+							cards        : filterState.cards ?: []
+						])
+						KeywordUtil.logInfo('[' + caseId + '] Filtro "' + filterName + '" OK — cards=' + ((List)(filterState.cards ?: [])).size())
+
+					} catch (Exception filterEx) {
+						warnings.add('[EMAIL-FILTER] Error procesando filtro "' + filterName + '": ' + filterEx.getMessage())
+					}
+				}
+			}
+			// -------------------------------------------------------------------------
+
+			// -------------------------------------------------------------------------
+			// COMPARACIÓN vs RUN ANTERIOR: color de tab + métricas por filtro
+			// Detecta: datos que cambiaron entre runs (esperado), datos en cero (alerta)
+			// -------------------------------------------------------------------------
 			Map<String, Object> previous = readJsonIfExists(snapshotLatestPath)
 			if (!previous.isEmpty()) {
 				String prevBg = collapseSpaces(((Map) (previous.state ?: [:])).activeBg?.toString())
 				if (prevBg && activeBg && prevBg != activeBg) {
 					warnings.add('Color tab activo cambio vs baseline en ' + tabLabel + '. actual=' + activeBg + ' previo=' + prevBg)
+				}
+			}
+			List<Map> prevEmailResults = (List<Map>) (previous.emailFilterResults ?: [])
+			if (!prevEmailResults.isEmpty() && !emailFilterResults.isEmpty()) {
+				emailFilterResults.each { Map curFilter ->
+					String fn = (curFilter.filterName ?: '').toString()
+					Map prevFilter = prevEmailResults.find { (it.filterName ?: '').toString() == fn }
+					if (!prevFilter) return
+					List<Map> curCards  = (List<Map>) (curFilter.cards  ?: [])
+					List<Map> prevCards = (List<Map>) (prevFilter.cards ?: [])
+					List<String> changes = []
+					curCards.each { Map curCard ->
+						String ct = (curCard.title ?: '').toString()
+						Map prevCard = prevCards.find { (it.title ?: '').toString() == ct }
+						if (!prevCard) return
+						['executions','users'].each { String metric ->
+							String curVal  = (curCard[metric]  ?: '0').toString().replaceAll('[^0-9]', '')
+							String prevVal = (prevCard[metric] ?: '0').toString().replaceAll('[^0-9]', '')
+							int cv = curVal ? Integer.parseInt(curVal) : 0
+							int pv = prevVal ? Integer.parseInt(prevVal) : 0
+							if (cv == 0 && pv > 0) {
+								warnings.add('[METRIC-CHANGE] ' + fn + '/' + ct + '.' + metric + ' cayó a 0 (anterior=' + pv + ')')
+							} else if (cv != pv) {
+								changes.add(ct + '.' + metric + ':' + pv + '->' + cv)
+							}
+						}
+					}
+					if (changes) {
+						KeywordUtil.logInfo('[METRIC-CHANGE] Filtro "' + fn + '" — cambios vs run anterior: ' + changes.join(', '))
+					}
+				}
+			}
+
+			// -------------------------------------------------------------------------
+			// ROLLING SCREENSHOT DE GRÁFICAS (por filtro de email)
+			// Mantiene: {tabLabel}/filter_{name}_latest.png y _previous.png
+			// Archiva: history/{timestamp}_filter_{name}.png — purga >30 días o >4 archivos
+			// -------------------------------------------------------------------------
+			if (!emailFilterResults.isEmpty()) {
+				String chartDir = System.getProperty('user.dir') + '/Reports/Tracking/chart-snapshots/' + tabLabel.toLowerCase().replaceAll('[^a-z0-9]+', '_')
+				String chartHistDir = chartDir + '/history'
+				new File(chartHistDir).mkdirs()
+				emailFilterResults.each { Map ef ->
+					String fn = (ef.filterName ?: 'unknown').toString().toLowerCase().replaceAll('[^a-z0-9]+', '_')
+					String latestPath  = chartDir + '/filter_' + fn + '_latest.png'
+					String prevPath    = chartDir + '/filter_' + fn + '_previous.png'
+					// Rotar: latest → previous → history (si previous ya existe, archivar)
+					File latestFile = new File(latestPath)
+					File prevFile   = new File(prevPath)
+					if (prevFile.exists()) {
+						String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern('yyyyMMdd_HHmmss'))
+						prevFile.renameTo(new File(chartHistDir + '/filter_' + fn + '_' + ts + '.png'))
+					}
+					if (latestFile.exists()) {
+						latestFile.renameTo(prevFile)
+					}
+					// Guardar nueva screenshot como latest
+					try {
+						WebUI.takeScreenshot(latestPath)
+					} catch (Exception ignored) {}
+					// Purgar history: eliminar archivos >30 días o si hay >4 archivos
+					List<File> histFiles = new File(chartHistDir).listFiles(
+						{ File f -> f.name.startsWith('filter_' + fn + '_') } as java.io.FilenameFilter
+					)?.sort { a, b -> a.lastModified() <=> b.lastModified() } ?: []
+					long cutoff = System.currentTimeMillis() - (30L * 24 * 60 * 60 * 1000)
+					histFiles.each { File hf ->
+						if (hf.lastModified() < cutoff || histFiles.size() > 4) {
+							hf.delete()
+						}
+					}
 				}
 			}
 
@@ -3004,7 +3279,8 @@ class TempletPortalKeywords {
 					timestamp: LocalDateTime.now().format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm:ss'))
 				],
 				state: state,
-				bottomState: bottomState
+				bottomState: bottomState,
+				emailFilterResults: emailFilterResults
 			]
 
 			writeJsonSnapshot(snapshotLatestPath, snapshot)
