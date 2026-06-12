@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteCollectionEntity>
+   <description>Coleccion maestra: valida TODO el proyecto en una sola ejecucion. TS_Full_Regression (44 TCs legacy: Builders tracking/objects/redirects + Sheets/Decks/Email manager + Schedulers smoke) + las 3 suites Repos-Coverage de Fase 2 (23 TCs generados desde los repos frontend). Secuencial para respetar isReuseDriver y 1 login por suite. Total: 67 TCs.</description>
+   <name>Master-Validation-All</name>
+   <tag>Master,FullValidation,Fase2,AllPlatforms</tag>
+   <executionMode>SEQUENTIAL</executionMode>
+   <maxConcurrentInstances>1</maxConcurrentInstances>
+   <testSuiteRunConfigurations>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>default</profileName>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/QA/TS_Full_Regression.ts</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>default</profileName>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-Builders.ts</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>default</profileName>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-Schedulers.ts</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>default</profileName>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-AdminPHP.ts</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+   </testSuiteRunConfigurations>
+</TestSuiteCollectionEntity>
