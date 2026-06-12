@@ -40,6 +40,11 @@ class ReposCoverageKeywords {
 		return (baseUrl.endsWith('/') ? baseUrl : baseUrl + '/') + path
 	}
 
+	static void gotoTarget(String url) {
+		WebUI.navigateToUrl(url)
+		WebUI.waitForPageLoad(30)
+	}
+
 	static String buildIssue(String caseId, int paso, String pasoDesc, String selectorDesc, String esperado, String encontrado, String sourceRepo, String sourceFile, String accion) {
 		String src = (!sourceRepo || sourceFile.startsWith(sourceRepo)) ? sourceFile : (sourceRepo + '/' + sourceFile)
 		return "[${caseId}][PASO ${paso}: ${pasoDesc}][SELECTOR ${selectorDesc}] Esperado: ${esperado}. Encontrado: ${encontrado}.\n" +
@@ -71,18 +76,14 @@ class ReposCoverageKeywords {
 			TempletPortalKeywords.openBrowserAndLoginWithMicrosoft(targetUrl)
 			// FIX 2026-06-12: tras el SSO el browser puede quedar en home;
 			// re-navegar SIEMPRE a la pantalla objetivo antes de validar.
-			WebUI.navigateToUrl(targetUrl)
-			WebUI.waitForPageLoad(30)
+			gotoTarget(targetUrl)
 		} else {
-			WebUI.navigateToUrl(targetUrl)
-			WebUI.waitForPageLoad(30)
+			gotoTarget(targetUrl)
 			if (!TempletPortalKeywords.isValidAppSession()) {
 				TempletPortalKeywords.openBrowserAndLoginWithMicrosoft(targetUrl)
-				WebUI.navigateToUrl(targetUrl)
-				WebUI.waitForPageLoad(30)
+				gotoTarget(targetUrl)
 			}
 		}
-		WebUI.waitForPageLoad(30)
 		WebUI.delay(2)
 
 		int paso = 0
@@ -205,7 +206,7 @@ class ReposCoverageKeywords {
 				break
 
 			case 'verify_absent':
-				boolean present = TempletPortalKeywords.verifyXPathPresent(name, primary, 5)
+				boolean present = TempletPortalKeywords.verifyXPathPresent(name, primary, 3)
 				if (present) {
 					String issue = buildIssue(caseId, paso, name + ' (verify_absent)', selectorDesc,
 						(el.expected_value ?: 'elemento ausente').toString(), 'elemento PRESENTE', sourceRepo, sourceFile,
@@ -217,7 +218,8 @@ class ReposCoverageKeywords {
 			case 'verify_absent_after_wait':
 				boolean stillPresent = true
 				for (int i = 0; i < 6; i++) {
-					if (!TempletPortalKeywords.verifyXPathPresent(name, primary, 5)) {
+					// primera pasada corta: si el loading ya desaparecio no pagamos timeout completo
+					if (!TempletPortalKeywords.verifyXPathPresent(name, primary, (i == 0 ? 2 : 5))) {
 						stillPresent = false
 						break
 					}
