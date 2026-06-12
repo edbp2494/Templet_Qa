@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Daily Pulse",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "daily-pulse",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_daily_pulse",
+        "type": "header",
+        "xpath_primary": "//*[contains(normalize-space(.),'Daily Pulse')][self::p or self::h1 or self::h2 or self::span]",
+        "xpath_fallback": "//*[contains(normalize-space(.),'Daily Pulse')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "components/daily-pulse/DailyPulseDashboard.tsx:71",
+        "notes": "PageHeader title='Project Manager' subTitle='Daily Pulse'"
+      }
+    ],
+    "controls": [
+      {
+        "name": "input_date_picker",
+        "type": "input",
+        "xpath_primary": "//input[@id='date-picker']",
+        "xpath_fallback": "//input[@type='date']",
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "components/daily-pulse/DailyPulseDashboard.tsx:78",
+        "notes": "id estable"
+      },
+      {
+        "name": "label_choose_date",
+        "type": "text",
+        "xpath_primary": "//label[contains(normalize-space(.),'Choose a date')]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/daily-pulse/DailyPulseDashboard.tsx:75",
+        "notes": ""
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_daily_pulse"
+    ],
+    "stable_count": 1,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

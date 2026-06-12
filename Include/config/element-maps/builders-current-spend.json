@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Current Spend",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "current-spend",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_current_spend",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Current spend']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Current spend')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Current spend",
+        "assertion_type": "HARD",
+        "source_file": "components/layouts/track/current-spend.tsx:222",
+        "notes": ""
+      }
+    ],
+    "controls": [
+      {
+        "name": "input_search",
+        "type": "input",
+        "xpath_primary": "//input[@placeholder='Search...']",
+        "xpath_fallback": "//input[contains(@placeholder,'Search')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/layouts/track/current-spend.tsx:396",
+        "notes": ""
+      },
+      {
+        "name": "loading_state",
+        "type": "text",
+        "xpath_primary": "//div[contains(@class,'text-center')][contains(normalize-space(.),'Loading...')]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_absent_after_wait",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/layouts/track/current-spend.tsx:215",
+        "notes": ""
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_current_spend",
+      "input_search"
+    ],
+    "stable_count": 0,
+    "fragile_count": 3,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

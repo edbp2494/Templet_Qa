@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Brand List",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "brand",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_active_brands",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Active Brands']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Active Brands')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Active Brands",
+        "assertion_type": "HARD",
+        "source_file": "app/(logged)/brand/page.tsx:112",
+        "notes": ""
+      },
+      {
+        "name": "subtitle_brands",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Manage your active brands')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/(logged)/brand/page.tsx:115",
+        "notes": ""
+      }
+    ],
+    "controls": [
+      {
+        "name": "input_search_brands",
+        "type": "input",
+        "xpath_primary": "//input[@placeholder='Search brands...']",
+        "xpath_fallback": "//input[contains(@placeholder,'Search')]",
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "app/(logged)/brand/page.tsx:125",
+        "notes": ""
+      },
+      {
+        "name": "loading_state",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Loading brands')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_absent_after_wait",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/(logged)/brand/page.tsx:100",
+        "notes": ""
+      },
+      {
+        "name": "btn_new_brand",
+        "type": "button",
+        "xpath_primary": "//button[contains(normalize-space(.),'New Brand')]",
+        "xpath_fallback": "//button[contains(normalize-space(.),'New')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/(logged)/brand/page.tsx:132",
+        "notes": "Abre modal NewBrand. NO confirmar creacion"
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_active_brands",
+      "btn_new_brand"
+    ],
+    "stable_count": 3,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

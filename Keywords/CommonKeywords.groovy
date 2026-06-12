@@ -341,4 +341,68 @@ public class CommonKeywords {
 			KeywordUtil.logInfo("[LOGOUT] Warning: ${e.message}")
 		}
 	}
+
+	/**
+	 * Valida las opciones de un <select> (extraccion del closure validateSelectItems duplicado en filters).
+	 * cfg: objPath (TestObject a clickear), cssSelector, label, allowBlankFirstValue (bool),
+	 *      failOnEmpty (bool, default false -> warning), closeObjectPath (opcional, click al cerrar),
+	 *      snapper (Closure opcional: recibe String label para screenshot).
+	 * Retorna true si todas las opciones son visibles, con texto y value valido.
+	 */
+	@Keyword
+	def static boolean validateSelectOptions(Map cfg) {
+		String objPath = cfg.objPath
+		String cssSelector = cfg.cssSelector
+		String label = (cfg.label ?: 'select').toString()
+		boolean allowBlankFirstValue = Boolean.TRUE.equals(cfg.allowBlankFirstValue)
+		boolean failOnEmpty = Boolean.TRUE.equals(cfg.failOnEmpty)
+
+		WebUI.waitForElementVisible(findTestObject(objPath), 10)
+		WebUI.click(findTestObject(objPath), com.kms.katalon.core.model.FailureHandling.OPTIONAL)
+		WebUI.delay(1)
+		if (cfg.snapper instanceof Closure) ((Closure) cfg.snapper).call("${label}_dropdown_open")
+
+		List<Map> optionData = (List<Map>) WebUI.executeJavaScript('''
+			var css = arguments[0];
+			var sel = document.querySelector(css);
+			if (!sel) return [];
+			return Array.from(sel.options).map(function(o, idx) {
+				var st = window.getComputedStyle(o);
+				var visible = !o.hidden && st.display !== 'none' && st.visibility !== 'hidden';
+				return { idx: idx, value: (o.value || '').trim(), text: (o.textContent || '').trim(), visible: visible };
+			});
+		''', [cssSelector])
+
+		boolean allOk = true
+		if (!optionData || optionData.isEmpty()) {
+			allOk = false
+			if (failOnEmpty) {
+				KeywordUtil.markFailedAndStop("[${label}] No se encontraron opciones en ${cssSelector}")
+			} else {
+				KeywordUtil.markWarning("[${label}] No se encontraron opciones en ${cssSelector}")
+			}
+		} else {
+			KeywordUtil.logInfo("[${label}] Total opciones: ${optionData.size()}")
+			optionData.each { opt ->
+				boolean hasText = opt['text'] != null && !opt['text'].toString().trim().isEmpty()
+				boolean isVisible = Boolean.valueOf(opt['visible'].toString())
+				boolean hasValue = opt['value'] != null && !opt['value'].toString().trim().isEmpty()
+				boolean valueOk = hasValue || (allowBlankFirstValue && ((opt['idx'] as Integer) == 0))
+				boolean rowOk = hasText && isVisible && valueOk
+				KeywordUtil.logInfo("[${label}][OPTION] idx=${opt['idx']} value='${opt['value']}' text='${opt['text']}' visible=${opt['visible']} ${rowOk ? 'OK' : 'X'}")
+				if (!rowOk) allOk = false
+			}
+		}
+
+		if (allOk) {
+			KeywordUtil.logInfo("[${label}] Todas las opciones son visibles y tienen texto OK")
+		} else if (optionData && !optionData.isEmpty()) {
+			KeywordUtil.markWarning("[${label}] Hay opciones invalidas (sin texto/no visibles/value invalido)")
+		}
+
+		if (cfg.closeObjectPath) {
+			WebUI.click(findTestObject(cfg.closeObjectPath.toString()), com.kms.katalon.core.model.FailureHandling.OPTIONAL)
+		}
+		return allOk
+	}
 }

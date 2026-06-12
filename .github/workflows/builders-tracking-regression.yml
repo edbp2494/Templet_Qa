@@ -7,8 +7,8 @@ on:
   #   paths:
   #     - 'Test Cases/Builders/**'
   #     - 'Keywords/**'
-  # schedule:
-  #   - cron: '0 2 * * *'  # Ejecutar daily a las 2 AM UTC
+  schedule:
+    - cron: '0 2 * * *'  # Daily 2 AM UTC - requiere secrets TEMPLET_MS_USER/TEMPLET_MS_PASS configurados
   workflow_dispatch:  # Ejecutar manualmente desde Actions tab
 
 env:

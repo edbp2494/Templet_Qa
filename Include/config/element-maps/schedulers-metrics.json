@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Metrics Dashboard",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "metrics",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_metrics",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Metrics Dashboard']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Metrics Dashboard')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Metrics Dashboard",
+        "assertion_type": "HARD",
+        "source_file": "components/metrics/MetricsPage.tsx:172",
+        "notes": ""
+      },
+      {
+        "name": "subtitle_metrics",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Completion rates overview')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/metrics/MetricsPage.tsx:174",
+        "notes": ""
+      }
+    ],
+    "controls": [
+      {
+        "name": "btn_load_data",
+        "type": "button",
+        "xpath_primary": "//button[normalize-space(.)='Load Data']",
+        "xpath_fallback": "//button[contains(normalize-space(.),'Load')]",
+        "selector_strength": "FRAGILE",
+        "action": "click",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "components/metrics/MetricsPage.tsx:241",
+        "notes": "Texto cambia a Loading... durante carga"
+      },
+      {
+        "name": "loading_state",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Loading metrics data')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_absent_after_wait",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/metrics/MetricsPage.tsx:253",
+        "notes": ""
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_metrics",
+      "btn_load_data"
+    ],
+    "stable_count": 2,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

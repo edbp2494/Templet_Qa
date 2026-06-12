@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Initiatives",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "initiatives",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_initiatives",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Initiatives']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Initiatives')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Initiatives",
+        "assertion_type": "HARD",
+        "source_file": "app/initiatives/page.tsx:231",
+        "notes": ""
+      },
+      {
+        "name": "subtitle_initiatives",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Manage initiative priorities')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/initiatives/page.tsx:233",
+        "notes": ""
+      }
+    ],
+    "board": [
+      {
+        "name": "loading_state",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Loading initiatives data')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_absent_after_wait",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/initiatives/page.tsx:281",
+        "notes": ""
+      },
+      {
+        "name": "btn_save",
+        "type": "button",
+        "xpath_primary": "//button[.//span[normalize-space(.)='Save']]",
+        "xpath_fallback": "//button[contains(normalize-space(.),'Save')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/initiatives/page.tsx:239",
+        "notes": "Condicional: solo visible si hay initiatives con status. NO clickear (persiste prioridades)"
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_initiatives",
+      "btn_save"
+    ],
+    "stable_count": 2,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

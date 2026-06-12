@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Convert PPTX",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "convert",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "controls": [
+      {
+        "name": "input_pptx_file",
+        "type": "input",
+        "xpath_primary": "//input[@placeholder='Selecciona un archivo .pptx']",
+        "xpath_fallback": "//input[contains(@placeholder,'.pptx')]",
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "app/(logged)/convert/page.tsx:176",
+        "notes": "Anchor principal de la pantalla"
+      },
+      {
+        "name": "action_buttons",
+        "type": "button",
+        "xpath_primary": "//button",
+        "xpath_fallback": "//main//button",
+        "selector_strength": "FRAGILE",
+        "action": "verify_count",
+        "expected_value": ">=2",
+        "assertion_type": "SOFT",
+        "source_file": "app/(logged)/convert/page.tsx:178",
+        "notes": "Botones convert/preview. NO subir archivos"
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "input_pptx_file"
+    ],
+    "stable_count": 1,
+    "fragile_count": 1,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

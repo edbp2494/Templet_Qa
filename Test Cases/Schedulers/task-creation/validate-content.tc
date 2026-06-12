@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Content Task Creation de Schedulers (oleada 2): titulo con id estable y tabs New Content/New Edit.</description>
+   <name>validate-content</name>
+   <tag>repos-coverage,fase2,oleada2,schedulers</tag>
+   <comment>Generado en oleada 2 desde element-map schedulers-task-creation-content.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e78418d3-7873-46e4-a8d1-98e370e9c543</testCaseGuid>
+</TestCaseEntity>

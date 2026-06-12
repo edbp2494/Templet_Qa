@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Task Creation - Edits",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "task-creation/edits",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_new_edit",
+        "type": "header",
+        "xpath_primary": "//h2[normalize-space(.)='New Edit']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'New Edit')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "New Edit",
+        "assertion_type": "HARD",
+        "source_file": "app/task-creation/edits/page.tsx:525",
+        "notes": ""
+      }
+    ],
+    "selectors_form": [
+      {
+        "name": "select_client",
+        "type": "input",
+        "xpath_primary": "//button[@role='combobox'][.//span[normalize-space(.)='Select a client']]",
+        "xpath_fallback": "//*[normalize-space(text())='Select a client']",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "app/task-creation/edits/page.tsx:536",
+        "notes": ""
+      },
+      {
+        "name": "select_project",
+        "type": "input",
+        "xpath_primary": "//button[@role='combobox'][.//span[normalize-space(.)='Select a project']]",
+        "xpath_fallback": "//*[normalize-space(text())='Select a project']",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "app/task-creation/edits/page.tsx:553",
+        "notes": ""
+      },
+      {
+        "name": "select_deliverable",
+        "type": "input",
+        "xpath_primary": "//button[@role='combobox'][.//span[normalize-space(.)='Select a Deliverable']]",
+        "xpath_fallback": "//*[normalize-space(text())='Select a Deliverable']",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/task-creation/edits/page.tsx:570",
+        "notes": ""
+      }
+    ],
+    "controls": [
+      {
+        "name": "btn_set_it_up",
+        "type": "button",
+        "xpath_primary": "//button[normalize-space(.)='Set it up!']",
+        "xpath_fallback": "//button[contains(normalize-space(.),'Set it up')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "app/task-creation/edits/page.tsx:760",
+        "notes": "NO clickear: dispara sendEmail (creacion real)"
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "select_client",
+      "select_project",
+      "btn_set_it_up"
+    ],
+    "stable_count": 0,
+    "fragile_count": 5,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

@@ -195,3 +195,62 @@ Ejemplos:
 - Los selectores actuales funcionan con `FailureHandling.OPTIONAL` para no bloquear la ejecución.
 - Se usa `normalize-space()` para tolerar espacios/saltos de línea extra.
 - El flujo Microsoft SSO es estable porque usa IDs controlados por Microsoft (`idSIButton9`, `i0116`, etc.)
+
+
+---
+
+## Pedido consolidado de data-testid (Fase 2, 2026-06-12)
+Generado desde Include/config/element-maps/*.json. Un data-testid por elemento estabiliza el selector primario y elimina los fallbacks por texto.
+
+### repos/templet-builders
+| Pantalla | Elemento | Archivo fuente |
+|---|---|---|
+| Brand List | `heading_active_brands` | `app/(logged)/brand/page.tsx:112` |
+| Brand List | `btn_new_brand` | `app/(logged)/brand/page.tsx:132` |
+| Convert PPTX | `input_pptx_file` | `app/(logged)/convert/page.tsx:176` |
+| Current Spend | `heading_current_spend` | `components/layouts/track/current-spend.tsx:222` |
+| Current Spend | `input_search` | `components/layouts/track/current-spend.tsx:396` |
+| Layout - Create Options | `heading_create_layout` | `app/(logged)/layout/page.tsx:139` |
+| Layout - Create Options | `option_buttons` | `app/(logged)/layout/page.tsx:133` |
+| Project Schedule | `heading_project_schedule` | `app/(logged)/project-schedule/page.tsx` |
+| Project Schedule | `timeline_grid` | `app/(logged)/project-schedule/page.tsx` |
+| Task Creation - Content | `tab_new_content` | `app/(logged)/task-creation/content/page.tsx` |
+| Task Creation - Content | `tab_new_edit` | `app/(logged)/task-creation/content/page.tsx` |
+| Task Creation - Non Standard | `heading_nonstandard_tasks` | `app/(logged)/task-creation/non-standard/page.tsx` |
+| Task Creation - Non Standard | `btn_new_sub_task` | `app/(logged)/task-creation/non-standard/page.tsx` |
+| Task Creation - Non Standard | `btn_set_it_up` | `app/(logged)/task-creation/non-standard/page.tsx` |
+| Task Creation - Non Standard | `select_client` | `app/(logged)/task-creation/non-standard/page.tsx` |
+| Template List | `heading_active_templates` | `app/(logged)/template/page.tsx` |
+| Template List | `btn_new_template` | `app/(logged)/template/page.tsx` |
+| Work in Progress | `heading_wip` | `app/(logged)/work-in-progress/page.tsx` |
+| Work in Progress | `col_collateral` | `app/(logged)/work-in-progress/page.tsx` |
+| Work in Progress | `col_status` | `app/(logged)/work-in-progress/page.tsx` |
+
+### repos/templet-schedulers
+| Pantalla | Elemento | Archivo fuente |
+|---|---|---|
+| Daily Pulse | `heading_daily_pulse` | `components/daily-pulse/DailyPulseDashboard.tsx:71` |
+| Initiatives | `heading_initiatives` | `app/initiatives/page.tsx:231` |
+| Initiatives | `btn_save` | `app/initiatives/page.tsx:239` |
+| Metrics Dashboard | `heading_metrics` | `components/metrics/MetricsPage.tsx:172` |
+| Metrics Dashboard | `btn_load_data` | `components/metrics/MetricsPage.tsx:241` |
+| Requests | `heading_requests` | `components/requests/Requests.tsx:674` |
+| Requests | `input_search` | `components/requests/FilterOptions.tsx` |
+| Resources | `heading_resources` | `components/resources/Resources.tsx:426` |
+| Resources | `team_section` | `components/resources/Resources.tsx:466` |
+| Summary (Task creation log) | `heading_summary` | `app/summary/page.tsx:52` |
+| Summary (Task creation log) | `input_search` | `components/summary/SummarySection.tsx:257` |
+| Summary (Task creation log) | `col_type_sortable` | `components/summary/SummarySection.tsx:330` |
+| Task Creation - Content | `tab_new_content` | `app/task-creation/content/page.tsx:353` |
+| Task Creation - Content | `tab_new_edit` | `app/task-creation/content/page.tsx:356` |
+| Task Creation - Edits | `select_client` | `app/task-creation/edits/page.tsx:536` |
+| Task Creation - Edits | `select_project` | `app/task-creation/edits/page.tsx:553` |
+| Task Creation - Edits | `btn_set_it_up` | `app/task-creation/edits/page.tsx:760` |
+| Task Creation - Non Standard | `heading_nonstandard` | `app/task-creation/non-standard/page.tsx:532` |
+| Task Creation - Non Standard | `btn_new_sub_task` | `app/task-creation/non-standard/page.tsx:685` |
+| Task Creation - Standard | `select_client` | `app/task-creation/standard/page.tsx:627` |
+| Task Creation - Standard | `select_project` | `app/task-creation/standard/page.tsx:651` |
+| Task Creation - Standard | `btn_set_it_up` | `app/task-creation/standard/page.tsx:932` |
+| Execution Tracking | `heading_execution_tracking` | `components/tracking/TrackingPage.tsx:158` |
+| Execution Tracking | `select_month` | `components/tracking/TrackingPage.tsx:164` |
+| Execution Tracking | `btn_load_data` | `components/tracking/TrackingPage.tsx:198` |

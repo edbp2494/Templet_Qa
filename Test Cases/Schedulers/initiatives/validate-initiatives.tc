@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Initiatives de Schedulers (oleada 2): heading, subtitulo, loading async y boton Save condicional.</description>
+   <name>validate-initiatives</name>
+   <tag>repos-coverage,fase2,oleada2,schedulers</tag>
+   <comment>Generado en oleada 2 desde element-map schedulers-initiatives.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9ce07105-87d1-45d1-9064-6354d64a83c1</testCaseGuid>
+</TestCaseEntity>

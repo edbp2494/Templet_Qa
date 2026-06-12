@@ -82,9 +82,20 @@ Inicio: ${suiteStartTime}
 			String description = (errorData.description ?: '').toString()
 			String severity = (errorData.severity ?: 'MEDIUM').toString()
 			
-			KeywordUtil.logInfo('[ASANA] Preparando ticket: ' + title)
-			// La creación real se hace desde el agente que maneja Asana API
-			// Aquí solo preparamos la estructura
+			KeywordUtil.logInfo('[ASANA] Creando ticket via API: ' + title)
+			String body = groovy.json.JsonOutput.toJson([data: [projects: [asanaProjectGid], name: title, notes: description + '\n\nSeverity: ' + severity]])
+			java.net.HttpURLConnection conn = (java.net.HttpURLConnection) new java.net.URL('https://app.asana.com/api/1.0/tasks').openConnection()
+			conn.setRequestMethod('POST')
+			conn.setRequestProperty('Authorization', 'Bearer ' + asanaApiKey)
+			conn.setRequestProperty('Content-Type', 'application/json')
+			conn.setDoOutput(true)
+			conn.getOutputStream().write(body.getBytes('UTF-8'))
+			int code = conn.getResponseCode()
+			if (code >= 200 && code < 300) {
+				KeywordUtil.logInfo('[ASANA] Ticket creado OK (' + code + '): ' + title)
+			} else {
+				KeywordUtil.markWarning('[ASANA] API respondio ' + code + ' para: ' + title)
+			}
 			
 		} catch (Exception e) {
 			KeywordUtil.logInfo('[ERROR] Error creando ticket: ' + e.message)

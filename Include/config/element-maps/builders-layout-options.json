@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Layout - Create Options",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "layout",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_create_layout",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Create New Layout']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Layout')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Create New Layout",
+        "assertion_type": "HARD",
+        "source_file": "app/(logged)/layout/page.tsx:139",
+        "notes": ""
+      }
+    ],
+    "controls": [
+      {
+        "name": "option_buttons",
+        "type": "button",
+        "xpath_primary": "//button",
+        "xpath_fallback": "//a[contains(@href,'/layout/')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_count",
+        "expected_value": ">=2",
+        "assertion_type": "SOFT",
+        "source_file": "app/(logged)/layout/page.tsx:133",
+        "notes": "Opciones Upload/Create + Next"
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_create_layout",
+      "option_buttons"
+    ],
+    "stable_count": 0,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

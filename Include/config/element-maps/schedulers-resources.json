@@ -11,13 +11,54 @@
   },
   "groups": {
     "header": [
-      {"name": "heading_resources", "type": "header", "xpath_primary": "//h1[normalize-space(.)='Resources']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Resources')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Resources", "assertion_type": "HARD", "source_file": "components/resources/Resources.tsx:426", "notes": "PageHeader"},
-      {"name": "subtitle_resources", "type": "text", "xpath_primary": "//*[contains(normalize-space(.),'Track progress and status of all resources')]", "xpath_fallback": null, "selector_strength": "STABLE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/resources/Resources.tsx:426", "notes": "Subtitulo literal"}
+      {
+        "name": "heading_resources",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Resources']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Resources')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Resources",
+        "assertion_type": "HARD",
+        "source_file": "components/resources/Resources.tsx:426",
+        "notes": "PageHeader"
+      },
+      {
+        "name": "subtitle_resources",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Track progress and status of all resources')]",
+        "xpath_fallback": null,
+        "selector_strength": "STABLE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/resources/Resources.tsx:426",
+        "notes": "Subtitulo literal"
+      }
     ],
     "board": [
-      {"name": "team_section", "type": "card", "xpath_primary": "//main//div[contains(@class,'grid')]", "xpath_fallback": "//main", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/resources/Resources.tsx:466", "notes": "TeamSection kanban; sin atributo estable - pedir data-testid"}
+      {
+        "name": "team_section",
+        "type": "card",
+        "xpath_primary": "//div[contains(@class,'min-h-screen') and contains(@class,'space-y-4')]",
+        "xpath_fallback": "//div[contains(@class,'flex-col') and contains(@class,'w-full')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "components/resources/Resources.tsx:466",
+        "notes": "Fix oleada 2: la app no usa tag main; wrapper por className del board (Resources.tsx)"
+      }
     ]
   },
-  "selector_review": {"needs_data_testid": ["heading_resources", "team_section"], "stable_count": 1, "fragile_count": 2, "unknown_count": 0},
+  "selector_review": {
+    "needs_data_testid": [
+      "heading_resources",
+      "team_section"
+    ],
+    "stable_count": 1,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
   "next_step": "katalon-testcase-creator -> TC-SCHEDULERS-RESOURCES-BOARD-001"
 }

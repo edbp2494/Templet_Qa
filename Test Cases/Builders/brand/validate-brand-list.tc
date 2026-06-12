@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Active Brands de Builders (oleada 2): heading, busqueda, loading y boton New Brand.</description>
+   <name>validate-brand-list</name>
+   <tag>repos-coverage,fase2,oleada2,builders</tag>
+   <comment>Generado en oleada 2 desde element-map builders-brand-list.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>33886a5a-e9c2-4fec-be98-40377824e981</testCaseGuid>
+</TestCaseEntity>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>Fase 2: cobertura generada desde repo templet-schedulers. 5 pantallas no cubiertas previamente. 1 solo login (isReuseDriver=true).</description>
+   <description>Fase 2: cobertura generada desde repo templet-schedulers. Oleadas 1 y 2. 1 solo login (isReuseDriver=true).</description>
    <name>Repos-Coverage-Schedulers</name>
-   <tag>NoRestart,Schedulers,ReposCoverage,Fase2</tag>
+   <tag>NoRestart,ReposCoverage,Fase2,Schedulers</tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
@@ -43,4 +43,48 @@
       <isReuseDriver>true</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/Schedulers/summary/validate-summary-log</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestS
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e78418d3-7873-46e4-a8d1-98e370e9c543</guid>
+      <isReuseDriver>true</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Schedulers/task-creation/validate-content</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b00dd808-62a0-4f62-9529-9dc99c5fea38</guid>
+      <isReuseDriver>true</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Schedulers/task-creation/validate-edits</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2a276663-0701-43ab-bf8f-3427121b7e2a</guid>
+      <isReuseDriver>true</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Schedulers/task-creation/validate-non-standard</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9ce07105-87d1-45d1-9064-6354d64a83c1</guid>
+      <isReuseDriver>true</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Schedulers/initiatives/validate-initiatives</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>eb8b2172-e7c8-4b0e-a5e0-923d9391fad2</guid>
+      <isReuseDriver>true</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Schedulers/metrics/validate-metrics</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>25cdbc04-7590-425e-99ff-a5fe7af9c240</guid>
+      <isReuseDriver>true</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Schedulers/daily-pulse/validate-daily-pulse</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+</TestSuiteEntity>

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Task Creation - Content",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "task-creation/content",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 2
+  },
+  "groups": {
+    "header": [
+      {
+        "name": "heading_content",
+        "type": "header",
+        "xpath_primary": "//*[@id='content-task-creation-title']",
+        "xpath_fallback": "//h2[normalize-space(.)='Content Task Creation']",
+        "selector_strength": "STABLE",
+        "action": "verify_text",
+        "expected_value": "Content Task Creation",
+        "assertion_type": "HARD",
+        "source_file": "app/task-creation/content/page.tsx:330",
+        "notes": "id estable"
+      }
+    ],
+    "tabs": [
+      {
+        "name": "tab_new_content",
+        "type": "tab",
+        "xpath_primary": "//button[normalize-space(.)='New Content']",
+        "xpath_fallback": "//*[@role='tab'][contains(normalize-space(.),'New Content')]",
+        "selector_strength": "FRAGILE",
+        "action": "click",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "app/task-creation/content/page.tsx:353",
+        "notes": ""
+      },
+      {
+        "name": "tab_new_edit",
+        "type": "tab",
+        "xpath_primary": "//button[normalize-space(.)='New Edit']",
+        "xpath_fallback": "//*[@role='tab'][contains(normalize-space(.),'New Edit')]",
+        "selector_strength": "FRAGILE",
+        "action": "click",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "app/task-creation/content/page.tsx:356",
+        "notes": ""
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "tab_new_content",
+      "tab_new_edit"
+    ],
+    "stable_count": 1,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "consumido por ReposCoverageKeywords.validateScreenFromElementMap"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida New Edit de Schedulers (oleada 2): heading, selects de formulario y Set it up! (solo presencia).</description>
+   <name>validate-edits</name>
+   <tag>repos-coverage,fase2,oleada2,schedulers</tag>
+   <comment>Generado en oleada 2 desde element-map schedulers-task-creation-edits.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b00dd808-62a0-4f62-9529-9dc99c5fea38</testCaseGuid>
+</TestCaseEntity>

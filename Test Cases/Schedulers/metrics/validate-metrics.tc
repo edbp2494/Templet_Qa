@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Metrics Dashboard de Schedulers (oleada 2): heading, subtitulo, Load Data (click) y loading.</description>
+   <name>validate-metrics</name>
+   <tag>repos-coverage,fase2,oleada2,schedulers</tag>
+   <comment>Generado en oleada 2 desde element-map schedulers-metrics.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>eb8b2172-e7c8-4b0e-a5e0-923d9391fad2</testCaseGuid>
+</TestCaseEntity>

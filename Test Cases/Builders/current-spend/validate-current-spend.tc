@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Current spend de Builders (oleada 2): heading, busqueda y loading.</description>
+   <name>validate-current-spend</name>
+   <tag>repos-coverage,fase2,oleada2,builders</tag>
+   <comment>Generado en oleada 2 desde element-map builders-current-spend.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8e020dd0-19ae-455b-ba42-56b112d7415a</testCaseGuid>
+</TestCaseEntity>

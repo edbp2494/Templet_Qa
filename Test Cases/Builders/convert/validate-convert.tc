@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Convert PPTX de Builders (oleada 2): input de archivo (anchor) y botones de accion. Sin subir archivos.</description>
+   <name>validate-convert</name>
+   <tag>repos-coverage,fase2,oleada2,builders</tag>
+   <comment>Generado en oleada 2 desde element-map builders-convert.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bb861283-199a-4cf4-8de1-fb916ab9a090</testCaseGuid>
+</TestCaseEntity>

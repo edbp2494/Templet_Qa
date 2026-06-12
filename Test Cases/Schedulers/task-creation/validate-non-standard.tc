@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Nonstandard tasks de Schedulers (oleada 2): heading, New sub task, Set it up! (presencia), Reset.</description>
+   <name>validate-non-standard</name>
+   <tag>repos-coverage,fase2,oleada2,schedulers</tag>
+   <comment>Generado en oleada 2 desde element-map schedulers-task-creation-non-standard.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2a276663-0701-43ab-bf8f-3427121b7e2a</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Create New Layout de Builders (oleada 2): heading y opciones Upload/Create.</description>
+   <name>validate-layout-options</name>
+   <tag>repos-coverage,fase2,oleada2,builders</tag>
+   <comment>Generado en oleada 2 desde element-map builders-layout-options.json.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3e055f80-a2a5-4fa0-87fe-d5478cc037ba</testCaseGuid>
+</TestCaseEntity>
