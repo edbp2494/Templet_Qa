@@ -1,14 +1,19 @@
 name: Builders Tracking - Regression Suite
 
-# Triggers disponibles (comentados por ahora - activar cuando esté listo)
+# Corre SOLO cuando hay cambios que afectan los tests (sin schedule nocturno)
 on:
-  # push:
-  #   branches: [ main, develop ]
-  #   paths:
-  #     - 'Test Cases/Builders/**'
-  #     - 'Keywords/**'
-  schedule:
-    - cron: '0 2 * * *'  # Daily 2 AM UTC - requiere secrets TEMPLET_MS_USER/TEMPLET_MS_PASS configurados
+  push:
+    branches: [ master, main ]
+    paths:
+      - 'Keywords/**'
+      - 'Scripts/**'
+      - 'Test Cases/**'
+      - 'Test Suites/**'
+      - 'Test Listeners/**'
+      - 'Object Repository/**'
+      - 'Profiles/**'
+      - 'Include/config/element-maps/**'
+      - '.github/workflows/**'
   workflow_dispatch:  # Ejecutar manualmente desde Actions tab
 
 env:
