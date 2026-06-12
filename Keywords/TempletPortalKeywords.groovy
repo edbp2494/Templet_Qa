@@ -3259,7 +3259,7 @@ class TempletPortalKeywords {
 					} catch (Exception ignored) {}
 					// Purgar history: eliminar archivos >30 días o si hay >4 archivos
 					List<File> histFiles = new File(chartHistDir).listFiles(
-						{ File f -> f.name.startsWith('filter_' + fn + '_') } as java.io.FilenameFilter
+						{ File dir, String name -> name.startsWith('filter_' + fn + '_') } as java.io.FilenameFilter
 					)?.sort { a, b -> a.lastModified() <=> b.lastModified() } ?: []
 					long cutoff = System.currentTimeMillis() - (30L * 24 * 60 * 60 * 1000)
 					histFiles.each { File hf ->

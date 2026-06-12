@@ -197,38 +197,12 @@ try {
 	} catch (Exception ignored) {}
 
 	String emailTestUrl = CommonKeywords.getRequiredGlobal('EMAIL_TEST_URL', 'https://emails-test.templet.io/admin/manager.php')
-	String msUser = CustomKeywords.'TempletPortalKeywords.resolveCredential'('MS_USER', 'USERNAME')
-	String msPass = CustomKeywords.'TempletPortalKeywords.resolveCredential'('MS_PASS', 'PASSWORD')
 
 	if (!browserAlreadyOpen) {
-		WebUI.openBrowser('')
-		WebUI.maximizeWindow()
-		WebUI.navigateToUrl(emailTestUrl.replace('manager.php', 'login.php'))
-		WebUI.waitForPageLoad(15)
-
-		WebUI.waitForElementClickable(findTestObject('Sheets/Filters/btn_login_microsoft'), 10)
-		WebUI.click(findTestObject('Sheets/Filters/btn_login_microsoft'))
-		WebUI.waitForPageLoad(20)
-
-		WebUI.waitForElementVisible(findTestObject('Sheets/Filters/input_ms_email'), 15)
-		WebUI.clearText(findTestObject('Sheets/Filters/input_ms_email'))
-		WebUI.setText(findTestObject('Sheets/Filters/input_ms_email'), msUser)
-		WebUI.click(findTestObject('Sheets/Filters/btn_ms_next'))
-		WebUI.waitForPageLoad(15)
-
-		WebUI.waitForElementVisible(findTestObject('Sheets/Filters/input_ms_password'), 15)
-		WebUI.setText(findTestObject('Sheets/Filters/input_ms_password'), msPass)
-		WebUI.click(findTestObject('Sheets/Filters/btn_ms_signin'))
-		WebUI.waitForPageLoad(15)
-
-		if (WebUI.verifyElementPresent(findTestObject('Sheets/Filters/span_kmsi_no_mostrar'), 5, FailureHandling.OPTIONAL)) {
-			WebUI.click(findTestObject('Sheets/Filters/span_kmsi_no_mostrar'), FailureHandling.OPTIONAL)
-		}
-		if (WebUI.verifyElementPresent(findTestObject('Sheets/Filters/btn_ms_stay_signed'), 5, FailureHandling.OPTIONAL)) {
-			WebUI.click(findTestObject('Sheets/Filters/btn_ms_stay_signed'), FailureHandling.OPTIONAL)
-		}
-		WebUI.waitForPageLoad(20)
+		// Login centralizado: SSO Microsoft con retry (reemplaza bloque manual duplicado)
+		CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(emailTestUrl)
 	}
+	WebUI.waitForPageLoad(10)
 
 	WebUI.waitForElementVisible(findTestObject('Sheets/Filters/section_dashboard'), 15)
 	WebUI.waitForElementVisible(findTestObject('Sheets/Filters/section_filters'), 15)

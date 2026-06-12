@@ -14,6 +14,7 @@ CustomKeywords.'TempletPortalKeywords.validateBuildersTrackingTabDashboard'([
 	urlVariableName: 'BUILDERS_TEST_URL',
 	fallbackUrl: buildersTestUrl,
 	directUrl: trackingUrl,
+	validateEmailFilters: true,
 	snapshotLatestPath: System.getProperty('user.dir') + '/Reports/Tracking/snapshots/tracking_task_creation_latest.json',
 	snapshotHistoryDir: System.getProperty('user.dir') + '/Reports/Tracking/snapshots/history'
 ])
