@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Standard Tasks de Schedulers (Fase 2). Heading, selects de formulario (client/project/brand), boton New project (aria-label) y Set it up! (solo presencia).</description>
+   <name>validate-standard</name>
+   <tag>schedulers,task-creation,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map schedulers-task-creation-standard.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b9318607-a522-496d-9da9-9af3d6916660</testCaseGuid>
+</TestCaseEntity>

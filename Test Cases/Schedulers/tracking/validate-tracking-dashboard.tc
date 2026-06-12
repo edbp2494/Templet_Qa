@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Execution Tracking de Schedulers (Fase 2). Heading, selectores de periodo, boton Load Data (click) y loading de telemetria.</description>
+   <name>validate-tracking-dashboard</name>
+   <tag>schedulers,tracking,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map schedulers-tracking.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7d2df8d1-f58d-43e1-8b5f-34f819ac0807</testCaseGuid>
+</TestCaseEntity>

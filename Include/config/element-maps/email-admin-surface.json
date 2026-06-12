@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "platform": "Email",
+    "screen": "Admin Surface (manager + endpoints no-UI)",
+    "environment_variable": "EMAIL_TEST_URL",
+    "fallback_url": "https://emails-test.templet.io/admin/manager.php",
+    "direct_url_path": "",
+    "source_repo": "repos/email.templet",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator",
+    "scope_note": "clientes.php es proxy API, info.php es phpinfo(), access.php es libreria - no son pantallas UI. Este mapa cubre la superficie admin: manager.php post-login + chequeos de exposicion de info.php y pagina 403."
+  },
+  "groups": {
+    "manager": [
+      {
+        "name": "manager_body",
+        "type": "card",
+        "xpath_primary": "//body[.//table or .//div[contains(@class,'list') or contains(@class,'grid') or contains(@class,'container')]]",
+        "xpath_fallback": "//body",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "HARD",
+        "source_file": "admin/manager.php",
+        "notes": "Post-login el manager debe renderizar contenido (ya cubierto en detalle por suites objects/filters/validation)"
+      }
+    ],
+    "security": [
+      {
+        "name": "phpinfo_exposure",
+        "type": "text",
+        "xpath_primary": "//h1[contains(normalize-space(.),'PHP Version')] | //td[contains(normalize-space(.),'PHP Version')]",
+        "xpath_fallback": "//*[contains(normalize-space(.),'phpinfo')]",
+        "selector_strength": "STABLE",
+        "action": "verify_absent",
+        "expected_value": "info.php NO debe exponer phpinfo()",
+        "assertion_type": "SOFT",
+        "source_file": "admin/info.php:1",
+        "notes": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+        "url_path": "admin/info.php"
+      },
+      {
+        "name": "page_403",
+        "type": "text",
+        "xpath_primary": "//body[contains(normalize-space(.),'403') or contains(normalize-space(.),'Forbidden') or contains(normalize-space(.),'Acceso')]",
+        "xpath_fallback": "//body",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "admin/403.php",
+        "notes": "La pagina 403 debe renderizar contenido controlado, no blank/fatal",
+        "url_path": "admin/403.php"
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [],
+    "stable_count": 1,
+    "fragile_count": 2,
+    "unknown_count": 0
+  },
+  "next_step": "katalon-testcase-creator -> TC-EMAIL-ADMIN-SURFACE-001"
+}

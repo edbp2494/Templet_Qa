@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Resources de Schedulers (Fase 2). Heading, subtitulo y board de equipo.</description>
+   <name>validate-resources-board</name>
+   <tag>schedulers,resources,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map schedulers-resources.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>86aaf4de-90e3-4200-8303-0aeefa63478e</testCaseGuid>
+</TestCaseEntity>

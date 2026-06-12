@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Task Creation Non-Standard de Builders desde el codigo fuente del repo templet-builders (Fase 2). Heading, form selectors, botones New sub task / Set it up! / Reset.</description>
+   <name>validate-non-standard</name>
+   <tag>builders,task-creation,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map builders-task-creation-non-standard.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>22ea2a9b-d867-4fc9-8bde-88165b5dcb55</testCaseGuid>
+</TestCaseEntity>

@@ -34,3 +34,6 @@ Reports/Screenshots/
 # No subir archivos de configuración globales ni credenciales
 Profiles/*.glbl
 Include/config/*.properties
+
+# Repos frontend clonados solo para analisis QA (Fase 2) - nunca versionar
+repos/

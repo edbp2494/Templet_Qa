@@ -17,8 +17,8 @@ class BuildersTrackingSuiteListener {
 		String suiteName = testSuiteContext.getTestSuiteId()
 		LocalDateTime endTime = LocalDateTime.now()
 		
-		// Solo procesar si es la suite de Builders Tracking
-		if (!suiteName.contains('Tracking') && !suiteName.contains('builders')) {
+		// Solo procesar si es la suite de Builders Tracking o las suites Fase 2 Repos-Coverage
+		if (!suiteName.contains('Tracking') && !suiteName.contains('builders') && !suiteName.contains('Repos-Coverage')) {
 			return
 		}
 		

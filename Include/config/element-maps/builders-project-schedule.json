@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Project Schedule",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "project-schedule",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_project_schedule", "type": "header", "xpath_primary": "//h1[normalize-space(.)='Project schedule']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Project schedule')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Project schedule", "assertion_type": "HARD", "source_file": "app/(logged)/project-schedule/page.tsx", "notes": ""}
+    ],
+    "timeline": [
+      {"name": "loading_state", "type": "text", "xpath_primary": "//*[contains(normalize-space(.),'Loading schedule data')]", "xpath_fallback": null, "selector_strength": "STABLE", "action": "verify_absent_after_wait", "expected_value": null, "assertion_type": "SOFT", "source_file": "app/(logged)/project-schedule/page.tsx", "notes": "Spinner async; debe desaparecer"},
+      {"name": "timeline_grid", "type": "card", "xpath_primary": "//main//div[contains(@class,'grid')]", "xpath_fallback": "//main//div[count(div)>2]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "app/(logged)/project-schedule/page.tsx", "notes": "Grid del timeline; sin atributo estable - pedir data-testid"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["heading_project_schedule", "timeline_grid"], "stable_count": 1, "fragile_count": 2, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-BUILDERS-SCHEDULE-PROJECT-001"
+}

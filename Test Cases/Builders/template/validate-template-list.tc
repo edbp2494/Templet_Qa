@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Active Templates de Builders (Fase 2). Heading, busqueda, boton New Template y links a /template/id.</description>
+   <name>validate-template-list</name>
+   <tag>builders,template,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map builders-template-list.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>957a29b9-7d49-45f3-ad09-0694e364c12a</testCaseGuid>
+</TestCaseEntity>

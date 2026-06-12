@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Execution Tracking",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "tracking",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_execution_tracking", "type": "header", "xpath_primary": "//h1[normalize-space(.)='Execution Tracking']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Execution Tracking')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Execution Tracking", "assertion_type": "HARD", "source_file": "components/tracking/TrackingPage.tsx:158", "notes": "PageHeader"},
+      {"name": "subtitle_telemetry", "type": "text", "xpath_primary": "//*[contains(normalize-space(.),'Real-time telemetry overview')]", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/tracking/TrackingPage.tsx:158", "notes": "Subtitulo dinamico"}
+    ],
+    "controls": [
+      {"name": "select_month", "type": "input", "xpath_primary": "(//button[@role='combobox'])[1]", "xpath_fallback": "//select[1]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/tracking/TrackingPage.tsx:164", "notes": "Selector de mes, posicional - pedir data-testid"},
+      {"name": "btn_load_data", "type": "button", "xpath_primary": "//button[normalize-space(.)='Load Data']", "xpath_fallback": "//button[contains(normalize-space(.),'Load')]", "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": "components/tracking/TrackingPage.tsx:198", "notes": "Texto cambia a 'Loading...' durante carga"}
+    ],
+    "loading": [
+      {"name": "loading_state", "type": "text", "xpath_primary": "//*[contains(normalize-space(.),'Loading telemetry data')]", "xpath_fallback": null, "selector_strength": "STABLE", "action": "verify_absent_after_wait", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/tracking/TrackingPage.tsx:218", "notes": "Debe desaparecer tras carga"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["select_month", "btn_load_data", "heading_execution_tracking"], "stable_count": 1, "fragile_count": 4, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-SCHEDULERS-TRACKING-DASHBOARD-001"
+}

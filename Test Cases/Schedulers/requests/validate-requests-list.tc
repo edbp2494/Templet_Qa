@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Requests de Schedulers (Fase 2). Heading, subtitulo, busqueda y filtros.</description>
+   <name>validate-requests-list</name>
+   <tag>schedulers,requests,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map schedulers-requests.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4fc8a1b8-aaab-48fe-be65-2463f66a72d4</testCaseGuid>
+</TestCaseEntity>

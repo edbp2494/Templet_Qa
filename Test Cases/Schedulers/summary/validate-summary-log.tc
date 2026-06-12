@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Summary (task creation log) de Schedulers (Fase 2). Heading, busqueda, Clear Filters, headers ordenables (click en Type) y loading async.</description>
+   <name>validate-summary-log</name>
+   <tag>schedulers,summary,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map schedulers-summary.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a365a11c-1868-4bce-a2e5-0f8826a70258</testCaseGuid>
+</TestCaseEntity>

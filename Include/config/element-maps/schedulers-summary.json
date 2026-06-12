@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Summary (Task creation log)",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "summary",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_summary", "type": "header", "xpath_primary": "//h1[normalize-space(.)='Summary']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Summary')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Summary", "assertion_type": "HARD", "source_file": "app/summary/page.tsx:52", "notes": "PageHeader, subtitulo 'Task creation log history'"}
+    ],
+    "controls": [
+      {"name": "input_search", "type": "input", "xpath_primary": "//input[contains(@placeholder,'Search by name, user, initiative')]", "xpath_fallback": "//input[contains(@placeholder,'Search')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": "components/summary/SummarySection.tsx:257", "notes": "Placeholder literal"},
+      {"name": "btn_clear_filters", "type": "button", "xpath_primary": "//button[normalize-space(.)='Clear Filters']", "xpath_fallback": "//button[contains(normalize-space(.),'Clear')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/summary/SummarySection.tsx:301", "notes": "disabled sin filtros activos"}
+    ],
+    "grid": [
+      {"name": "col_type_sortable", "type": "button", "xpath_primary": "//button[normalize-space(.)='Type']", "xpath_fallback": "//*[self::th or self::button][contains(normalize-space(.),'Type')]", "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/summary/SummarySection.tsx:330", "notes": "Header ordenable"},
+      {"name": "col_name_sortable", "type": "button", "xpath_primary": "//button[normalize-space(.)='Name']", "xpath_fallback": "//*[self::th or self::button][contains(normalize-space(.),'Name')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/summary/SummarySection.tsx:341", "notes": "Header ordenable"},
+      {"name": "loading_state", "type": "text", "xpath_primary": "//*[contains(normalize-space(.),'Loading summary data')]", "xpath_fallback": null, "selector_strength": "STABLE", "action": "verify_absent_after_wait", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/summary/SummarySection.tsx:62", "notes": "Debe desaparecer tras carga"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["heading_summary", "input_search", "col_type_sortable"], "stable_count": 1, "fragile_count": 5, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-SCHEDULERS-SUMMARY-LOG-001"
+}

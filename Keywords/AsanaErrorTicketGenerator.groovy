@@ -36,7 +36,8 @@ class AsanaErrorTicketGenerator {
 					tab: json.tab,
 					timestamp: json.timestamp,
 					url: json.url,
-					screenshot: json.screenshot
+					screenshot: json.screenshot,
+					sourceFile: json.sourceFile
 				])
 			}
 			
@@ -51,7 +52,8 @@ class AsanaErrorTicketGenerator {
 					tab: json.tab,
 					timestamp: json.timestamp,
 					url: json.url,
-					screenshot: json.screenshot
+					screenshot: json.screenshot,
+					sourceFile: json.sourceFile
 				])
 			}
 		} catch (Exception e) {
@@ -112,6 +114,7 @@ class AsanaErrorTicketGenerator {
 			String url = (error.url ?: '').toString()
 			String timestamp = (error.timestamp ?: '').toString()
 			String screenshot = (error.screenshot ?: '').toString()
+			String sourceFile = (error.sourceFile ?: '').toString()
 			
 			// Determinar plataforma/componente
 			String component = 'Builders'
@@ -136,6 +139,7 @@ ${tab ? "**Tab:** ${tab}" : ''}
 **Error:**
 ${message}
 
+${sourceFile ? "**Source File (repo frontend):** ${sourceFile}" : ''}
 ${screenshot ? "**Screenshot:** ${screenshot}" : ''}
 
 ---
@@ -152,7 +156,8 @@ _Generado automáticamente por Katalon - Builders Tracking Suite_
 				tab: tab,
 				timestamp: timestamp,
 				url: url,
-				screenshot: screenshot
+				screenshot: screenshot,
+				sourceFile: sourceFile
 			]
 			
 			// Agrupar por case + error para evitar duplicados

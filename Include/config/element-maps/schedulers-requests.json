@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "platform": "Schedulers",
+    "screen": "Requests",
+    "environment_variable": "SCHEDULERS_TEST_URL",
+    "fallback_url": "https://testing-templet-schedulers.vercel.app/",
+    "direct_url_path": "requests",
+    "source_repo": "repos/templet-schedulers",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_requests", "type": "header", "xpath_primary": "//h1[normalize-space(.)='Requests']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Requests')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Requests", "assertion_type": "HARD", "source_file": "components/requests/Requests.tsx:674", "notes": "PageHeader"},
+      {"name": "subtitle_requests", "type": "text", "xpath_primary": "//*[contains(normalize-space(.),'Track progress and status of all requests')]", "xpath_fallback": null, "selector_strength": "STABLE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/requests/Requests.tsx:674", "notes": "Subtitulo literal"}
+    ],
+    "controls": [
+      {"name": "input_search", "type": "input", "xpath_primary": "//input[contains(@placeholder,'Search by initiative')]", "xpath_fallback": "//input[contains(@placeholder,'Search')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "components/requests/FilterOptions.tsx", "notes": "Placeholder: Search by initiative, area, or client..."},
+      {"name": "filter_selects", "type": "input", "xpath_primary": "//button[@role='combobox']", "xpath_fallback": "//select", "selector_strength": "FRAGILE", "action": "verify_count", "expected_value": ">=1", "assertion_type": "SOFT", "source_file": "components/requests/Requests.tsx:699", "notes": "Filtros All clients / All initiatives"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["heading_requests", "input_search"], "stable_count": 1, "fragile_count": 3, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-SCHEDULERS-REQUESTS-LIST-001"
+}

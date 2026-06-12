@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Task Creation - Content",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "task-creation/content",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_content_task_creation", "type": "header", "xpath_primary": "//*[@id='content-task-creation-title']", "xpath_fallback": "//h2[normalize-space(.)='Content Task Creation']", "selector_strength": "STABLE", "action": "verify_text", "expected_value": "Content Task Creation", "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/content/page.tsx", "notes": "id estable en el codigo"}
+    ],
+    "tabs": [
+      {"name": "tab_new_content", "type": "tab", "xpath_primary": "//button[normalize-space(.)='New Content']", "xpath_fallback": "//*[@role='tab'][contains(normalize-space(.),'New Content')]", "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/content/page.tsx", "notes": "Tab por defecto"},
+      {"name": "tab_new_edit", "type": "tab", "xpath_primary": "//button[normalize-space(.)='New Edit']", "xpath_fallback": "//*[@role='tab'][contains(normalize-space(.),'New Edit')]", "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/content/page.tsx", "notes": "Segundo tab; al click debe cambiar contenido"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["tab_new_content", "tab_new_edit"], "stable_count": 1, "fragile_count": 2, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-BUILDERS-TASKCREATION-CONTENT-001"
+}

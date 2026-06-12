@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida pantalla Content Task Creation de Builders (Fase 2). Titulo con id estable y tabs New Content / New Edit.</description>
+   <name>validate-content</name>
+   <tag>builders,task-creation,repos-coverage,fase2</tag>
+   <comment>Generado en Fase 2 desde element-map builders-task-creation-content.json. Errores accionables con ARCHIVO FUENTE y ACCION SUGERIDA.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d6244278-1aa9-4aa9-a6d9-1741ded992fc</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Template List",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "template",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_active_templates", "type": "header", "xpath_primary": "//h1[normalize-space(.)='Active Templates']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Active Templates')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Active Templates", "assertion_type": "HARD", "source_file": "app/(logged)/template/page.tsx", "notes": ""}
+    ],
+    "controls": [
+      {"name": "input_search", "type": "input", "xpath_primary": "//input[contains(@placeholder,'Search')]", "xpath_fallback": "//input[@type='search' or @type='text']", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "app/(logged)/template/page.tsx", "notes": ""},
+      {"name": "btn_new_template", "type": "button", "xpath_primary": "//button[normalize-space(.)='New Template']", "xpath_fallback": "//button[contains(normalize-space(.),'New Template')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/template/page.tsx", "notes": "NO clickear delete en filas"}
+    ],
+    "grid": [
+      {"name": "template_rows_links", "type": "link", "xpath_primary": "//a[starts-with(@href,'/template/')]", "xpath_fallback": "//table//a", "selector_strength": "STABLE", "action": "verify_count", "expected_value": ">=1", "assertion_type": "SOFT", "source_file": "app/(logged)/template/page.tsx", "notes": "Links a /template/{id}; >=1 si hay data"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["heading_active_templates", "btn_new_template"], "stable_count": 1, "fragile_count": 3, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-BUILDERS-TEMPLATE-LIST-001"
+}

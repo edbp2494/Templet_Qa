@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Task Creation - Non Standard",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url_path": "task-creation/non-standard",
+    "source_repo": "repos/templet-builders",
+    "generated_at": "2026-06-12",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "groups": {
+    "header": [
+      {"name": "heading_nonstandard_tasks", "type": "header", "xpath_primary": "//h2[normalize-space(.)='Nonstandard tasks']", "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Nonstandard')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "Nonstandard tasks", "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "Heading principal; sin data-testid"}
+    ],
+    "controls": [
+      {"name": "input_task_name", "type": "input", "xpath_primary": "//input[@placeholder='Task name' or @name='taskName']", "xpath_fallback": "//label[contains(normalize-space(.),'Task name')]/following::input[1]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "Input nombre de tarea"},
+      {"name": "btn_new_sub_task", "type": "button", "xpath_primary": "//button[normalize-space(.)='New sub task']", "xpath_fallback": "//button[contains(normalize-space(.),'sub task')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "Agrega fila de subtask"},
+      {"name": "btn_set_it_up", "type": "button", "xpath_primary": "//button[normalize-space(.)='Set it up!']", "xpath_fallback": "//button[contains(normalize-space(.),'Set it up')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "Submit principal. NO clickear en el TC (crearia tarea real)"},
+      {"name": "btn_reset", "type": "button", "xpath_primary": "//button[normalize-space(.)='Reset']", "xpath_fallback": "//button[contains(normalize-space(.),'Reset')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "Limpia formulario"}
+    ],
+    "selectors_form": [
+      {"name": "select_client", "type": "input", "xpath_primary": "//label[normalize-space(.)='Client']/following::*[self::button or self::input][1]", "xpath_fallback": "//*[contains(normalize-space(.),'Select a client')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "SearchSelector de cliente"},
+      {"name": "select_brand", "type": "input", "xpath_primary": "//label[normalize-space(.)='Brand']/following::button[@role='combobox'][1]", "xpath_fallback": "//*[contains(normalize-space(.),'Select a brand')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": "app/(logged)/task-creation/non-standard/page.tsx", "notes": "Select de brand"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["heading_nonstandard_tasks", "btn_new_sub_task", "btn_set_it_up", "select_client"], "stable_count": 0, "fragile_count": 7, "unknown_count": 0},
+  "next_step": "katalon-testcase-creator -> TC-BUILDERS-TASKCREATION-NONSTANDARD-001"
+}
