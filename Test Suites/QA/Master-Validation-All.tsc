@@ -13,7 +13,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/QA/TS_Full_Regression.ts</testSuiteEntity>
+         <testSuiteEntity>Test Suites/QA/TS_Full_Regression</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -22,7 +22,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-Builders.ts</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-Builders</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -31,7 +31,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-Schedulers.ts</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-Schedulers</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -40,7 +40,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-AdminPHP.ts</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Platforms/QA/Repos-Coverage-AdminPHP</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>
