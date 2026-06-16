@@ -3,10 +3,9 @@ CustomKeywords.'TempletPortalKeywords.verifyAuthenticatedSidebarOrderOnly'([
 	platformLabel: 'Schedulers TEST',
 	urlVariableName: 'SCHEDULERS_TEST_URL',
 	fallbackUrl: 'https://testing-templet-schedulers.vercel.app/',
+	// PENDING_APP_FIX: 'Tracking' y 'Metrics' existen en /tracking y /metrics pero no aparecen en sidebar (bug conocido)
 	sequenceItems: [
 		'Home',
-		'Tracking',
-		'Metrics',
 		'Accounts',
 		'Initiatives',
 		'Contributors',

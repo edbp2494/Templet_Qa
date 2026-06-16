@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida Blueprint Manager Power User (/blueprint/manager/power-user): heading, boton New Blueprint, boton Filter by brand, grid de cards y conteo de blueprints >= 1.</description>
+   <name>validate-blueprint-manager</name>
+   <tag>builders,blueprint,regression</tag>
+   <comment>TC-BUILDERS-BLUEPRINT-MANAGER-001 — segundo TC de la suite Brand-Blueprint-Validation. Reutiliza sesion del TC1.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-blueprint-manager-001</testCaseGuid>
+</TestCaseEntity>

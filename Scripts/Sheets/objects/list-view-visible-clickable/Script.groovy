@@ -141,6 +141,7 @@ try {
         browserAlreadyOpen = WebUI.verifyElementPresent(findTestObject('Sheets/Filters/section_dashboard'), 5, FailureHandling.OPTIONAL)
     } catch (Exception ignored) {}
     if (!browserAlreadyOpen) {
+        WebUI.delay(3)  // Buffer para liberar Chrome profile del TC anterior
         CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(startUrl)
     }
     WebUI.waitForPageLoad(10)

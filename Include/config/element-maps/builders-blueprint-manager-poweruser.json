@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Blueprint Manager - Power User",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url": "https://testing-templet-builders.vercel.app/blueprint/manager/power-user",
+    "generated_at": "2026-06-16",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "steps": [
+    {
+      "step": "verify_present",
+      "name": "heading_blueprint_manager",
+      "type": "header",
+      "xpath_primary": "//h1[normalize-space(.)='Blueprint manager']",
+      "xpath_fallback": "//h1[contains(normalize-space(.),'Blueprint')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Título principal de la página."
+    },
+    {
+      "step": "verify_present",
+      "name": "btn_new_blueprint",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='New Blueprint']",
+      "xpath_fallback": "//button[contains(normalize-space(.),'New Blueprint')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "CTA principal. Solo verificar presencia — no hacer click (crearía datos en TEST)."
+    },
+    {
+      "step": "verify_present",
+      "name": "btn_filter_by_brand",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='Filter by brand']",
+      "xpath_fallback": "//button[contains(normalize-space(.),'Filter')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Dropdown de filtro por marca."
+    },
+    {
+      "step": "verify_present",
+      "name": "grid_blueprints",
+      "type": "card",
+      "xpath_primary": "//div[contains(@class,'grid-cols-1') and contains(@class,'gap-8')]",
+      "xpath_fallback": "//div[contains(@class,'gap-8')][.//h3]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Contenedor grid de blueprint cards. Clase confirmada: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'."
+    },
+    {
+      "step": "verify_count",
+      "name": "blueprint_cards_count",
+      "type": "card",
+      "xpath_primary": "//div[contains(@class,'gap-8')]//h3",
+      "xpath_fallback": "//main//h3",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "expected_value": ">0",
+      "notes": "Cuenta de blueprints en el grid. Contenido dinámico — solo verificar >=1. En TEST hay 10 blueprints visibles."
+    }
+  ],
+  "selector_review": {
+    "needs_data_testid": ["heading_blueprint_manager", "btn_new_blueprint", "btn_filter_by_brand", "grid_blueprints"],
+    "stable_count": 0,
+    "fragile_count": 5,
+    "unknown_count": 0
+  },
+  "next_step": "Pasa este JSON a katalon-testcase-creator para generar el Script.groovy"
+}

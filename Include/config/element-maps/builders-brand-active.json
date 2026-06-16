@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "platform": "Builders",
+    "screen": "Brand Properties - Active Brands",
+    "environment_variable": "BUILDERS_TEST_URL",
+    "fallback_url": "https://testing-templet-builders.vercel.app/",
+    "direct_url": "https://testing-templet-builders.vercel.app/brand",
+    "generated_at": "2026-06-16",
+    "for_skill": "katalon-testcase-creator"
+  },
+  "steps": [
+    {
+      "step": "verify_present",
+      "name": "heading_active_brands",
+      "type": "header",
+      "xpath_primary": "//h1[normalize-space(.)='Active Brands']",
+      "xpath_fallback": "//h1[contains(normalize-space(.),'Active Brands')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Título principal. Sin data-testid — pedir al dev team."
+    },
+    {
+      "step": "verify_present",
+      "name": "btn_new_brand",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='New Brand']",
+      "xpath_fallback": "//button[contains(normalize-space(.),'New Brand')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "CTA principal. Solo verificar presencia — no hacer click (crearía datos en TEST)."
+    },
+    {
+      "step": "verify_present",
+      "name": "col_header_name",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='Name']",
+      "xpath_fallback": "//th[normalize-space(.)='Name'] | //button[normalize-space(.)='Name']",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Columna sortable de la tabla de marcas."
+    },
+    {
+      "step": "verify_present",
+      "name": "col_header_client",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='Client']",
+      "xpath_fallback": "//button[contains(normalize-space(.),'Client')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Columna sortable."
+    },
+    {
+      "step": "verify_present",
+      "name": "col_header_initiatives",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='# of Initiatives']",
+      "xpath_fallback": "//button[contains(normalize-space(.),'Initiatives')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Columna sortable."
+    },
+    {
+      "step": "verify_present",
+      "name": "col_header_requests",
+      "type": "button",
+      "xpath_primary": "//button[normalize-space(.)='# of Requests']",
+      "xpath_fallback": "//button[contains(normalize-space(.),'Requests')]",
+      "selector_strength": "FRAGILE",
+      "assertion_type": "HARD",
+      "notes": "Columna sortable."
+    },
+    {
+      "step": "verify_count",
+      "name": "table_brand_rows",
+      "type": "table",
+      "xpath_primary": "//tbody/tr",
+      "xpath_fallback": "//tr[.//td] | //div[contains(@class,'row') or contains(@class,'item')][.//button[normalize-space(.)='Name' or normalize-space(.)='Client']]",
+      "selector_strength": "UNKNOWN",
+      "assertion_type": "SOFT",
+      "expected_value": ">0",
+      "notes": "Filas de datos. Estructura inferida (no hay HTML de la tabla). Confirmar tag real: puede ser <tr>, <div>, etc. Contenido dinámico."
+    }
+  ],
+  "selector_review": {
+    "needs_data_testid": ["heading_active_brands", "btn_new_brand", "col_header_name", "col_header_client", "col_header_initiatives", "col_header_requests"],
+    "stable_count": 0,
+    "fragile_count": 6,
+    "unknown_count": 1
+  },
+  "next_step": "Pasa este JSON a katalon-testcase-creator para generar el Script.groovy"
+}
