@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida que las opciones de generacion AI del menu "..." de un asset (Create HTML / IDML / PPTX / TEXT) abran ai.templet.io/drafts en pestaña nueva con el type correcto y la cierren. Opciones deshabilitadas para el asset -> warning (no fail).</description>
+   <name>validate-brand-ai-create-options</name>
+   <tag>builders,brand,ai-create,regression</tag>
+   <comment>TC-BUILDERS-BRAND-AICREATE-001 — Brand ESCALA por defecto (BUILDERS_BRAND_FIXTURE_URL). Click por JS para evitar ElementClickIntercepted en Radix.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-brand-ai-create-001</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida el flujo "Create TEXT" (la otra IA: ai.templet.io/drafts) desde Builders /brand: carga de pantallas (Active Brands -> brand detail -> tab Layouts), abrir y cerrar la pestaña Create TEXT 2 veces, intento de mensaje vacio (boton deshabilitado -> warning, no fail) y creacion de un mensaje con marcador generico capturando la respuesta de la IA.</description>
+   <name>validate-brand-ai-text</name>
+   <tag>builders,brand,ai-text,regression</tag>
+   <comment>TC-BUILDERS-BRAND-AITEXT-001 — Entry /brand (BUILDERS_TEST_URL). Opcional BUILDERS_BRAND_FIXTURE_URL. Selectores de drafts por discovery+fallbacks+warnings.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-brand-ai-text-001</testCaseGuid>
+</TestCaseEntity>

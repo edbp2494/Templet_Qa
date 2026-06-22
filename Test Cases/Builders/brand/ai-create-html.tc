@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida "Create HTML" en Builders /brand (ESCALA): abre drafts y por cada metodo de input (Uploading source files / Sharing website links / Filling out a form) selecciona el radio, entra, captura el paso, hace scroll, da "Go Back" y valida el retorno a la pantalla de inputs. Cierra navegador.</description>
+   <name>ai-create-html</name>
+   <tag>builders,brand,ai-create,html,regression</tag>
+   <comment>TC-BUILDERS-BRAND-AICREATE-HTML-001 — usa BrandAiKeywords.validateCreateInputMethods. Brand por BUILDERS_BRAND_FIXTURE_URL (default ESCALA).</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-brand-aicreate-html-001</testCaseGuid>
+</TestCaseEntity>

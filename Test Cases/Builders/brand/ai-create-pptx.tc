@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valida "Create PPTX" en Builders /brand (ESCALA): abre drafts y por cada metodo de input (Uploading source files / Sharing website links / Filling out a form) selecciona el radio, entra, captura el paso, hace scroll, da "Go Back" y valida el retorno a la pantalla de inputs. Cierra navegador.</description>
+   <name>ai-create-pptx</name>
+   <tag>builders,brand,ai-create,pptx,regression</tag>
+   <comment>TC-BUILDERS-BRAND-AICREATE-PPTX-001 — usa BrandAiKeywords.validateCreateInputMethods. Brand por BUILDERS_BRAND_FIXTURE_URL (default ESCALA).</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>builders-brand-aicreate-pptx-001</testCaseGuid>
+</TestCaseEntity>
