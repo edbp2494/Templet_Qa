@@ -11,7 +11,7 @@
    ```powershell
    [System.IO.File]::WriteAllText($path, $content, [System.Text.UTF8Encoding]::new($false))
    ```
-3. **No hacer git add, commit, push.** Usuario tiene cuenta de trabajo (Rappi) en este repo personal.
+3. **No hacer git add, commit, push** sin autorizacion explicita del usuario.
 4. **No crear tickets Asana, no disparar CI/CD** sin autorización explícita del usuario.
 5. **Leer el archivo completo antes de proponer cambios.** Sin refactors grandes no pedidos.
 6. **Si algo es riesgoso o destructivo**, detenerse y pedir confirmación.

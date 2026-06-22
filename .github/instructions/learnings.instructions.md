@@ -20,5 +20,4 @@ description: Reglas aprendidas en sesiones anteriores para evitar errores recurr
 
 ## NO subir nada a Git
 
-- Usuario logueado con cuenta de trabajo (Rappi) - proyecto personal
 - Nunca hacer git add, commit, push en este repo

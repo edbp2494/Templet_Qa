@@ -1,0 +1,1 @@
+Carpetas crudas de export del Katalon Recorder. Flujo: graba en el Recorder -> exporta aqui (.html nativo) -> katalon-element-mapper genera el JSON en ../element-maps/ -> katalon-testcase-creator genera el Script.groovy.
