@@ -1,0 +1,1059 @@
+{
+  "cycle": {
+    "start": "2026-05-24",
+    "end": "2026-06-24",
+    "label": "24 mayo 2026 → 24 junio 2026"
+  },
+  "generated": "2026-06-20 22:33:48",
+  "executions": {
+    "runs": 65,
+    "tcs_executed": 402,
+    "pass": 234,
+    "fail": 90,
+    "error": 78,
+    "pass_rate": 58.2,
+    "regressions": 3,
+    "auto_seconds": 19926.0,
+    "detail": [
+      {
+        "timestamp": "2026-06-03 15:32:58",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 35.0,
+        "total": 38,
+        "pass": 1,
+        "fail": 0,
+        "error": 37
+      },
+      {
+        "timestamp": "2026-06-03 15:59:47",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 1190.0,
+        "total": 38,
+        "pass": 22,
+        "fail": 1,
+        "error": 15
+      },
+      {
+        "timestamp": "2026-06-03 16:06:08",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 191.0,
+        "total": 16,
+        "pass": 2,
+        "fail": 2,
+        "error": 12
+      },
+      {
+        "timestamp": "2026-06-03 18:27:38",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 206.0,
+        "total": 16,
+        "pass": 2,
+        "fail": 2,
+        "error": 12
+      },
+      {
+        "timestamp": "2026-06-03 18:49:00",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 712.0,
+        "total": 14,
+        "pass": 11,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 18:55:34",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 350.0,
+        "total": 6,
+        "pass": 5,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 19:24:35",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 169.0,
+        "total": 4,
+        "pass": 3,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 19:28:22",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 74.0,
+        "total": 1,
+        "pass": 0,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 19:50:06",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 41.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 20:22:28",
+        "suite": "Test Suites/PrePush/All-TestCases-Validation",
+        "duration_s": 1827.0,
+        "total": 38,
+        "pass": 38,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 21:10:38",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 163.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 3,
+        "error": 1
+      },
+      {
+        "timestamp": "2026-06-03 21:18:29",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 161.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 21:31:37",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 172.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 21:52:03",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 174.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 22:20:06",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 222.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-03 22:31:18",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 234.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-04 14:16:24",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 227.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-04 15:40:06",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 226.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-04 18:24:40",
+        "suite": "Test Suites/QA/UI-Components-Validation",
+        "duration_s": 239.0,
+        "total": 4,
+        "pass": 0,
+        "fail": 4,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-08 20:46:52",
+        "suite": "Test Suites/Platforms/Full-Validation-All-Platforms",
+        "duration_s": 949.0,
+        "total": 17,
+        "pass": 17,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-10 01:35:00",
+        "suite": "Test Suites/Platforms/Super-Suite-Validation",
+        "duration_s": 1363.0,
+        "total": 28,
+        "pass": 27,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 11:27:46",
+        "suite": "Test Suites/Platforms/Builders/Tracking/Tracking-Full-Flow",
+        "duration_s": 208.0,
+        "total": 4,
+        "pass": 3,
+        "fail": 0,
+        "error": 1
+      },
+      {
+        "timestamp": "2026-06-12 17:20:54",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+        "duration_s": 173.0,
+        "total": 5,
+        "pass": 4,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 17:33:36",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-Schedulers",
+        "duration_s": 159.0,
+        "total": 5,
+        "pass": 4,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 17:36:20",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-AdminPHP",
+        "duration_s": 69.0,
+        "total": 3,
+        "pass": 3,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 17:39:58",
+        "suite": "Test Suites/Platforms/Builders/Tracking/Tracking-Full-Flow",
+        "duration_s": 205.0,
+        "total": 4,
+        "pass": 4,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 18:00:31",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+        "duration_s": 170.0,
+        "total": 5,
+        "pass": 4,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 18:08:11",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+        "duration_s": 77.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 18:16:58",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+        "duration_s": 102.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-12 18:49:13",
+        "suite": "Test Suites/Platforms/QA/Repos-Coverage-Schedulers",
+        "duration_s": 41.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-13 11:42:23",
+        "suite": "Test Suites/Platforms/Super-Suite-Validation",
+        "duration_s": 1360.0,
+        "total": 28,
+        "pass": 26,
+        "fail": 2,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-16 13:30:13",
+        "suite": "Test Suites/Platforms/Super-Suite-Validation",
+        "duration_s": 1345.0,
+        "total": 28,
+        "pass": 27,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-16 13:43:42",
+        "suite": "Test Suites/Platforms/Builders/BrandBlueprint/Brand-Blueprint-Validation",
+        "duration_s": 42.0,
+        "total": 2,
+        "pass": 2,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-16 13:55:25",
+        "suite": "Test Suites/Platforms/Super-Suite-Validation",
+        "duration_s": 83.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-17 17:06:15",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+        "duration_s": 73.0,
+        "total": 1,
+        "pass": 0,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-17 17:15:55",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+        "duration_s": 55.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-17 17:17:00",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+        "duration_s": 53.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 13:24:50",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+        "duration_s": 484.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 13:38:03",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-Options-Flow",
+        "duration_s": 102.0,
+        "total": 1,
+        "pass": 0,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 13:42:44",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-Options-Flow",
+        "duration_s": 69.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:02:12",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 249.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:09:49",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 171.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:15:24",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 168.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:25:46",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 436.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:39:15",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 381.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:48:34",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 383.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 14:48:41",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 382.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 15:07:19",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 384.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 15:18:01",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 396.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 15:22:12",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 646.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 15:26:26",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 898.0,
+        "total": 3,
+        "pass": 0,
+        "fail": 3,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 15:31:24",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 132.0,
+        "total": 1,
+        "pass": 0,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 15:54:20",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 132.0,
+        "total": 1,
+        "pass": 0,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:19:28",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 58.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:23:24",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 163.0,
+        "total": 3,
+        "pass": 3,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:28:29",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 92.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:30:14",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 87.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:34:07",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 105.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:34:08",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 102.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:37:46",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 83.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:41:37",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 145.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:41:40",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 145.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:43:25",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 78.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:45:07",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 80.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-20 16:50:49",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 235.0,
+        "total": 3,
+        "pass": 3,
+        "fail": 0,
+        "error": 0
+      }
+    ]
+  },
+  "time": {
+    "auto_seconds": 19926.0,
+    "manual_seconds_est": 241200,
+    "saved_seconds": 221274.0,
+    "manual_min_per_tc": 10
+  },
+  "target_pass": 60,
+  "git": {
+    "commits": [
+      {
+        "hash": "d807f76",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-16",
+        "subject": "feat(builders): add Brand + Blueprint Manager TCs, fix Schedulers sidebar flakiness",
+        "human": "Nueva funcionalidad en builders: add Brand + Blueprint Manager TCs, fix Schedulers sidebar flakiness",
+        "fix": true
+      },
+      {
+        "hash": "23d2f41",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-13",
+        "subject": "CI: actions/upload-artifact v3→v4 (deprecation fix)",
+        "human": "CI/CD: actions/upload-artifact v3→v4 (deprecation fix)",
+        "fix": true
+      },
+      {
+        "hash": "a484ae4",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-13",
+        "subject": "Fix Master-Validation-All.tsc: rutas de suites sin extension .ts (resolvia executableEntity null)",
+        "human": "Fix Master-Validation-All.tsc: rutas de suites sin extension .ts (resolvia executableEntity null)",
+        "fix": true
+      },
+      {
+        "hash": "1870c2e",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "CI: sin schedule nocturno; corre solo en push con cambios que afectan tests (paths filter) o manual",
+        "human": "CI/CD: sin schedule nocturno; corre solo en push con cambios que afectan tests (paths filter) o manual",
+        "fix": false
+      },
+      {
+        "hash": "85d1413",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "Coleccion maestra Master-Validation-All.tsc: 67 TCs en una ejecucion (Full Regression + 3 Repos-Coverage)",
+        "human": "Coleccion maestra Master-Validation-All.tsc: 67 TCs en una ejecucion (Full Regression + 3 Repos-Coverage)",
+        "fix": false
+      },
+      {
+        "hash": "501b877",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "Oleada 2 Fase 2: 10 TCs nuevos (6 Schedulers + 4 Builders), fixes Requests/Resources, perfil Chrome dedicado, CI nocturno, Asana API real guardada, CommonKeywords.validateSelectOptions, pedido data-testid consolidado",
+        "human": "Oleada 2 Fase 2: 10 TCs nuevos (6 Schedulers + 4 Builders), fixes Requests/Resources, perfil Chrome dedicado, CI nocturno, Asana API real guardada, CommonKeywords.validateSelectOptions, pedido data-testid consolidado",
+        "fix": true
+      },
+      {
+        "hash": "533c6ed",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "Optimizer: helper gotoTarget y timeouts cortos en checks de ausencia (ReposCoverageKeywords) - ahorra ~15-20s por suite",
+        "human": "Optimizer: helper gotoTarget y timeouts cortos en checks de ausencia (ReposCoverageKeywords) - ahorra ~15-20s por suite",
+        "fix": false
+      },
+      {
+        "hash": "908802d",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "Fase 2: cobertura generada desde repos frontend - ReposCoverageKeywords, 13 TCs + element-maps, suites Repos-Coverage, sourceFile en tickets Asana (REPORTE_FASE2)",
+        "human": "Fase 2: cobertura generada desde repos frontend - ReposCoverageKeywords, 13 TCs + element-maps, suites Repos-Coverage, sourceFile en tickets Asana (REPORTE_FASE2)",
+        "fix": false
+      },
+      {
+        "hash": "499e479",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "QA: fix FilenameFilter en purga de chart-snapshots, migracion SSO de filters a keyword central, 12 suites QA (TS_*) y REPORTE_QA",
+        "human": "QA: fix FilenameFilter en purga de chart-snapshots, migracion SSO de filters a keyword central, 12 suites QA (TS_*) y REPORTE_QA",
+        "fix": true
+      },
+      {
+        "hash": "cb49cf2",
+        "author": "eduardo.baptista",
+        "date": "2026-06-10",
+        "subject": "fix(login): adaptive MS SSO wait + account picker handling; add Super-Suite-Validation",
+        "human": "Correccion en login: adaptive MS SSO wait + account picker handling; add Super-Suite-Validation",
+        "fix": true
+      },
+      {
+        "hash": "987235f",
+        "author": "eduardo.baptista",
+        "date": "2026-06-10",
+        "subject": "feat(tracking): blueprint email filter validation + chart history",
+        "human": "Nueva funcionalidad en tracking: blueprint email filter validation + chart history",
+        "fix": false
+      },
+      {
+        "hash": "402e865",
+        "author": "eduardo.baptista",
+        "date": "2026-06-09",
+        "subject": "chore: add .gitattributes to normalize line endings (LF in repo)",
+        "human": "Mantenimiento: add .gitattributes to normalize line endings (LF in repo)",
+        "fix": false
+      },
+      {
+        "hash": "743fc58",
+        "author": "eduardo.baptista",
+        "date": "2026-06-09",
+        "subject": "fix(tracking): improve tab discovery and state collection in JS snippets",
+        "human": "Correccion en tracking: improve tab discovery and state collection in JS snippets",
+        "fix": true
+      },
+      {
+        "hash": "7e0d60d",
+        "author": "eduardo.baptista",
+        "date": "2026-06-08",
+        "subject": "chore: initial commit — Templet QA Katalon project",
+        "human": "Mantenimiento: initial commit — Templet QA Katalon project",
+        "fix": false
+      }
+    ],
+    "commit_count": 14,
+    "authors": [
+      "Eduardo Baptista",
+      "eduardo.baptista"
+    ],
+    "files_changed": 438,
+    "new_tcs": [
+      "Test Cases/Builders/blueprint/validate-blueprint-manager.tc",
+      "Test Cases/Builders/brand/validate-brand-list.tc",
+      "Test Cases/Builders/convert/validate-convert.tc",
+      "Test Cases/Builders/current-spend/validate-current-spend.tc",
+      "Test Cases/Builders/direct-redirect/all-options.tc",
+      "Test Cases/Builders/functional-smoke.tc",
+      "Test Cases/Builders/layout/validate-layout-options.tc",
+      "Test Cases/Builders/objects/click-visible-objects-return-home.tc",
+      "Test Cases/Builders/objects/validate-objects-visible.tc",
+      "Test Cases/Builders/project-schedule/validate-project-schedule.tc",
+      "Test Cases/Builders/smoke.tc",
+      "Test Cases/Builders/task-creation/validate-content.tc",
+      "Test Cases/Builders/task-creation/validate-non-standard.tc",
+      "Test Cases/Builders/template/validate-template-list.tc",
+      "Test Cases/Builders/tracking/validate-all-dashboard.tc",
+      "Test Cases/Builders/tracking/validate-blueprint-tab.tc",
+      "Test Cases/Builders/tracking/validate-login-tab.tc",
+      "Test Cases/Builders/tracking/validate-task-creation-tab.tc",
+      "Test Cases/Builders/work-in-progress/validate-wip-dashboard.tc",
+      "Test Cases/Decks/admin/validate-admin-surface.tc",
+      "Test Cases/Decks/filters/client-initiative-sort.tc",
+      "Test Cases/Decks/filters/initiative-content-validation.tc",
+      "Test Cases/Decks/functional-smoke.tc",
+      "Test Cases/Decks/objects-test-prod.tc",
+      "Test Cases/Decks/objects/click-visible-objects-return-home.tc",
+      "Test Cases/Decks/objects/list-actions-click-response.tc",
+      "Test Cases/Decks/objects/list-view-visible-clickable.tc",
+      "Test Cases/Decks/objects/validate-objects-visible.tc",
+      "Test Cases/Decks/validation/list-actions-modal-response.tc",
+      "Test Cases/Decks/validation/sort-grid-list-validation.tc",
+      "Test Cases/Email/admin/validate-admin-surface.tc",
+      "Test Cases/Email/filters/client-initiative-sort.tc",
+      "Test Cases/Email/filters/initiative-content-validation.tc",
+      "Test Cases/Email/functional-smoke.tc",
+      "Test Cases/Email/objects-test-prod.tc",
+      "Test Cases/Email/objects/click-visible-objects-return-home.tc",
+      "Test Cases/Email/objects/list-actions-click-response.tc",
+      "Test Cases/Email/objects/list-view-visible-clickable.tc",
+      "Test Cases/Email/objects/validate-objects-visible.tc",
+      "Test Cases/Email/validation/list-actions-modal-response.tc",
+      "Test Cases/Email/validation/sort-grid-list-validation.tc",
+      "Test Cases/Schedulers/daily-pulse/validate-daily-pulse.tc",
+      "Test Cases/Schedulers/functional-smoke.tc",
+      "Test Cases/Schedulers/initiatives/validate-initiatives.tc",
+      "Test Cases/Schedulers/metrics/validate-metrics.tc",
+      "Test Cases/Schedulers/objects/click-visible-objects-return-home.tc",
+      "Test Cases/Schedulers/objects/validate-objects-visible.tc",
+      "Test Cases/Schedulers/requests/validate-requests-list.tc",
+      "Test Cases/Schedulers/resources/validate-resources-board.tc",
+      "Test Cases/Schedulers/smoke.tc",
+      "Test Cases/Schedulers/summary/validate-summary-log.tc",
+      "Test Cases/Schedulers/task-creation/validate-content.tc",
+      "Test Cases/Schedulers/task-creation/validate-edits.tc",
+      "Test Cases/Schedulers/task-creation/validate-non-standard.tc",
+      "Test Cases/Schedulers/task-creation/validate-standard.tc",
+      "Test Cases/Schedulers/tracking/validate-tracking-dashboard.tc",
+      "Test Cases/Sheets/admin/validate-admin-surface.tc",
+      "Test Cases/Sheets/filters/client-initiative-sort.tc",
+      "Test Cases/Sheets/filters/initiative-content-validation.tc",
+      "Test Cases/Sheets/functional-smoke.tc",
+      "Test Cases/Sheets/objects-test-prod.tc",
+      "Test Cases/Sheets/objects/click-visible-objects-return-home.tc",
+      "Test Cases/Sheets/objects/list-actions-click-response.tc",
+      "Test Cases/Sheets/objects/list-view-visible-clickable.tc",
+      "Test Cases/Sheets/objects/validate-objects-visible.tc",
+      "Test Cases/Sheets/smoke.tc",
+      "Test Cases/Sheets/validation/list-actions-modal-response.tc",
+      "Test Cases/Sheets/validation/sort-grid-list-validation.tc"
+    ],
+    "mod_tcs": [
+      "Test Cases/Builders/brand/validate-brand-list.tc"
+    ],
+    "new_scripts": [
+      "Scripts/Builders/blueprint/validate-blueprint-manager/Script.groovy",
+      "Scripts/Builders/brand/validate-brand-list/Script.groovy",
+      "Scripts/Builders/convert/validate-convert/Script.groovy",
+      "Scripts/Builders/current-spend/validate-current-spend/Script.groovy",
+      "Scripts/Builders/direct-redirect/all-options/Script.groovy",
+      "Scripts/Builders/functional-smoke/Script.groovy",
+      "Scripts/Builders/layout/validate-layout-options/Script.groovy",
+      "Scripts/Builders/objects/click-visible-objects-return-home/Script.groovy",
+      "Scripts/Builders/objects/validate-objects-visible/Script.groovy",
+      "Scripts/Builders/project-schedule/validate-project-schedule/Script.groovy",
+      "Scripts/Builders/smoke/Script.groovy",
+      "Scripts/Builders/task-creation/validate-content/Script.groovy",
+      "Scripts/Builders/task-creation/validate-non-standard/Script.groovy",
+      "Scripts/Builders/template/validate-template-list/Script.groovy",
+      "Scripts/Builders/tracking/validate-all-dashboard/Script.groovy",
+      "Scripts/Builders/tracking/validate-blueprint-tab/Script.groovy",
+      "Scripts/Builders/tracking/validate-login-tab/Script.groovy",
+      "Scripts/Builders/tracking/validate-task-creation-tab/Script.groovy",
+      "Scripts/Builders/work-in-progress/validate-wip-dashboard/Script.groovy",
+      "Scripts/Decks/admin/validate-admin-surface/Script.groovy",
+      "Scripts/Decks/functional-smoke/Script.groovy",
+      "Scripts/Decks/objects-test-prod/Script.groovy",
+      "Scripts/Decks/objects/click-visible-objects-return-home/Script.groovy",
+      "Scripts/Decks/objects/list-actions-click-response/Script.groovy",
+      "Scripts/Decks/objects/list-view-visible-clickable/Script.groovy",
+      "Scripts/Decks/objects/validate-objects-visible/Script.groovy",
+      "Scripts/Decks/validation/list-actions-modal-response/Script.groovy",
+      "Scripts/Decks/validation/sort-grid-list-validation/Script.groovy",
+      "Scripts/Email/admin/validate-admin-surface/Script.groovy",
+      "Scripts/Email/functional-smoke/Script.groovy",
+      "Scripts/Email/objects-test-prod/Script.groovy",
+      "Scripts/Email/objects/click-visible-objects-return-home/Script.groovy",
+      "Scripts/Email/objects/list-actions-click-response/Script.groovy",
+      "Scripts/Email/objects/list-view-visible-clickable/Script.groovy",
+      "Scripts/Email/objects/validate-objects-visible/Script.groovy",
+      "Scripts/Email/validation/list-actions-modal-response/Script.groovy",
+      "Scripts/Email/validation/sort-grid-list-validation/Script.groovy",
+      "Scripts/Schedulers/daily-pulse/validate-daily-pulse/Script.groovy",
+      "Scripts/Schedulers/functional-smoke/Script.groovy",
+      "Scripts/Schedulers/initiatives/validate-initiatives/Script.groovy",
+      "Scripts/Schedulers/metrics/validate-metrics/Script.groovy",
+      "Scripts/Schedulers/objects/click-visible-objects-return-home/Script.groovy",
+      "Scripts/Schedulers/objects/validate-objects-visible/Script.groovy",
+      "Scripts/Schedulers/requests/validate-requests-list/Script.groovy",
+      "Scripts/Schedulers/resources/validate-resources-board/Script.groovy",
+      "Scripts/Schedulers/smoke/Script.groovy",
+      "Scripts/Schedulers/summary/validate-summary-log/Script.groovy",
+      "Scripts/Schedulers/task-creation/validate-content/Script.groovy",
+      "Scripts/Schedulers/task-creation/validate-edits/Script.groovy",
+      "Scripts/Schedulers/task-creation/validate-non-standard/Script.groovy",
+      "Scripts/Schedulers/task-creation/validate-standard/Script.groovy",
+      "Scripts/Schedulers/tracking/validate-tracking-dashboard/Script.groovy",
+      "Scripts/Sheets/admin/validate-admin-surface/Script.groovy",
+      "Scripts/Sheets/filters/client-initiative-sort/Script.groovy",
+      "Scripts/Sheets/filters/initiative-content-validation/Script.groovy",
+      "Scripts/Sheets/functional-smoke/Script.groovy",
+      "Scripts/Sheets/objects-test-prod/Script.groovy",
+      "Scripts/Sheets/objects/click-visible-objects-return-home/Script.groovy",
+      "Scripts/Sheets/objects/list-actions-click-response/Script.groovy",
+      "Scripts/Sheets/objects/list-view-visible-clickable/Script.groovy",
+      "Scripts/Sheets/objects/validate-objects-visible/Script.groovy",
+      "Scripts/Sheets/smoke/Script.groovy",
+      "Scripts/Sheets/validation/list-actions-modal-response/Script.groovy",
+      "Scripts/Sheets/validation/sort-grid-list-validation/Script.groovy",
+      "Test Cases/Sheets/objects/list-view-visible-clickable/Script.groovy"
+    ],
+    "new_keywords": [
+      "Keywords/AsanaErrorTicketGenerator.groovy",
+      "Keywords/AsanaErrorTicketGeneratorKeyword.groovy",
+      "Keywords/CommonKeywords.groovy",
+      "Keywords/ObjectCaptureKeywords.groovy",
+      "Keywords/ReposCoverageKeywords.groovy",
+      "Keywords/SheetsKeywords.groovy",
+      "Keywords/TempletPortalKeywords.groovy",
+      "Keywords/VisualKeywords.groovy"
+    ],
+    "fixes": [
+      {
+        "hash": "d807f76",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-16",
+        "subject": "feat(builders): add Brand + Blueprint Manager TCs, fix Schedulers sidebar flakiness",
+        "human": "Nueva funcionalidad en builders: add Brand + Blueprint Manager TCs, fix Schedulers sidebar flakiness",
+        "fix": true
+      },
+      {
+        "hash": "23d2f41",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-13",
+        "subject": "CI: actions/upload-artifact v3→v4 (deprecation fix)",
+        "human": "CI/CD: actions/upload-artifact v3→v4 (deprecation fix)",
+        "fix": true
+      },
+      {
+        "hash": "a484ae4",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-13",
+        "subject": "Fix Master-Validation-All.tsc: rutas de suites sin extension .ts (resolvia executableEntity null)",
+        "human": "Fix Master-Validation-All.tsc: rutas de suites sin extension .ts (resolvia executableEntity null)",
+        "fix": true
+      },
+      {
+        "hash": "501b877",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "Oleada 2 Fase 2: 10 TCs nuevos (6 Schedulers + 4 Builders), fixes Requests/Resources, perfil Chrome dedicado, CI nocturno, Asana API real guardada, CommonKeywords.validateSelectOptions, pedido data-testid consolidado",
+        "human": "Oleada 2 Fase 2: 10 TCs nuevos (6 Schedulers + 4 Builders), fixes Requests/Resources, perfil Chrome dedicado, CI nocturno, Asana API real guardada, CommonKeywords.validateSelectOptions, pedido data-testid consolidado",
+        "fix": true
+      },
+      {
+        "hash": "499e479",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-12",
+        "subject": "QA: fix FilenameFilter en purga de chart-snapshots, migracion SSO de filters a keyword central, 12 suites QA (TS_*) y REPORTE_QA",
+        "human": "QA: fix FilenameFilter en purga de chart-snapshots, migracion SSO de filters a keyword central, 12 suites QA (TS_*) y REPORTE_QA",
+        "fix": true
+      },
+      {
+        "hash": "cb49cf2",
+        "author": "eduardo.baptista",
+        "date": "2026-06-10",
+        "subject": "fix(login): adaptive MS SSO wait + account picker handling; add Super-Suite-Validation",
+        "human": "Correccion en login: adaptive MS SSO wait + account picker handling; add Super-Suite-Validation",
+        "fix": true
+      },
+      {
+        "hash": "743fc58",
+        "author": "eduardo.baptista",
+        "date": "2026-06-09",
+        "subject": "fix(tracking): improve tab discovery and state collection in JS snippets",
+        "human": "Correccion en tracking: improve tab discovery and state collection in JS snippets",
+        "fix": true
+      }
+    ],
+    "code_added": 12787,
+    "code_deleted": 297
+  },
+  "inventory": {
+    "total_tcs": 74,
+    "total_suites": 51,
+    "total_scripts": 70,
+    "by_platform": {
+      "Builders": 24,
+      "Sheets": 12,
+      "Decks": 11,
+      "Email": 11,
+      "Schedulers": 15,
+      "QA": 1
+    }
+  },
+  "tickets": {
+    "total": 57,
+    "unique": 7,
+    "abiertos": 6,
+    "resueltos": 1,
+    "by_severity": {
+      "HIGH": 11,
+      "MEDIUM": 46
+    },
+    "cases": [
+      {
+        "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+        "desc": "Elemento no encontrado en Task Creation - Non Standard",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 13,
+        "recurrence": 8,
+        "estado": "Abierto"
+      },
+      {
+        "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+        "desc": "Elemento no encontrado en Execution Tracking",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 12,
+        "recurrence": 6,
+        "estado": "Resuelto"
+      },
+      {
+        "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+        "desc": "Elemento no encontrado en Requests",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 7,
+        "recurrence": 7,
+        "estado": "Abierto"
+      },
+      {
+        "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+        "desc": "Elemento no encontrado en Resources",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 7,
+        "recurrence": 7,
+        "estado": "Abierto"
+      },
+      {
+        "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+        "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 6,
+        "recurrence": 6,
+        "estado": "Abierto"
+      },
+      {
+        "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+        "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 6,
+        "recurrence": 6,
+        "estado": "Abierto"
+      },
+      {
+        "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+        "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+        "sev": "MEDIUM",
+        "asana": "N",
+        "count": 6,
+        "recurrence": 6,
+        "estado": "Abierto"
+      }
+    ],
+    "asana": "Se publican en Asana si hay API key (GlobalVariable asana_api_key); si no, quedan como JSON local en Reports/asana_tickets."
+  },
+  "metas": [
+    {
+      "nombre": "Tasa de exito >= 60% (meta del mes)",
+      "meta": "60%",
+      "valor": "58.2%",
+      "ok": false
+    },
+    {
+      "nombre": "Regresiones ejecutadas >= 1",
+      "meta": "1",
+      "valor": "3",
+      "ok": true
+    },
+    {
+      "nombre": "Casos nuevos automatizados >= 3",
+      "meta": "3",
+      "valor": "68",
+      "ok": true
+    },
+    {
+      "nombre": "Estabilizaciones/bloqueos resueltos >= 1",
+      "meta": "1",
+      "valor": "7",
+      "ok": true
+    }
+  ]
+}

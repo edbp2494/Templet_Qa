@@ -1,0 +1,515 @@
+[
+ {
+  "ts": "2026-06-12 17:20:54",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:20:54",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:33:36",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:33:36",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:33:36",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:33:36",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:33:36",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:33:36",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Decks] TC-DECKS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+  "component": "Decks",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Email] TC-EMAIL-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+  "component": "Email",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:36:20",
+  "title": "[Sheets] TC-SHEETS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+  "component": "Sheets",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Decks] TC-DECKS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+  "component": "Decks",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Email] TC-EMAIL-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+  "component": "Email",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 17:39:58",
+  "title": "[Sheets] TC-SHEETS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+  "component": "Sheets",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Decks] TC-DECKS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+  "component": "Decks",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Email] TC-EMAIL-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+  "component": "Email",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:00:31",
+  "title": "[Sheets] TC-SHEETS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+  "component": "Sheets",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Decks] TC-DECKS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+  "component": "Decks",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Email] TC-EMAIL-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+  "component": "Email",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:08:11",
+  "title": "[Sheets] TC-SHEETS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+  "component": "Sheets",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Decks] TC-DECKS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+  "component": "Decks",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Email] TC-EMAIL-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+  "component": "Email",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - HIGH",
+  "sev": "HIGH",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Schedulers] TC-SCHEDULERS-TRACKING-DASHBOARD-001 [Execution Tracking] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Execution Tracking",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:16:58",
+  "title": "[Sheets] TC-SHEETS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+  "component": "Sheets",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:49:13",
+  "title": "[Builders] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 [Task Creation - Non Standard] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
+  "component": "Builders",
+  "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:49:13",
+  "title": "[Decks] TC-DECKS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-DECKS-ADMIN-SURFACE-001",
+  "component": "Decks",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:49:13",
+  "title": "[Email] TC-EMAIL-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
+  "component": "Email",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:49:13",
+  "title": "[Schedulers] TC-SCHEDULERS-REQUESTS-LIST-001 [Requests] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Requests",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:49:13",
+  "title": "[Schedulers] TC-SCHEDULERS-RESOURCES-BOARD-001 [Resources] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
+  "component": "Schedulers",
+  "desc": "Elemento no encontrado en Resources",
+  "asana": "N"
+ },
+ {
+  "ts": "2026-06-12 18:49:13",
+  "title": "[Sheets] TC-SHEETS-ADMIN-SURFACE-001 [Admin Surface (manager + endpoints no-UI)] - MEDIUM",
+  "sev": "MEDIUM",
+  "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
+  "component": "Sheets",
+  "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "asana": "N"
+ }
+]

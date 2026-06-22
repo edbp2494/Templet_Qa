@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Genera el dashboard de ciclo QA (24->24) corriendo qa-metrics/generate_cycle_report.py. Salida en docs/qa-cycles/latest.html + carpeta del ciclo. No hace push (el CI lo hace el dia 24).</description>
+   <name>generate-cycle-report</name>
+   <tag>qa,reporte,ciclo,metricas</tag>
+   <comment>TC-QA-CYCLE-REPORT-001</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>qa-cycle-report-001</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,587 @@
+[
+ {
+  "timestamp": "2026-06-03 15:32:58",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 35.0,
+  "total": 38,
+  "pass": 1,
+  "fail": 0,
+  "error": 37
+ },
+ {
+  "timestamp": "2026-06-03 15:59:47",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 1190.0,
+  "total": 38,
+  "pass": 22,
+  "fail": 1,
+  "error": 15
+ },
+ {
+  "timestamp": "2026-06-03 16:06:08",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 191.0,
+  "total": 16,
+  "pass": 2,
+  "fail": 2,
+  "error": 12
+ },
+ {
+  "timestamp": "2026-06-03 18:27:38",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 206.0,
+  "total": 16,
+  "pass": 2,
+  "fail": 2,
+  "error": 12
+ },
+ {
+  "timestamp": "2026-06-03 18:49:00",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 712.0,
+  "total": 14,
+  "pass": 11,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 18:55:34",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 350.0,
+  "total": 6,
+  "pass": 5,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 19:24:35",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 169.0,
+  "total": 4,
+  "pass": 3,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 19:28:22",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 74.0,
+  "total": 1,
+  "pass": 0,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 19:50:06",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 41.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 20:22:28",
+  "suite": "Test Suites/PrePush/All-TestCases-Validation",
+  "duration_s": 1827.0,
+  "total": 38,
+  "pass": 38,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 21:10:38",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 163.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 3,
+  "error": 1
+ },
+ {
+  "timestamp": "2026-06-03 21:18:29",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 161.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 21:31:37",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 172.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 21:52:03",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 174.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 22:20:06",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 222.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-03 22:31:18",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 234.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-04 14:16:24",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 227.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-04 15:40:06",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 226.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-04 18:24:40",
+  "suite": "Test Suites/QA/UI-Components-Validation",
+  "duration_s": 239.0,
+  "total": 4,
+  "pass": 0,
+  "fail": 4,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-08 20:46:52",
+  "suite": "Test Suites/Platforms/Full-Validation-All-Platforms",
+  "duration_s": 949.0,
+  "total": 17,
+  "pass": 17,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-10 01:35:00",
+  "suite": "Test Suites/Platforms/Super-Suite-Validation",
+  "duration_s": 1363.0,
+  "total": 28,
+  "pass": 27,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 11:27:46",
+  "suite": "Test Suites/Platforms/Builders/Tracking/Tracking-Full-Flow",
+  "duration_s": 208.0,
+  "total": 4,
+  "pass": 3,
+  "fail": 0,
+  "error": 1
+ },
+ {
+  "timestamp": "2026-06-12 17:20:54",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+  "duration_s": 173.0,
+  "total": 5,
+  "pass": 4,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 17:33:36",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-Schedulers",
+  "duration_s": 159.0,
+  "total": 5,
+  "pass": 4,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 17:36:20",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-AdminPHP",
+  "duration_s": 69.0,
+  "total": 3,
+  "pass": 3,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 17:39:58",
+  "suite": "Test Suites/Platforms/Builders/Tracking/Tracking-Full-Flow",
+  "duration_s": 205.0,
+  "total": 4,
+  "pass": 4,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 18:00:31",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+  "duration_s": 170.0,
+  "total": 5,
+  "pass": 4,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 18:08:11",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+  "duration_s": 77.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 18:16:58",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-Builders",
+  "duration_s": 102.0,
+  "total": 5,
+  "pass": 5,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-12 18:49:13",
+  "suite": "Test Suites/Platforms/QA/Repos-Coverage-Schedulers",
+  "duration_s": 41.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-13 11:42:23",
+  "suite": "Test Suites/Platforms/Super-Suite-Validation",
+  "duration_s": 1360.0,
+  "total": 28,
+  "pass": 26,
+  "fail": 2,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-16 13:30:13",
+  "suite": "Test Suites/Platforms/Super-Suite-Validation",
+  "duration_s": 1345.0,
+  "total": 28,
+  "pass": 27,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-16 13:43:42",
+  "suite": "Test Suites/Platforms/Builders/BrandBlueprint/Brand-Blueprint-Validation",
+  "duration_s": 42.0,
+  "total": 2,
+  "pass": 2,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-16 13:55:25",
+  "suite": "Test Suites/Platforms/Super-Suite-Validation",
+  "duration_s": 83.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-17 17:06:15",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+  "duration_s": 73.0,
+  "total": 1,
+  "pass": 0,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-17 17:15:55",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+  "duration_s": 55.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-17 17:17:00",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+  "duration_s": 53.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 13:24:50",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Text-Generation-Flow",
+  "duration_s": 484.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 13:38:03",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-Options-Flow",
+  "duration_s": 102.0,
+  "total": 1,
+  "pass": 0,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 13:42:44",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-Options-Flow",
+  "duration_s": 69.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:02:12",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 249.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:09:49",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 171.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:15:24",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 168.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:25:46",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 436.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:39:15",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 381.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:48:34",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 383.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 14:48:41",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 382.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 15:07:19",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 384.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 15:18:01",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 396.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 15:22:12",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 646.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 15:26:26",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 898.0,
+  "total": 3,
+  "pass": 0,
+  "fail": 3,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 15:31:24",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 132.0,
+  "total": 1,
+  "pass": 0,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 15:54:20",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 132.0,
+  "total": 1,
+  "pass": 0,
+  "fail": 1,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:19:28",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 58.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:23:24",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 163.0,
+  "total": 3,
+  "pass": 3,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:28:29",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 92.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:30:14",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 87.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:34:07",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 105.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:34:08",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 102.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:37:46",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 83.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:41:37",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 145.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:41:40",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 145.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:43:25",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 78.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:45:07",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 80.0,
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "error": 0
+ },
+ {
+  "timestamp": "2026-06-20 16:50:49",
+  "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+  "duration_s": 235.0,
+  "total": 3,
+  "pass": 3,
+  "fail": 0,
+  "error": 0
+ }
+]

@@ -1,0 +1,63 @@
+name: QA Cycle Report (24->24)
+
+# Genera el reporte de ciclo QA y lo commitea/pushea.
+# - schedule: el dia 24 de cada mes (cierre de ciclo) a las 11:00 UTC.
+# - manual: workflow_dispatch (boton "Run workflow"), opcional fecha de referencia.
+#
+# Nota: las metricas de EJECUCIONES y TICKETS salen de los historiales versionados
+# docs/qa-cycles/*-history.json (que alimentan las corridas locales). El CI recalcula
+# el dashboard desde esos historiales + git + inventario, y publica el resultado.
+
+on:
+  schedule:
+    - cron: '0 11 24 * *'
+  workflow_dispatch:
+    inputs:
+      at:
+        description: 'Fecha de referencia YYYY-MM-DD (vacio = hoy)'
+        required: false
+        default: ''
+      manual_min:
+        description: 'Minutos manuales por caso (estimacion de ahorro)'
+        required: false
+        default: '10'
+
+permissions:
+  contents: write
+
+jobs:
+  cycle-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (historia completa para git log)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generar reporte de ciclo
+        env:
+          QA_MANUAL_MIN_PER_TC: ${{ github.event.inputs.manual_min || '10' }}
+        run: |
+          AT="${{ github.event.inputs.at }}"
+          if [ -n "$AT" ]; then
+            python3 qa-metrics/generate_cycle_report.py --at "$AT"
+          else
+            python3 qa-metrics/generate_cycle_report.py
+          fi
+
+      - name: Commit y push del reporte
+        run: |
+          git config user.name "templet-qa-bot"
+          git config user.email "qa-bot@templet.io"
+          git add docs/qa-cycles
+          if git diff --staged --quiet; then
+            echo "Sin cambios en el reporte de ciclo."
+          else
+            git commit -m "chore(qa): reporte de ciclo $(date -u +%Y-%m-%d)"
+            git push
+          fi
