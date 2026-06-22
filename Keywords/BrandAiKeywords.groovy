@@ -177,6 +177,47 @@ public class BrandAiKeywords {
 		}
 	}
 
+	/**
+	 * Preambulo compartido para los flujos de /brand: reuso/login de sesion,
+	 * validacion de sesion, espera del detalle del brand ("Definition") y apertura
+	 * del tab "Layouts". Devuelve el WebDriver, o null si la sesion no es valida
+	 * (en ese caso agrega el failure de AUTH a la lista recibida).
+	 *
+	 * config: [caseId, buildersUrl, brandUrl, failures (List), detailAttempts (opcional, def 6)]
+	 */
+	@Keyword
+	WebDriver enterBrandLayouts(Map config) {
+		String buildersUrl = config.buildersUrl
+		String brandUrl    = config.brandUrl
+		List   failures    = (List) config.failures
+		int    attempts    = (config.detailAttempts ?: 6) as int
+
+		if (!TempletPortalKeywords.isBrowserSessionAlive()) {
+			TempletPortalKeywords.openBrowserAndLoginWithMicrosoft(buildersUrl)
+			WebUI.waitForPageLoad(25)
+		}
+		WebUI.navigateToUrl(brandUrl)
+		WebUI.waitForPageLoad(20)
+		WebDriver driver = DriverFactory.getWebDriver()
+
+		if (!TempletPortalKeywords.isValidAppSession()) {
+			failures.add('[AUTH] Sesion no valida — la URL apunta a Microsoft login')
+			return null
+		}
+
+		boolean brandDetail = false
+		for (int a = 1; a <= attempts; a++) {
+			brandDetail = TempletPortalKeywords.verifyXPathPresent('section_definition', "//h2[normalize-space(.)='Definition']", 4)
+			if (brandDetail) { break }
+			WebUI.delay(2)
+		}
+		if (!brandDetail) { failures.add('[SCREEN] brand detail no cargo (Definition ausente)') }
+
+		TempletPortalKeywords.clickIfPresent(TempletPortalKeywords.xpathObject('tab_layouts', "//*[@role='tab'][normalize-space(.)='Layouts']"), 6)
+		WebUI.delay(2)
+		return driver
+	}
+
 	@Keyword
 	def validateCreateInputMethods(Map config) {
 		String caseId = config.caseId
@@ -189,29 +230,8 @@ public class BrandAiKeywords {
 		String fixtureUrl  = (String) CommonKeywords.getRequiredGlobal('BUILDERS_BRAND_FIXTURE_URL', ESCALA_BRAND_URL)
 		String brandUrl    = (fixtureUrl != null && fixtureUrl.trim().length() > 0) ? fixtureUrl.trim() : ESCALA_BRAND_URL
 
-		if (!TempletPortalKeywords.isBrowserSessionAlive()) {
-			TempletPortalKeywords.openBrowserAndLoginWithMicrosoft(buildersUrl)
-			WebUI.waitForPageLoad(25)
-		}
-		WebUI.navigateToUrl(brandUrl)
-		WebUI.waitForPageLoad(20)
-		WebDriver driver = DriverFactory.getWebDriver()
-
-		if (!TempletPortalKeywords.isValidAppSession()) {
-			failures.add('[AUTH] Sesion no valida — la URL apunta a Microsoft login')
-			finish(caseId, failures, warnings); return
-		}
-
-		boolean brandDetail = false
-		for (int a = 1; a <= 6; a++) {
-			brandDetail = TempletPortalKeywords.verifyXPathPresent('section_definition', "//h2[normalize-space(.)='Definition']", 4)
-			if (brandDetail) { break }
-			WebUI.delay(2)
-		}
-		if (!brandDetail) { failures.add('[SCREEN] brand detail no cargo (Definition ausente)') }
-
-		TempletPortalKeywords.clickIfPresent(TempletPortalKeywords.xpathObject('tab_layouts', "//*[@role='tab'][normalize-space(.)='Layouts']"), 6)
-		WebUI.delay(2)
+		WebDriver driver = enterBrandLayouts([caseId: caseId, buildersUrl: buildersUrl, brandUrl: brandUrl, failures: failures])
+		if (driver == null) { finish(caseId, failures, warnings); return }
 
 		if (!TempletPortalKeywords.verifyXPathPresent('asset_menu_trigger', "(//button[@aria-haspopup='menu'])[1]", 10)) {
 			failures.add('[LAYOUTS] No se encontraron menus "..." de assets en Layouts.')

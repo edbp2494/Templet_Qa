@@ -46,35 +46,12 @@ def closeMenu = {
 	try { new Actions(driver).sendKeys(Keys.ESCAPE).perform() } catch (Throwable ignore) { }
 }
 
-// ── Login / reuso de sesion ─────────────────────────────────────────────────────
-boolean sessionAlive = CustomKeywords.'TempletPortalKeywords.isBrowserSessionAlive'()
-if (!sessionAlive) {
-	CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(buildersUrl)
-	WebUI.waitForPageLoad(25)
-}
-WebUI.navigateToUrl(brandUrl)
-WebUI.waitForPageLoad(20)
-driver = DriverFactory.getWebDriver()
-
-if (!CustomKeywords.'TempletPortalKeywords.isValidAppSession'()) {
-	failures.add('[AUTH] Sesion no valida — la URL apunta a Microsoft login')
+// ── Login + brand detail + tab Layouts (keyword compartida BrandAiKeywords) ──────
+driver = CustomKeywords.'BrandAiKeywords.enterBrandLayouts'([caseId: caseId, buildersUrl: buildersUrl, brandUrl: brandUrl, failures: failures])
+if (driver == null) {
 	CustomKeywords.'CommonKeywords.logCaseSummary'(caseId, failures, warnings)
 	KeywordUtil.markFailedAndStop("[${caseId}] Failures: ${failures}")
 }
-
-// ── Brand detail + tab Layouts ───────────────────────────────────────────────────
-boolean brandDetail = false
-for (int attempt = 1; attempt <= 6; attempt++) {
-	brandDetail = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('section_definition', "//h2[normalize-space(.)='Definition']", 4)
-	if (brandDetail) { break }
-	WebUI.delay(2)
-}
-if (!brandDetail) {
-	failures.add('[SCREEN] brand detail no cargo (seccion "Definition" ausente)')
-}
-TestObject layoutsTab = CustomKeywords.'TempletPortalKeywords.xpathObject'('tab_layouts', "//*[@role='tab'][normalize-space(.)='Layouts']")
-CustomKeywords.'TempletPortalKeywords.clickIfPresent'(layoutsTab, 6)
-WebUI.delay(2)
 
 boolean assetMenus = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('asset_menu_trigger', "(//button[@aria-haspopup='menu'])[1]", 10)
 if (!assetMenus) {
