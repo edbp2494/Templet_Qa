@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC5: Verifica manejo de errores del pipeline E6 (Notifications, Error Handling). Submit vacio -> verifica mensajes de validacion. URL invalida -> verifica que la sesion sobrevive. Captura evidencia de cada escenario.</description>
+   <name>validate-request-error</name>
+   <tag>E6,Blueprint,RequestProcessing,ErrorHandling,Notifications</tag>
+   <comment></comment>
+   <testCaseGuid>97b9f9ae-e03a-4e4c-8cf1-adcdbaefd642</testCaseGuid>
+</TestCaseEntity>

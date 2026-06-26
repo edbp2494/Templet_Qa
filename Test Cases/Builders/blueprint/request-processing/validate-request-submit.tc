@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC3: Intenta llenar y enviar el formulario de creacion de Blueprint con datos de prueba QA-AUTO-TEST. Verifica que el pipeline E6 (Intake -> Normalize -> Orchestration) procesa la request. Captura URL y estado post-submit.</description>
+   <name>validate-request-submit</name>
+   <tag>E6,Blueprint,RequestProcessing,Submit,E2E</tag>
+   <comment></comment>
+   <testCaseGuid>cd70d7a1-d8d8-4361-9202-4dc2272ce9d4</testCaseGuid>
+</TestCaseEntity>

@@ -98,9 +98,22 @@ def parse_all_tickets(repo):
             sev = 'OTRO'
             msv = re.search(r'(HIGH|MEDIUM|LOW)', title)
             if msv: sev = msv.group(1)
+            desc_raw = t.get('description', '') or ''
+            # detalle de reparacion extraido del cuerpo del ticket
+            m_err = re.search(r'\*\*Error:\*\*\s*(.+?)(?:\nARCHIVO|\n\*\*Source|\Z)', desc_raw, re.S)
+            paso = re.sub(r'\s+', ' ', (m_err.group(1).strip() if m_err else '')).strip()
+            m_paso = re.search(r'(PASO\s*\d+:[^\]]+)\]', paso)
+            paso_short = m_paso.group(1).strip() if m_paso else paso[:90]
+            m_src = re.search(r'ARCHIVO FUENTE:\s*(.+)', desc_raw)
+            repo_file = (m_src.group(1).strip() if m_src else t.get('sourceFile', '')) or ''
+            m_act = re.search(r'ACCION SUGERIDA:\s*(.+)', desc_raw)
+            accion = re.sub(r'\s+', ' ', (m_act.group(1).strip() if m_act else '')).strip()
             items.append({'ts': ts.strftime('%Y-%m-%d %H:%M:%S'), 'title': title[:140], 'sev': sev,
                           'caseId': t.get('caseId',''), 'component': t.get('component',''),
                           'desc': _humaniza_desc(t),
+                          'paso': paso_short[:140], 'repo_file': repo_file[:160],
+                          'accion': accion[:240], 'screenshot': (t.get('screenshot','') or '')[:240],
+                          'url': t.get('url',''),
                           'asana': ('Y' if (t.get('asanaTaskId') or t.get('asanaUrl') or t.get('asana_gid')) else 'N')})
     return items
 
@@ -206,9 +219,13 @@ def aggregate(repo, at, manual_min, exec_hist, ticket_hist):
     cases={}
     for t in tks:
         cid = t.get('caseId') or (t.get('title','')[:40])
-        c = cases.setdefault(cid, {'caseId':cid,'desc':t.get('desc',''),'sev':t.get('sev',''),'asana':t.get('asana','N'),'count':0})
+        c = cases.setdefault(cid, {'caseId':cid,'desc':t.get('desc',''),'sev':t.get('sev',''),'asana':t.get('asana','N'),'count':0,
+                                   'paso':'','repo_file':'','accion':'','screenshot':'','url':''})
         c['count']+=1; c['sev']=t.get('sev',c['sev'])
         if not c.get('desc'): c['desc']=t.get('desc','')
+        # quedarse con el detalle de reparacion mas completo encontrado
+        for k in ('paso','repo_file','accion','screenshot','url'):
+            if t.get(k) and len(t.get(k,'')) > len(c.get(k,'')): c[k]=t[k]
         if t.get('asana')=='Y': c['asana']='Y'
     abiertos=resueltos=0; case_list=[]
     for cid,c in cases.items():
@@ -295,14 +312,22 @@ def build_html(d):
         f'<tr><td><code>{html.escape(c["hash"])}</code></td><td>{html.escape(c["date"])}</td>'
         f'<td>{html.escape((c.get("human") or c["subject"])[:90])}</td></tr>'
         for c in g['commits'][:25]) or '<tr><td colspan="3" class="muted">Sin commits en el ciclo</td></tr>'
-    ticket_rows=''.join(
+    def _ticket_block(i,c):
+        det=[]
+        if c.get('repo_file'): det.append(f"<b>Archivo:</b> <code>{html.escape(c['repo_file'])}</code>")
+        if c.get('paso'): det.append(f"<b>Fallo:</b> {html.escape(c['paso'])}")
+        if c.get('accion'): det.append(f"<b>Reparacion:</b> {html.escape(c['accion'])}")
+        if c.get('screenshot'): det.append(f"<b>Screenshot:</b> <code>{html.escape(c['screenshot'])}</code>")
+        det_html=('<br>'.join(det)) if det else '<span class="muted">Sin detalle adicional</span>'
+        return (
         f'<tr><td style="text-align:center">{i}</td><td><code>{html.escape(c["caseId"][:42])}</code></td>'
         f'<td>{html.escape((c.get("desc") or "")[:60])}</td>'
         f'<td><span class="sev sev-{html.escape(c["sev"])}">{html.escape(c["sev"])}</span></td>'
         f'<td style="text-align:center">{c["count"]}</td>'
         f'<td style="text-align:center">{html.escape(c.get("asana","N"))}</td>'
         f'<td><span class="est est-{("ab" if c["estado"]=="Abierto" else "re")}">{html.escape(c["estado"])}</span></td></tr>'
-        for i,c in enumerate(tk['cases'][:30],1)) or '<tr><td colspan="7" class="muted">Sin tickets en el ciclo</td></tr>'
+        f'<tr class="detrow"><td></td><td colspan="6" class="detail">{det_html}</td></tr>')
+    ticket_rows=''.join(_ticket_block(i,c) for i,c in enumerate(tk['cases'][:30],1)) or '<tr><td colspan="7" class="muted">Sin tickets en el ciclo</td></tr>'
     auto_h=t['auto_seconds']/3600.0; man_h=t['manual_seconds_est']/3600.0
     time_bars=svg_bars([('Automatizado',round(auto_h,1)),('Manual (est.)',round(man_h,1))],'#7c3aed',' h')
     return f"""<!doctype html><html lang="es"><head><meta charset="utf-8">
@@ -333,6 +358,7 @@ def build_html(d):
 .meta.ok{{background:rgba(34,197,94,.10);border-color:#1f7a44}} .meta.no{{background:rgba(217,119,6,.10);border-color:#7c5212}} .meta-name{{flex:1}} .meta-val{{font-weight:700}} .meta-val small{{color:var(--muted);font-weight:400}}
 table{{width:100%;border-collapse:collapse;font-size:13px}} th,td{{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}} th{{color:var(--muted)}}
 code{{background:#0c1322;border:1px solid #1c2740;padding:1px 5px;border-radius:5px;color:#cbd5e1}} .muted{{color:var(--muted)}}
+.detrow td{{border-bottom:1px solid var(--line);padding-top:2px}} .detail{{font-size:12px;color:#94a3b8;line-height:1.55;background:#0b1120}} .detail b{{color:#cbd5e1}} .detail code{{font-size:11px}}
 .sev{{padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}} .sev-HIGH{{background:#3b0d0d;color:#fca5a5}} .sev-MEDIUM{{background:#3a2a06;color:#fcd34d}} .sev-LOW{{background:#06283a;color:#7dd3fc}} .sev-OTRO{{background:#1f2937;color:#9ca3af}}
 .est{{padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}} .est-ab{{background:#3b0d0d;color:#fca5a5}} .est-re{{background:#0c2f1c;color:#86efac}}
 .foot{{margin-top:24px;color:#6b7a90;font-size:12px;text-align:center}} .pill{{display:inline-block;background:rgba(34,197,94,.12);color:#bbf7d0;border:1px solid #1f7a44;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700}}
@@ -398,7 +424,7 @@ def build_message(d):
         L.append("")
         L.append("Issues principales del periodo:")
         for ctk in tk['cases'][:6]:
-            L.append(f"  * [{ctk['sev']}] {ctk['caseId']} ({ctk['component']}) - {ctk['estado']}")
+            L.append(f"  * [{ctk['sev']}] {ctk['caseId']} ({ctk.get('component','')}) - {ctk['estado']}")
     return "\n".join(L)
 
 def main():

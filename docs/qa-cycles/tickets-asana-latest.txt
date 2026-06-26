@@ -1,0 +1,157 @@
+==============================================================================
+ISSUES QA - CICLO 24-MAY-2026 -> 24-JUN-2026   (Templet QA / Katalon)
+7 issues unicos | Revalidados el 25-jun-2026 (suite QA/Revalidate-Open-Issues)
+RESUELTOS: 4 (Builders TaskCreation, Schedulers Resources, Schedulers Requests, phpinfo Email)
+ABIERTOS:  1 Schedulers (Execution Tracking ✗) + 2 SEGURIDAD phpinfo (Decks, Sheets)
+Estado Asana: NINGUNO levantado todavia
+Generado: para pegar en Asana (un bloque = un ticket)
+==============================================================================
+
+---------------------------- TICKET #1 ----------------------------
+TITULO:      [Builders] Elemento no encontrado en Task Creation - Non Standard
+CASE ID:     TC-BUILDERS-TASKCREATION-NONSTANDARD-001
+PLATAFORMA:  Builders TEST - Task Creation - Non Standard
+PANTALLA:    Task Creation - Non Standard
+URL:         https://testing-templet-builders.vercel.app/
+SEVERIDAD:   HIGH (tuvo corridas bloqueantes)
+OCURRENCIAS: 13 veces (recurrencia 8)  |  ESTADO: Abierto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: RESUELTO ✓ — re-corrida 25-jun PASO. La pantalla ya carga; el issue ya no aplica. CERRAR.
+ARCHIVO REPO:repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx
+SCREENSHOT:  Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_180000.png
+
+QUE FALLO (pasos del test):
+  - [TC-BUILDERS-TASKCREATION-NONSTANDARD-001][PASO 1: heading_nonstandard_tasks (verify_present)][SELECTOR //h2[normalize-space(.)='Nonstandard tasks'] | fallback: //*[self::h1 or self::h2][contains(normalize-space(.),'Nonstandard')]] Esperado: elemento presente con texto 'Nonstandard tasks'. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-BUILDERS-TASKCREATION-NONSTANDARD-001][PASO 2: input_task_name (verify_present)][SELECTOR //input[@placeholder='Task name' or @name='taskName'] | fallback: //label[contains(normalize-space(.),'Task name')]/following::input[1]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-BUILDERS-TASKCREATION-NONSTANDARD-001][PASO 3: btn_new_sub_task (verify_present)][SELECTOR //button[normalize-space(.)='New sub task'] | fallback: //button[contains(normalize-space(.),'sub task')]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-BUILDERS-TASKCREATION-NONSTANDARD-001][PASO 4: btn_set_it_up (verify_present)][SELECTOR //button[normalize-space(.)='Set it up!'] | fallback: //button[contains(normalize-space(.),'Set it up')]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-BUILDERS-TASKCREATION-NONSTANDARD-001][PASO 6: select_client (verify_present)][SELECTOR //label[normalize-space(.)='Client']/following::*[self::button or self::input][1] | fallback: //*[contains(normalize-space(.),'Select a client')]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-BUILDERS-TASKCREATION-NONSTANDARD-001][PASO 5: btn_reset (verify_present)][SELECTOR //button[normalize-space(.)='Reset'] | fallback: //button[contains(normalize-space(.),'Reset')]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+
+ACCION DE REPARACION:
+  Abrir la pantalla y verificar si carga el formulario de tareas no estandar. Si los textos cambiaron (titulo, campo, botones), actualizar selectores en Katalon. Si la pantalla aparece vacia o redirige, es bug de la app: escalar a dev.
+
+---------------------------- TICKET #2 ----------------------------
+TITULO:      [Schedulers] Elemento no encontrado en Execution Tracking
+CASE ID:     TC-SCHEDULERS-TRACKING-DASHBOARD-001
+PLATAFORMA:  Schedulers TEST - Execution Tracking
+PANTALLA:    Execution Tracking
+URL:         https://testing-templet-schedulers.vercel.app/
+SEVERIDAD:   HIGH (tuvo corridas bloqueantes)
+OCURRENCIAS: 12 veces (recurrencia 6)  |  ESTADO: Resuelto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: SIGUE ABIERTO ✗ — re-corrida 25-jun FALLO: no encuentra titulo 'Execution Tracking' ni boton 'Load Data'. Revisar UI/selector.
+ARCHIVO REPO:repos/templet-schedulers/components/tracking/TrackingPage.tsx:164
+SCREENSHOT:  Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png
+
+QUE FALLO (pasos del test):
+  - [TC-SCHEDULERS-TRACKING-DASHBOARD-001][PASO 1: heading_execution_tracking (verify_present)][SELECTOR //h1[normalize-space(.)='Execution Tracking'] | fallback: //*[self::h1 or self::h2][contains(normalize-space(.),'Execution Tracking')]] Esperado: elemento presente con texto 'Execution Tracking'. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-SCHEDULERS-TRACKING-DASHBOARD-001][PASO 4: btn_load_data (click)][SELECTOR //button[normalize-space(.)='Load Data'] | fallback: //button[contains(normalize-space(.),'Load')]] Esperado: click exitoso manteniendo sesion valida. Encontrado: elemento no clickeable o no encontrado.
+  - [TC-SCHEDULERS-TRACKING-DASHBOARD-001][PASO 2: subtitle_telemetry (verify_present)][SELECTOR //*[contains(normalize-space(.),'Real-time telemetry overview')]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-SCHEDULERS-TRACKING-DASHBOARD-001][PASO 3: select_month (verify_present)][SELECTOR (//button[@role='combobox'])[1] | fallback: //select[1]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+
+ACCION DE REPARACION:
+  Confirmar que la pagina de Execution Tracking carga el titulo, el selector de mes y el boton Load Data. Revisar si el boton tarda en habilitarse (esperar) o si cambio el texto. Marcado como resuelto: validar estabilidad en la proxima corrida.
+
+---------------------------- TICKET #3 ----------------------------
+TITULO:      [Schedulers] Elemento no encontrado en Requests
+CASE ID:     TC-SCHEDULERS-REQUESTS-LIST-001
+PLATAFORMA:  Schedulers TEST - Requests
+PANTALLA:    Requests
+URL:         https://testing-templet-schedulers.vercel.app/requests
+SEVERIDAD:   MEDIUM
+OCURRENCIAS: 7 veces (recurrencia 7)  |  ESTADO: Abierto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: RESUELTO ✓ — re-corrida aislada 25-jun (15:42) PASO. El fallo previo fue por cierre de navegador, no bug. Quedan 2 warnings menores (buscador 'Search by initiative' y filtros sin data en TEST). CERRAR el issue principal.
+ARCHIVO REPO:repos/templet-schedulers/components/requests/Requests.tsx:699
+SCREENSHOT:  (no se genero captura para este caso)
+
+QUE FALLO (pasos del test):
+  - [TC-SCHEDULERS-REQUESTS-LIST-001][PASO 3: input_search (verify_present)][SELECTOR //input[contains(@placeholder,'Search by initiative')] | fallback: //input[contains(@placeholder,'Search')]] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+  - [TC-SCHEDULERS-REQUESTS-LIST-001][PASO 4: filter_selects (verify_count)][SELECTOR //button[@role='combobox'] | fallback: //select] Esperado: >=1 elemento(s). Encontrado: 0 elemento(s).
+
+ACCION DE REPARACION:
+  Revisar que la barra de busqueda ('Search by initiative') y los filtros se rendericen en /requests. Si cambio el placeholder o el tipo de control, actualizar selector. Si no aparecen, posible bug de la app.
+
+---------------------------- TICKET #4 ----------------------------
+TITULO:      [Schedulers] Elemento no encontrado en Resources
+CASE ID:     TC-SCHEDULERS-RESOURCES-BOARD-001
+PLATAFORMA:  Schedulers TEST - Resources
+PANTALLA:    Resources
+URL:         https://testing-templet-schedulers.vercel.app/resources
+SEVERIDAD:   MEDIUM
+OCURRENCIAS: 7 veces (recurrencia 7)  |  ESTADO: Abierto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: RESUELTO ✓ — re-corrida 25-jun PASO limpio (0 warnings). El issue ya no aplica. CERRAR.
+ARCHIVO REPO:repos/templet-schedulers/components/resources/Resources.tsx:466
+SCREENSHOT:  (no se genero captura para este caso)
+
+QUE FALLO (pasos del test):
+  - [TC-SCHEDULERS-RESOURCES-BOARD-001][PASO 3: team_section (verify_present)][SELECTOR //main//div[contains(@class,'grid')] | fallback: //main] Esperado: elemento presente. Encontrado: NO encontrado con selector primario ni fallback.
+
+ACCION DE REPARACION:
+  El selector del board de equipos es muy generico (div.grid). Reforzar con un selector estable (data-testid o titulo de seccion). Confirmar que /resources renderiza la grilla.
+
+---------------------------- TICKET #5 ----------------------------
+TITULO:      [Decks] Elemento no encontrado en Admin Surface (manager + endpoints no-UI)
+CASE ID:     TC-DECKS-ADMIN-SURFACE-001
+PLATAFORMA:  Decks TEST - Admin Surface (manager + endpoints no-UI)
+PANTALLA:    Admin Surface (manager + endpoints no-UI)
+URL:         https://decks-test.templet.io/admin/login.php
+SEVERIDAD:   MEDIUM
+OCURRENCIAS: 6 veces (recurrencia 6)  |  ESTADO: Abierto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: SEGURIDAD VIGENTE ⚠ — re-corrida 25-jun: info.php SIGUE exponiendo phpinfo(). La 403 sin mensaje propio es cosmetico. LEVANTAR como seguridad.
+ARCHIVO REPO:repos/deck.templet/admin/403.php
+SCREENSHOT:  (no se genero captura para este caso)
+
+QUE FALLO (pasos del test):
+  - [TC-DECKS-ADMIN-SURFACE-001][PASO 2: phpinfo_exposure (verify_absent)][SELECTOR //h1[contains(normalize-space(.),'PHP Version')] | //td[contains(normalize-space(.),'PHP Version')] | fallback: //*[contains(normalize-space(.),'phpinfo')]] Esperado: info.php NO debe exponer phpinfo(). Encontrado: elemento PRESENTE.
+  - [TC-DECKS-ADMIN-SURFACE-001][PASO 3: page_403 (selector)][SELECTOR //body[contains(normalize-space(.),'403') or contains(normalize-space(.),'Forbidden') or contains(normalize-space(.),'Acceso')] | fallback: //body] Esperado: match con selector primario. Encontrado: solo el fallback funciono.
+
+ACCION DE REPARACION:
+  SEGURIDAD: el endpoint info.php expone phpinfo() publicamente. Pedir a dev/infra eliminar o bloquear info.php en Decks. Ademas, la pagina 403 no muestra mensaje propio (Forbidden/Acceso denegado): agregar 403 con contenido claro.
+
+---------------------------- TICKET #6 ----------------------------
+TITULO:      [Email] Elemento no encontrado en Admin Surface (manager + endpoints no-UI)
+CASE ID:     TC-EMAIL-ADMIN-SURFACE-001
+PLATAFORMA:  Email TEST - Admin Surface (manager + endpoints no-UI)
+PANTALLA:    Admin Surface (manager + endpoints no-UI)
+URL:         https://emails-test.templet.io/admin/login.php
+SEVERIDAD:   MEDIUM
+OCURRENCIAS: 6 veces (recurrencia 6)  |  ESTADO: Abierto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: phpinfo RESUELTO ✓ — re-corrida 25-jun: Email ya NO expone phpinfo(). Solo queda la 403 sin mensaje propio (cosmetico, opcional).
+ARCHIVO REPO:repos/email.templet/admin/403.php
+SCREENSHOT:  (no se genero captura para este caso)
+
+QUE FALLO (pasos del test):
+  - [TC-EMAIL-ADMIN-SURFACE-001][PASO 3: page_403 (selector)][SELECTOR //body[contains(normalize-space(.),'403') or contains(normalize-space(.),'Forbidden') or contains(normalize-space(.),'Acceso')] | fallback: //body] Esperado: match con selector primario. Encontrado: solo el fallback funciono.
+
+ACCION DE REPARACION:
+  La pagina 403 de Email solo respondio el body generico, sin texto '403/Forbidden/Acceso denegado'. Agregar una pagina 403 con mensaje propio. Verificar tambien que info.php no exponga phpinfo().
+
+---------------------------- TICKET #7 ----------------------------
+TITULO:      [Sheets] Elemento no encontrado en Admin Surface (manager + endpoints no-UI)
+CASE ID:     TC-SHEETS-ADMIN-SURFACE-001
+PLATAFORMA:  Sheets TEST - Admin Surface (manager + endpoints no-UI)
+PANTALLA:    Admin Surface (manager + endpoints no-UI)
+URL:         https://sheets-test.templet.io/admin/403.php
+SEVERIDAD:   MEDIUM
+OCURRENCIAS: 6 veces (recurrencia 6)  |  ESTADO: Abierto
+ASANA:       N (pendiente de crear)
+REVALIDACION 25-JUN-2026: SEGURIDAD VIGENTE ⚠ — re-corrida 25-jun: info.php SIGUE exponiendo phpinfo(). La 403 sin mensaje propio es cosmetico. LEVANTAR como seguridad.
+ARCHIVO REPO:repos/sheets.templet/admin/info.php:1
+SCREENSHOT:  (no se genero captura para este caso)
+
+QUE FALLO (pasos del test):
+  - [TC-SHEETS-ADMIN-SURFACE-001][PASO 2: phpinfo_exposure (verify_absent)][SELECTOR //h1[contains(normalize-space(.),'PHP Version')] | //td[contains(normalize-space(.),'PHP Version')] | fallback: //*[contains(normalize-space(.),'phpinfo')]] Esperado: info.php NO debe exponer phpinfo(). Encontrado: elemento PRESENTE.
+
+ACCION DE REPARACION:
+  SEGURIDAD: info.php expone phpinfo() en Sheets. Pedir eliminar/bloquear info.php. Revisar tambien que la pagina 403 muestre mensaje propio.
+
+==============================================================================
+Nota: los 'elemento no encontrado' pueden ser (a) selector desactualizado
+por cambio de UI -> se arregla en Katalon, o (b) el elemento desaparecio
+de la app -> bug a escalar a dev. Abrir la pantalla/screenshot para decidir.
+==============================================================================

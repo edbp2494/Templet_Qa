@@ -1,0 +1,187 @@
+{
+  "cycle": {
+    "start": "2026-06-24",
+    "end": "2026-07-24",
+    "label": "24 junio 2026 → 24 julio 2026"
+  },
+  "generated": "2026-06-25 18:43:39",
+  "executions": {
+    "runs": 11,
+    "tcs_executed": 57,
+    "pass": 54,
+    "fail": 3,
+    "error": 0,
+    "pass_rate": 94.7,
+    "regressions": 0,
+    "auto_seconds": 1794.0,
+    "detail": [
+      {
+        "timestamp": "2026-06-24 16:45:45",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 176.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 17:20:34",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 176.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 17:27:58",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 121.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 17:54:23",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 129.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 17:55:15",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 179.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 17:56:08",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 230.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 18:59:44",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 103.0,
+        "total": 5,
+        "pass": 5,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 19:58:55",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 150.0,
+        "total": 7,
+        "pass": 6,
+        "fail": 1,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-24 20:20:57",
+        "suite": "Test Suites/Platforms/Builders/Blueprint/Request-Processing",
+        "duration_s": 181.0,
+        "total": 7,
+        "pass": 7,
+        "fail": 0,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-25 15:21:13",
+        "suite": "Test Suites/QA/Revalidate-Open-Issues",
+        "duration_s": 285.0,
+        "total": 7,
+        "pass": 5,
+        "fail": 2,
+        "error": 0
+      },
+      {
+        "timestamp": "2026-06-25 15:42:34",
+        "suite": "Test Suites/QA/Revalidate-Requests-Only",
+        "duration_s": 64.0,
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "error": 0
+      }
+    ]
+  },
+  "time": {
+    "auto_seconds": 1794.0,
+    "manual_seconds_est": 34200,
+    "saved_seconds": 32406.0,
+    "manual_min_per_tc": 10
+  },
+  "target_pass": 70,
+  "git": {
+    "commits": [],
+    "commit_count": 0,
+    "authors": [],
+    "files_changed": 0,
+    "new_tcs": [],
+    "mod_tcs": [],
+    "new_scripts": [],
+    "new_keywords": [],
+    "fixes": [],
+    "code_added": 0,
+    "code_deleted": 0
+  },
+  "inventory": {
+    "total_tcs": 81,
+    "total_suites": 54,
+    "total_scripts": 77,
+    "by_platform": {
+      "Builders": 31,
+      "Sheets": 12,
+      "Decks": 11,
+      "Email": 11,
+      "Schedulers": 15,
+      "QA": 1
+    }
+  },
+  "tickets": {
+    "total": 0,
+    "unique": 0,
+    "abiertos": 0,
+    "resueltos": 0,
+    "by_severity": {},
+    "cases": [],
+    "asana": "Se publican en Asana si hay API key (GlobalVariable asana_api_key); si no, quedan como JSON local en Reports/asana_tickets."
+  },
+  "metas": [
+    {
+      "nombre": "Tasa de exito >= 70% (meta del mes)",
+      "meta": "70%",
+      "valor": "94.7%",
+      "ok": true
+    },
+    {
+      "nombre": "Regresiones ejecutadas >= 1",
+      "meta": "1",
+      "valor": "0",
+      "ok": false
+    },
+    {
+      "nombre": "Casos nuevos automatizados >= 3",
+      "meta": "3",
+      "valor": "0",
+      "ok": false
+    },
+    {
+      "nombre": "Estabilizaciones/bloqueos resueltos >= 1",
+      "meta": "1",
+      "valor": "0",
+      "ok": false
+    }
+  ]
+}

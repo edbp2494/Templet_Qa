@@ -4,16 +4,16 @@
     "end": "2026-06-24",
     "label": "24 mayo 2026 → 24 junio 2026"
   },
-  "generated": "2026-06-20 22:33:48",
+  "generated": "2026-06-26 13:46:47",
   "executions": {
-    "runs": 65,
-    "tcs_executed": 402,
-    "pass": 234,
+    "runs": 66,
+    "tcs_executed": 405,
+    "pass": 237,
     "fail": 90,
     "error": 78,
-    "pass_rate": 58.2,
+    "pass_rate": 58.5,
     "regressions": 3,
-    "auto_seconds": 19926.0,
+    "auto_seconds": 20175.0,
     "detail": [
       {
         "timestamp": "2026-06-03 15:32:58",
@@ -599,18 +599,59 @@
         "pass": 3,
         "fail": 0,
         "error": 0
+      },
+      {
+        "timestamp": "2026-06-22 14:27:24",
+        "suite": "Test Suites/Platforms/Builders/Brand/AI-Create-PerType",
+        "duration_s": 249.0,
+        "total": 3,
+        "pass": 3,
+        "fail": 0,
+        "error": 0
       }
     ]
   },
   "time": {
-    "auto_seconds": 19926.0,
-    "manual_seconds_est": 241200,
-    "saved_seconds": 221274.0,
+    "auto_seconds": 20175.0,
+    "manual_seconds_est": 243000,
+    "saved_seconds": 222825.0,
     "manual_min_per_tc": 10
   },
   "target_pass": 60,
   "git": {
     "commits": [
+      {
+        "hash": "b96114d",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-21",
+        "subject": "refactor(brand): extraer enterBrandLayouts y reusarlo en validate-brand-ai-create-options",
+        "human": "Refactor en brand: extraer enterBrandLayouts y reusarlo en validate-brand-ai-create-options",
+        "fix": false
+      },
+      {
+        "hash": "9f43e1c",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-21",
+        "subject": "chore(repo): actualizar instrucciones, config webservice y recorder captures",
+        "human": "Mantenimiento en repo: actualizar instrucciones, config webservice y recorder captures",
+        "fix": false
+      },
+      {
+        "hash": "815344a",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-21",
+        "subject": "feat(qa): generador de reporte de ciclo QA + dashboard",
+        "human": "Nueva funcionalidad en qa: generador de reporte de ciclo QA + dashboard",
+        "fix": false
+      },
+      {
+        "hash": "be10f10",
+        "author": "Eduardo Baptista",
+        "date": "2026-06-21",
+        "subject": "feat(brand): suite de validacion AI Create en /brand (HTML/PPTX/TEXT + opciones + AI text)",
+        "human": "Nueva funcionalidad en brand: suite de validacion AI Create en /brand (HTML/PPTX/TEXT + opciones + AI text)",
+        "fix": false
+      },
       {
         "hash": "d807f76",
         "author": "Eduardo Baptista",
@@ -724,14 +765,19 @@
         "fix": false
       }
     ],
-    "commit_count": 14,
+    "commit_count": 18,
     "authors": [
       "Eduardo Baptista",
       "eduardo.baptista"
     ],
-    "files_changed": 438,
+    "files_changed": 473,
     "new_tcs": [
       "Test Cases/Builders/blueprint/validate-blueprint-manager.tc",
+      "Test Cases/Builders/brand/ai-create-html.tc",
+      "Test Cases/Builders/brand/ai-create-pptx.tc",
+      "Test Cases/Builders/brand/ai-create-text.tc",
+      "Test Cases/Builders/brand/validate-brand-ai-create-options.tc",
+      "Test Cases/Builders/brand/validate-brand-ai-text.tc",
       "Test Cases/Builders/brand/validate-brand-list.tc",
       "Test Cases/Builders/convert/validate-convert.tc",
       "Test Cases/Builders/current-spend/validate-current-spend.tc",
@@ -772,6 +818,7 @@
       "Test Cases/Email/objects/validate-objects-visible.tc",
       "Test Cases/Email/validation/list-actions-modal-response.tc",
       "Test Cases/Email/validation/sort-grid-list-validation.tc",
+      "Test Cases/QA/generate-cycle-report.tc",
       "Test Cases/Schedulers/daily-pulse/validate-daily-pulse.tc",
       "Test Cases/Schedulers/functional-smoke.tc",
       "Test Cases/Schedulers/initiatives/validate-initiatives.tc",
@@ -805,6 +852,11 @@
     ],
     "new_scripts": [
       "Scripts/Builders/blueprint/validate-blueprint-manager/Script.groovy",
+      "Scripts/Builders/brand/ai-create-html/Script.groovy",
+      "Scripts/Builders/brand/ai-create-pptx/Script.groovy",
+      "Scripts/Builders/brand/ai-create-text/Script.groovy",
+      "Scripts/Builders/brand/validate-brand-ai-create-options/Script.groovy",
+      "Scripts/Builders/brand/validate-brand-ai-text/Script.groovy",
       "Scripts/Builders/brand/validate-brand-list/Script.groovy",
       "Scripts/Builders/convert/validate-convert/Script.groovy",
       "Scripts/Builders/current-spend/validate-current-spend/Script.groovy",
@@ -841,6 +893,7 @@
       "Scripts/Email/objects/validate-objects-visible/Script.groovy",
       "Scripts/Email/validation/list-actions-modal-response/Script.groovy",
       "Scripts/Email/validation/sort-grid-list-validation/Script.groovy",
+      "Scripts/QA/generate-cycle-report/Script.groovy",
       "Scripts/Schedulers/daily-pulse/validate-daily-pulse/Script.groovy",
       "Scripts/Schedulers/functional-smoke/Script.groovy",
       "Scripts/Schedulers/initiatives/validate-initiatives/Script.groovy",
@@ -873,6 +926,7 @@
     "new_keywords": [
       "Keywords/AsanaErrorTicketGenerator.groovy",
       "Keywords/AsanaErrorTicketGeneratorKeyword.groovy",
+      "Keywords/BrandAiKeywords.groovy",
       "Keywords/CommonKeywords.groovy",
       "Keywords/ObjectCaptureKeywords.groovy",
       "Keywords/ReposCoverageKeywords.groovy",
@@ -938,15 +992,15 @@
         "fix": true
       }
     ],
-    "code_added": 12787,
-    "code_deleted": 297
+    "code_added": 13769,
+    "code_deleted": 335
   },
   "inventory": {
-    "total_tcs": 74,
-    "total_suites": 51,
-    "total_scripts": 70,
+    "total_tcs": 81,
+    "total_suites": 54,
+    "total_scripts": 77,
     "by_platform": {
-      "Builders": 24,
+      "Builders": 31,
       "Sheets": 12,
       "Decks": 11,
       "Email": 11,
@@ -970,6 +1024,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 13,
+        "paso": "PASO 1: heading_nonstandard_tasks (verify_present)",
+        "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+        "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+        "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+        "url": "https://testing-templet-builders.vercel.app/task-creation/non-standard",
         "recurrence": 8,
         "estado": "Abierto"
       },
@@ -979,6 +1038,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 12,
+        "paso": "PASO 1: heading_execution_tracking (verify_present)",
+        "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+        "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+        "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+        "url": "https://testing-templet-schedulers.vercel.app/",
         "recurrence": 6,
         "estado": "Resuelto"
       },
@@ -988,6 +1052,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 7,
+        "paso": "PASO 3: input_search (verify_present)",
+        "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+        "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+        "screenshot": "",
+        "url": "https://testing-templet-schedulers.vercel.app/requests",
         "recurrence": 7,
         "estado": "Abierto"
       },
@@ -997,6 +1066,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 7,
+        "paso": "PASO 3: team_section (verify_present)",
+        "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+        "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+        "screenshot": "",
+        "url": "https://testing-templet-schedulers.vercel.app/resources",
         "recurrence": 7,
         "estado": "Abierto"
       },
@@ -1006,6 +1080,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 6,
+        "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+        "repo_file": "repos/deck.templet/admin/info.php:1",
+        "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+        "screenshot": "",
+        "url": "https://decks-test.templet.io/admin/login.php",
         "recurrence": 6,
         "estado": "Abierto"
       },
@@ -1015,6 +1094,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 6,
+        "paso": "PASO 3: page_403 (selector)",
+        "repo_file": "repos/email.templet/admin/403.php",
+        "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+        "screenshot": "",
+        "url": "https://emails-test.templet.io/admin/login.php",
         "recurrence": 6,
         "estado": "Abierto"
       },
@@ -1024,6 +1108,11 @@
         "sev": "MEDIUM",
         "asana": "N",
         "count": 6,
+        "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+        "repo_file": "repos/sheets.templet/admin/info.php:1",
+        "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+        "screenshot": "",
+        "url": "https://sheets-test.templet.io/admin/403.php",
         "recurrence": 6,
         "estado": "Abierto"
       }
@@ -1034,7 +1123,7 @@
     {
       "nombre": "Tasa de exito >= 60% (meta del mes)",
       "meta": "60%",
-      "valor": "58.2%",
+      "valor": "58.5%",
       "ok": false
     },
     {
@@ -1046,7 +1135,7 @@
     {
       "nombre": "Casos nuevos automatizados >= 3",
       "meta": "3",
-      "valor": "68",
+      "valor": "74",
       "ok": true
     },
     {

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC1 (login): Abre sesion SSO Microsoft, navega a blueprint/manager/power-user, descubre estructura DOM, botones y URLs de creacion disponibles. Captura evidencia para ajuste de TCs siguientes.</description>
+   <name>validate-request-smoke</name>
+   <tag>E6,Blueprint,RequestProcessing,Smoke,Login</tag>
+   <comment></comment>
+   <testCaseGuid>e9a8ceda-b538-40d8-b64c-dee7ce839072</testCaseGuid>
+</TestCaseEntity>

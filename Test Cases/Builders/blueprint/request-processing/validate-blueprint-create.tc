@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC6: Creacion completa de blueprint. Abre modal "Create New Blueprint", llena Name (timestamp), selecciona primera opcion disponible en dropdowns requeridos (Initiative, Parent Blueprint, Program Manager), hace click en "Save Blueprint" y verifica que el modal cierra y el blueprint aparece en la lista. Guarda el nombre creado en System property qa.blueprint.test.name para TC-DELETE.</description>
+   <name>validate-blueprint-create</name>
+   <tag>E6,Blueprint,RequestProcessing,Create,CRUD</tag>
+   <comment></comment>
+   <testCaseGuid>f4a2c891-7d53-4e88-a5b2-9c1d3e67f012</testCaseGuid>
+</TestCaseEntity>

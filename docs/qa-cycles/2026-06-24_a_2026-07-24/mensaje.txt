@@ -1,0 +1,9 @@
+Randyyyy, todo bien? 🙌 Te comparto el trabajo del periodo:
+Periodo: 2026-06-24 a 2026-07-24
+
+- Automatizacion y ajustes nuevos (0 casos nuevos, 0 modificados, 0 estabilizaciones, 0 keywords): 0.0 h
+- Ejecuciones y revalidaciones (11 corridas, 0 regresiones, 57 casos ejecutados): 2.8 h
+- Reporte y seguimiento de issues (0 casos / 0 ocurrencias): 0.0 h
+- Reuniones, dailys, refinamientos y demo: 6.0 h
+
+Total del periodo: 8.8 h   (estimado — ajusta las horas segun tu registro real)

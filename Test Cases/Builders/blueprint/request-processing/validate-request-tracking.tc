@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC4: Navega a /tracking, verifica que el dashboard muestra datos del Blueprint tab, captura cards y metricas. Verifica que el pipeline E6 (Records, Planning, Asana Execution) refleja el estado de la request enviada.</description>
+   <name>validate-request-tracking</name>
+   <tag>E6,Blueprint,RequestProcessing,Tracking,E2E</tag>
+   <comment></comment>
+   <testCaseGuid>9d8e3e4e-38d2-4b25-b9e7-305042ec426d</testCaseGuid>
+</TestCaseEntity>

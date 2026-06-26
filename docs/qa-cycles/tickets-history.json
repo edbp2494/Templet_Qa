@@ -6,6 +6,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 1: heading_nonstandard_tasks (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -15,6 +20,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 5: btn_reset (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -24,6 +34,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 1: heading_nonstandard_tasks (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -33,6 +48,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 5: btn_reset (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -42,6 +62,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -51,6 +76,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -60,6 +90,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 1: heading_execution_tracking (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -69,6 +104,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 2: subtitle_telemetry (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -78,6 +118,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 1: heading_nonstandard_tasks (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -87,6 +132,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 5: btn_reset (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -96,6 +146,11 @@
   "caseId": "TC-DECKS-ADMIN-SURFACE-001",
   "component": "Decks",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/deck.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://decks-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -105,6 +160,11 @@
   "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
   "component": "Email",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 3: page_403 (selector)",
+  "repo_file": "repos/email.templet/admin/403.php",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://emails-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -114,6 +174,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -123,6 +188,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -132,6 +202,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 1: heading_execution_tracking (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -141,6 +216,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 2: subtitle_telemetry (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -150,6 +230,11 @@
   "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
   "component": "Sheets",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/sheets.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://sheets-test.templet.io/admin/403.php",
   "asana": "N"
  },
  {
@@ -159,6 +244,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 1: heading_nonstandard_tasks (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -168,6 +258,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 5: btn_reset (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_172021.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -177,6 +272,11 @@
   "caseId": "TC-DECKS-ADMIN-SURFACE-001",
   "component": "Decks",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/deck.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://decks-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -186,6 +286,11 @@
   "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
   "component": "Email",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 3: page_403 (selector)",
+  "repo_file": "repos/email.templet/admin/403.php",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://emails-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -195,6 +300,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -204,6 +314,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -213,6 +328,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 1: heading_execution_tracking (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -222,6 +342,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 2: subtitle_telemetry (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -231,6 +356,11 @@
   "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
   "component": "Sheets",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/sheets.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://sheets-test.templet.io/admin/403.php",
   "asana": "N"
  },
  {
@@ -240,6 +370,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 1: heading_nonstandard_tasks (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_180000.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -249,6 +384,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 5: btn_reset (verify_present)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-BUILDERS-TASKCREATION-NONSTANDARD-001_failure_20260612_180000.png",
+  "url": "https://testing-templet-builders.vercel.app/",
   "asana": "N"
  },
  {
@@ -258,6 +398,11 @@
   "caseId": "TC-DECKS-ADMIN-SURFACE-001",
   "component": "Decks",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/deck.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://decks-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -267,6 +412,11 @@
   "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
   "component": "Email",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 3: page_403 (selector)",
+  "repo_file": "repos/email.templet/admin/403.php",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://emails-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -276,6 +426,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -285,6 +440,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -294,6 +454,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 1: heading_execution_tracking (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -303,6 +468,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 2: subtitle_telemetry (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -312,6 +482,11 @@
   "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
   "component": "Sheets",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/sheets.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://sheets-test.templet.io/admin/403.php",
   "asana": "N"
  },
  {
@@ -321,6 +496,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 2: input_task_name (selector)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://testing-templet-builders.vercel.app/task-creation/non-standard",
   "asana": "N"
  },
  {
@@ -330,6 +510,11 @@
   "caseId": "TC-DECKS-ADMIN-SURFACE-001",
   "component": "Decks",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/deck.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://decks-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -339,6 +524,11 @@
   "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
   "component": "Email",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 3: page_403 (selector)",
+  "repo_file": "repos/email.templet/admin/403.php",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://emails-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -348,6 +538,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -357,6 +552,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -366,6 +566,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 1: heading_execution_tracking (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -375,6 +580,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 2: subtitle_telemetry (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -384,6 +594,11 @@
   "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
   "component": "Sheets",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/sheets.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://sheets-test.templet.io/admin/403.php",
   "asana": "N"
  },
  {
@@ -393,6 +608,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 2: input_task_name (selector)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://testing-templet-builders.vercel.app/task-creation/non-standard",
   "asana": "N"
  },
  {
@@ -402,6 +622,11 @@
   "caseId": "TC-DECKS-ADMIN-SURFACE-001",
   "component": "Decks",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/deck.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://decks-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -411,6 +636,11 @@
   "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
   "component": "Email",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 3: page_403 (selector)",
+  "repo_file": "repos/email.templet/admin/403.php",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://emails-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -420,6 +650,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -429,6 +664,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -438,6 +678,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 1: heading_execution_tracking (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -447,6 +692,11 @@
   "caseId": "TC-SCHEDULERS-TRACKING-DASHBOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Execution Tracking",
+  "paso": "PASO 2: subtitle_telemetry (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/tracking/TrackingPage.tsx:158",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "C:\\Users\\e2494\\Katalon Studio\\Templet/Reports/Screenshots/functional-smoke/TC-SCHEDULERS-TRACKING-DASHBOARD-001_failure_20260612_173233.png",
+  "url": "https://testing-templet-schedulers.vercel.app/",
   "asana": "N"
  },
  {
@@ -456,6 +706,11 @@
   "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
   "component": "Sheets",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/sheets.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://sheets-test.templet.io/admin/403.php",
   "asana": "N"
  },
  {
@@ -465,6 +720,11 @@
   "caseId": "TC-BUILDERS-TASKCREATION-NONSTANDARD-001",
   "component": "Builders",
   "desc": "Elemento no encontrado en Task Creation - Non Standard",
+  "paso": "PASO 2: input_task_name (selector)",
+  "repo_file": "repos/templet-builders/app/(logged)/task-creation/non-standard/page.tsx",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://testing-templet-builders.vercel.app/task-creation/non-standard",
   "asana": "N"
  },
  {
@@ -474,6 +734,11 @@
   "caseId": "TC-DECKS-ADMIN-SURFACE-001",
   "component": "Decks",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/deck.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://decks-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -483,6 +748,11 @@
   "caseId": "TC-EMAIL-ADMIN-SURFACE-001",
   "component": "Email",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 3: page_403 (selector)",
+  "repo_file": "repos/email.templet/admin/403.php",
+  "accion": "Agregar data-testid en la app (ver Include/config/SELECTORS-REVIEW.md) y actualizar el selector primario del element-map.",
+  "screenshot": "",
+  "url": "https://emails-test.templet.io/admin/login.php",
   "asana": "N"
  },
  {
@@ -492,6 +762,11 @@
   "caseId": "TC-SCHEDULERS-REQUESTS-LIST-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Requests",
+  "paso": "PASO 3: input_search (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/requests/FilterOptions.tsx",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/requests",
   "asana": "N"
  },
  {
@@ -501,6 +776,11 @@
   "caseId": "TC-SCHEDULERS-RESOURCES-BOARD-001",
   "component": "Schedulers",
   "desc": "Elemento no encontrado en Resources",
+  "paso": "PASO 3: team_section (verify_present)",
+  "repo_file": "repos/templet-schedulers/components/resources/Resources.tsx:466",
+  "accion": "Revisar el componente en el repo: si el texto/estructura cambio, actualizar element-map y selector en Katalon; si el elemento desaparecio de la UI, posible bug de la app.",
+  "screenshot": "",
+  "url": "https://testing-templet-schedulers.vercel.app/resources",
   "asana": "N"
  },
  {
@@ -510,6 +790,11 @@
   "caseId": "TC-SHEETS-ADMIN-SURFACE-001",
   "component": "Sheets",
   "desc": "Elemento no encontrado en Admin Surface (manager + endpoints no-UI)",
+  "paso": "PASO 2: phpinfo_exposure (verify_absent)",
+  "repo_file": "repos/sheets.templet/admin/info.php:1",
+  "accion": "Hallazgo de codigo: info.php contiene solo phpinfo(). Si esta accesible es fuga de informacion (versiones, paths, config). Warning MEDIUM via ticket.",
+  "screenshot": "",
+  "url": "https://sheets-test.templet.io/admin/403.php",
   "asana": "N"
  }
 ]

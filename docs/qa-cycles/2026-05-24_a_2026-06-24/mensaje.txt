@@ -1,17 +1,17 @@
 Randyyyy, todo bien? 🙌 Te comparto el trabajo del periodo:
 Periodo: 2026-05-24 a 2026-06-24
 
-- Automatizacion y ajustes nuevos (68 casos nuevos, 1 modificados, 7 estabilizaciones, 8 keywords): 142.5 h
-- Ejecuciones y revalidaciones (65 corridas, 3 regresiones, 402 casos ejecutados): 17.8 h
+- Automatizacion y ajustes nuevos (74 casos nuevos, 1 modificados, 7 estabilizaciones, 9 keywords): 154.9 h
+- Ejecuciones y revalidaciones (66 corridas, 3 regresiones, 405 casos ejecutados): 18.0 h
 - Reporte y seguimiento de issues (7 casos / 57 ocurrencias): 3.5 h
 - Reuniones, dailys, refinamientos y demo: 6.0 h
 
-Total del periodo: 169.8 h   (estimado — ajusta las horas segun tu registro real)
+Total del periodo: 182.4 h   (estimado — ajusta las horas segun tu registro real)
 
 Issues principales del periodo:
-  * [MEDIUM] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 (Builders) - Abierto
-  * [MEDIUM] TC-SCHEDULERS-TRACKING-DASHBOARD-001 (Schedulers) - Resuelto
-  * [MEDIUM] TC-SCHEDULERS-REQUESTS-LIST-001 (Schedulers) - Abierto
-  * [MEDIUM] TC-SCHEDULERS-RESOURCES-BOARD-001 (Schedulers) - Abierto
-  * [MEDIUM] TC-DECKS-ADMIN-SURFACE-001 (Decks) - Abierto
-  * [MEDIUM] TC-EMAIL-ADMIN-SURFACE-001 (Email) - Abierto
+  * [MEDIUM] TC-BUILDERS-TASKCREATION-NONSTANDARD-001 () - Abierto
+  * [MEDIUM] TC-SCHEDULERS-TRACKING-DASHBOARD-001 () - Resuelto
+  * [MEDIUM] TC-SCHEDULERS-REQUESTS-LIST-001 () - Abierto
+  * [MEDIUM] TC-SCHEDULERS-RESOURCES-BOARD-001 () - Abierto
+  * [MEDIUM] TC-DECKS-ADMIN-SURFACE-001 () - Abierto
+  * [MEDIUM] TC-EMAIL-ADMIN-SURFACE-001 () - Abierto

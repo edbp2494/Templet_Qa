@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC2: Abre el formulario de creacion de Blueprint (via boton New Blueprint o URL directa), descubre campos disponibles via DOM, verifica inputs y selects visibles, captura estado para ajuste.</description>
+   <name>validate-request-form</name>
+   <tag>E6,Blueprint,RequestProcessing,Form,Discovery</tag>
+   <comment></comment>
+   <testCaseGuid>2624cd4e-8c8f-470c-b9ca-f98cf3f29c6e</testCaseGuid>
+</TestCaseEntity>
