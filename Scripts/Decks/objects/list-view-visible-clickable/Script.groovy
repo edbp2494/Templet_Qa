@@ -314,8 +314,8 @@ try {
     }
     applySortOptions('View Grid')
 
-    TestObject listShape = findTestObject('Sheets/Objects/ListView/icon_list_shape')
-    TestObject listViewIcon = findTestObject('Sheets/Objects/ListView/icon_list_view')
+    TestObject listShape = findTestObject('Decks/Objects/ListView/icon_list_shape')
+    TestObject listViewIcon = findTestObject('Decks/Objects/ListView/icon_list_view')
     WebUI.waitForElementVisible(listViewIcon, 4)
     int cardsBeforeToggle = countVisibleCards()
     boolean listViewReady = false
@@ -414,7 +414,7 @@ try {
             failures.add('[EXPORT] IDML no visible en dropdown')
         }
         WebUI.delay(5)
-        List<File> newDls = (new File('C:/Users/e2494/Downloads')).listFiles()?.findAll { File f ->
+        List<File> newDls = (new File(System.getProperty('user.home'), 'Downloads')).listFiles()?.findAll { File f ->
             f.isFile() && !f.name.endsWith('.crdownload') && !f.name.endsWith('.tmp') && f.lastModified() > preExportTs
         } ?: []
         if (newDls.isEmpty()) {

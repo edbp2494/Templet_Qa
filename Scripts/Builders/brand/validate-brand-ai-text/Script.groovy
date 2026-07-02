@@ -23,21 +23,12 @@ String initiativeName = 'Attendance-short'
 // Brand ESCALA por defecto (hardcode de respaldo; tambien en BUILDERS_BRAND_FIXTURE_URL)
 String escalaBrandUrl = 'https://testing-templet-builders.vercel.app/brand/3ac229a2-3bcd-ef11-b8e9-6045bd034dc5'
 String buildersUrl = CustomKeywords.'CommonKeywords.getRequiredGlobal'('BUILDERS_TEST_URL', 'https://testing-templet-builders.vercel.app/')
-String brandListUrl = buildersUrl.endsWith('/') ? buildersUrl + 'brand' : buildersUrl + '/brand'
+String brandListUrl = buildersUrl.replaceAll('/+$', '') + '/brand'
 String fixtureUrl = CustomKeywords.'CommonKeywords.getRequiredGlobal'('BUILDERS_BRAND_FIXTURE_URL', escalaBrandUrl)
 boolean hasFixture = (fixtureUrl != null && fixtureUrl.trim().length() > 0)
 
 // ── Login / reuso de sesion ─────────────────────────────────────────────────────
-boolean sessionAlive = CustomKeywords.'TempletPortalKeywords.isBrowserSessionAlive'()
-if (!sessionAlive) {
-	CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(buildersUrl)
-} else {
-	WebUI.navigateToUrl(buildersUrl)
-}
-WebUI.waitForPageLoad(25)
-
-boolean validSession = CustomKeywords.'TempletPortalKeywords.isValidAppSession'()
-if (!validSession) {
+if (!CustomKeywords.'TempletPortalKeywords.ensureAuthenticatedSession'(buildersUrl, 25)) {
 	failures.add('[AUTH] Sesion no valida — la URL apunta a Microsoft login')
 	CustomKeywords.'CommonKeywords.logCaseSummary'(caseId, failures, warnings)
 	KeywordUtil.markFailedAndStop("[${caseId}] Failures: ${failures}")

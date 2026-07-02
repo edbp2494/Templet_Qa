@@ -13,16 +13,7 @@ String buildersTestUrl = CustomKeywords.'CommonKeywords.getRequiredGlobal'(
 )
 String trackingUrl = CustomKeywords.'CommonKeywords.buildTrackingUrl'(buildersTestUrl)
 
-boolean sessionAlive = CustomKeywords.'TempletPortalKeywords.isBrowserSessionAlive'()
-if (!sessionAlive) {
-	CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(trackingUrl)
-} else {
-	WebUI.navigateToUrl(trackingUrl)
-}
-WebUI.waitForPageLoad(20)
-WebUI.delay(2)
-
-if (!CustomKeywords.'TempletPortalKeywords.isValidAppSession'()) {
+if (!CustomKeywords.'TempletPortalKeywords.ensureAuthenticatedSession'(trackingUrl, 20, 2)) {
 	failures.add('[AUTH] Sesion no valida al navegar a tracking')
 	CustomKeywords.'CommonKeywords.logCaseSummary'(caseId, failures, warnings)
 	KeywordUtil.markFailedAndStop("[${caseId}] Sin sesion")

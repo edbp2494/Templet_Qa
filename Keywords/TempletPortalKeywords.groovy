@@ -2572,6 +2572,40 @@ class TempletPortalKeywords {
 		return WebUI.verifyElementPresent(xpathObject(name, xpath), timeoutSeconds, FailureHandling.OPTIONAL)
 	}
 
+	/**
+	 * Reutiliza la sesion del navegador si sigue viva (isReuseDriver=true) o abre
+	 * browser + login Microsoft si no. Navega a targetUrl, espera la carga y
+	 * retorna true si la sesion queda valida (no en Microsoft login).
+	 * El script llamador decide como registrar el failure (patron failures/warnings).
+	 */
+	@Keyword
+	static boolean ensureAuthenticatedSession(String targetUrl, int waitSeconds = 15, int settleSeconds = 0) {
+		if (isBrowserSessionAlive()) {
+			WebUI.navigateToUrl(targetUrl)
+		} else {
+			openBrowserAndLoginWithMicrosoft(targetUrl)
+		}
+		WebUI.waitForPageLoad(Math.max(1, waitSeconds))
+		if (settleSeconds > 0) {
+			WebUI.delay(settleSeconds)
+		}
+		return isValidAppSession()
+	}
+
+	/**
+	 * Verifica un XPath exacto y, si no aparece, intenta el XPath de fallback.
+	 * Retorna Map: [found: boolean, usedFallback: boolean].
+	 * El script llamador decide si !found es failure o warning.
+	 */
+	@Keyword
+	static Map verifyXPathPresentWithFallback(String name, String exactXpath, String fallbackXpath, int timeoutExactSeconds = 10, int timeoutFallbackSeconds = 5) {
+		if (verifyXPathPresent(name, exactXpath, timeoutExactSeconds)) {
+			return [found: true, usedFallback: false]
+		}
+		boolean fallbackFound = verifyXPathPresent(name + '_fallback', fallbackXpath, timeoutFallbackSeconds)
+		return [found: fallbackFound, usedFallback: fallbackFound]
+	}
+
 	static void discoverTrackingTabStructure(String tabLabel, String outputPath) {
 		Map<String, Object> discovery = (Map<String, Object>) WebUI.executeJavaScript('''
 			var targetLabel = String(arguments[0] || '').toLowerCase();

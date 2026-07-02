@@ -33,41 +33,29 @@ if (!currentUrl.contains('blueprint')) {
 }
 
 // ── 2. Buscar heading de Blueprint Manager ────────────────────────────────────
-boolean headingFound = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
+Map headingFound = CustomKeywords.'TempletPortalKeywords.verifyXPathPresentWithFallback'(
 	'heading_blueprint_manager',
 	"//h1[normalize-space(.)='Blueprint manager']",
-	10
+	"//h1[contains(normalize-space(.),'Blueprint')]",
+	10, 5
 )
-if (!headingFound) {
-	headingFound = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
-		'heading_blueprint_any',
-		"//h1[contains(normalize-space(.),'Blueprint')]",
-		5
-	)
-	if (headingFound) {
-		warnings.add('[SELECTOR] Heading Blueprint via fallback h1 — UI puede haber cambiado texto')
-	} else {
-		warnings.add('[HEADING] No se encontro h1 de Blueprint — page puede estar en construccion')
-	}
+if (!headingFound.found) {
+	warnings.add('[HEADING] No se encontro h1 de Blueprint — page puede estar en construccion')
+} else if (headingFound.usedFallback) {
+	warnings.add('[SELECTOR] Heading Blueprint via fallback h1 — UI puede haber cambiado texto')
 }
 
 // ── 3. Buscar boton "New Blueprint" ──────────────────────────────────────────
-boolean btnNewBlueprint = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
+Map btnNewBlueprint = CustomKeywords.'TempletPortalKeywords.verifyXPathPresentWithFallback'(
 	'btn_new_blueprint',
 	"//button[normalize-space(.)='New Blueprint']",
-	10
+	"//button[contains(normalize-space(.),'Blueprint') or contains(normalize-space(.),'New')]",
+	10, 5
 )
-if (!btnNewBlueprint) {
-	btnNewBlueprint = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
-		'btn_new_blueprint_fallback',
-		"//button[contains(normalize-space(.),'Blueprint') or contains(normalize-space(.),'New')]",
-		5
-	)
-	if (btnNewBlueprint) {
-		warnings.add('[SELECTOR] btn New Blueprint via fallback — verificar texto exacto')
-	} else {
-		warnings.add('[BTN] No se encontro boton New Blueprint — puede ser que requiera otro rol o la UI cambio')
-	}
+if (!btnNewBlueprint.found) {
+	warnings.add('[BTN] No se encontro boton New Blueprint — puede ser que requiera otro rol o la UI cambio')
+} else if (btnNewBlueprint.usedFallback) {
+	warnings.add('[SELECTOR] btn New Blueprint via fallback — verificar texto exacto')
 }
 
 // ── 4. Descubrir URLs accesibles (discovery) ──────────────────────────────────

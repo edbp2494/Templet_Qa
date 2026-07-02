@@ -378,7 +378,7 @@ try {
     }
 
     WebUI.delay(5)
-    File downloadsDir = new File('C:/Users/e2494/Downloads')
+    File downloadsDir = new File(System.getProperty('user.home'), 'Downloads')
     List<File> newDownloads = []
     if (downloadsDir.exists() && downloadsDir.isDirectory()) {
         File[] files = downloadsDir.listFiles()

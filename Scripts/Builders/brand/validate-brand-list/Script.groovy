@@ -11,7 +11,7 @@ String buildersTestUrl = CustomKeywords.'CommonKeywords.getRequiredGlobal'(
 	'BUILDERS_TEST_URL',
 	'https://testing-templet-builders.vercel.app/'
 )
-String targetUrl = buildersTestUrl.endsWith('/') ? buildersTestUrl + 'brand' : buildersTestUrl + '/brand'
+String targetUrl = buildersTestUrl.replaceAll('/+$', '') + '/brand'
 
 // ── Login (TC1 de la suite — abre browser y hace SSO) ────────────────────────
 CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(targetUrl)
@@ -25,41 +25,29 @@ if (!currentUrl.contains('/brand')) {
 }
 
 // ── 1. Heading principal ──────────────────────────────────────────────────────
-boolean headingOk = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
+Map headingOk = CustomKeywords.'TempletPortalKeywords.verifyXPathPresentWithFallback'(
 	'heading_active_brands',
 	"//h1[normalize-space(.)='Active Brands']",
-	10
+	"//h1[contains(normalize-space(.),'Active Brands')]",
+	10, 5
 )
-if (!headingOk) {
-	headingOk = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
-		'heading_active_brands_fallback',
-		"//h1[contains(normalize-space(.),'Active Brands')]",
-		5
-	)
-	if (!headingOk) {
-		failures.add('[HEADING] "Active Brands" no encontrado en /brand')
-	} else {
-		warnings.add('[SELECTOR] heading_active_brands via fallback — pedir data-testid')
-	}
+if (!headingOk.found) {
+	failures.add('[HEADING] "Active Brands" no encontrado en /brand')
+} else if (headingOk.usedFallback) {
+	warnings.add('[SELECTOR] heading_active_brands via fallback — pedir data-testid')
 }
 
 // ── 2. Boton New Brand ────────────────────────────────────────────────────────
-boolean btnNewBrand = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
+Map btnNewBrand = CustomKeywords.'TempletPortalKeywords.verifyXPathPresentWithFallback'(
 	'btn_new_brand',
 	"//button[normalize-space(.)='New Brand']",
-	10
+	"//button[contains(normalize-space(.),'New Brand')]",
+	10, 5
 )
-if (!btnNewBrand) {
-	btnNewBrand = CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'(
-		'btn_new_brand_fallback',
-		"//button[contains(normalize-space(.),'New Brand')]",
-		5
-	)
-	if (!btnNewBrand) {
-		failures.add('[BTN] "New Brand" button no encontrado')
-	} else {
-		warnings.add('[SELECTOR] btn_new_brand via fallback')
-	}
+if (!btnNewBrand.found) {
+	failures.add('[BTN] "New Brand" button no encontrado')
+} else if (btnNewBrand.usedFallback) {
+	warnings.add('[SELECTOR] btn_new_brand via fallback')
 }
 
 // ── 3. Columnas de la tabla ───────────────────────────────────────────────────

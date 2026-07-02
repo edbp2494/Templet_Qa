@@ -13,15 +13,7 @@ String buildersTestUrl = CustomKeywords.'CommonKeywords.getRequiredGlobal'(
 )
 String managerUrl = buildersTestUrl.replaceAll('/+$', '') + '/blueprint/manager/power-user'
 
-boolean sessionAlive = CustomKeywords.'TempletPortalKeywords.isBrowserSessionAlive'()
-if (!sessionAlive) {
-	CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(managerUrl)
-} else {
-	WebUI.navigateToUrl(managerUrl)
-}
-WebUI.waitForPageLoad(15)
-
-if (!CustomKeywords.'TempletPortalKeywords.isValidAppSession'()) {
+if (!CustomKeywords.'TempletPortalKeywords.ensureAuthenticatedSession'(managerUrl, 15)) {
 	failures.add('[AUTH] Sesion perdida al navegar a blueprint manager')
 	CustomKeywords.'CommonKeywords.logCaseSummary'(caseId, failures, warnings)
 	KeywordUtil.markFailedAndStop("[${caseId}] Sin sesion")
