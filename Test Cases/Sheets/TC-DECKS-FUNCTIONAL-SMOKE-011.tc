@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke funcional de Decks: login Microsoft, dashboard, acceso a creación y logout</description>
+   <name>TC-DECKS-FUNCTIONAL-SMOKE-011</name>
+   <tag>Decks</tag>
+   <tag>Smoke</tag>
+   <tag>Fase2</tag>
+   <tag>Functional</tag>
+   <comment>Valida el flujo técnico básico de Decks sobre TEST.</comment>
+   <testCaseGuid>tc-decks-functional-smoke-011</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Comparación UI base de Sheets entre TEST y PROD luego de autenticación Microsoft</description>
+   <name>TC-SHEETS-TEST-PROD-OBJECTS-003</name>
+   <tag>Sheets</tag>
+   <tag>ComparacionProduccion</tag>
+   <tag>ValidacionElementos</tag>
+   <tag>UIBaseline</tag>
+   <comment>Valida presencia y texto de elementos UI base de Sheets entre TEST y PROD.</comment>
+   <testCaseGuid>fae4344a-4cf0-4408-994f-cb78ef7ff003</testCaseGuid>
+</TestCaseEntity>
