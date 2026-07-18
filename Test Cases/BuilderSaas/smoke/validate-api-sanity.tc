@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-API-SANITY-002 — Reusa la sesion MS y hace fetch same-origin a /api/brands, /api/templates, /api/layouts. Valida status 200 y counts sanos (referencia por snapshot previo o seed inicial).</description>
+   <name>validate-api-sanity</name>
+   <tag>buildersaas,smoke,api,sanity</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dfefe88b-2c1c-47cf-9538-4983875e5c6a</testCaseGuid>
+</TestCaseEntity>

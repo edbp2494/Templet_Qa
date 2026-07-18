@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-TRACKING-BLUEPRINT-001
+// Plataforma: Builders | Área: tracking
+// Descripción: Valida click y contenido visual del tab Blueprint en Tracking.
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Builders/Tracking/Tracking-Full-Flow
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 String buildersTestUrl = CustomKeywords.'CommonKeywords.getRequiredGlobal'('BUILDERS_TEST_URL', 'https://testing-templet-builders.vercel.app/')
 String trackingUrl = CustomKeywords.'CommonKeywords.buildTrackingUrl'(buildersTestUrl)
 

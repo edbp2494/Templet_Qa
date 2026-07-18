@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-DECKS-LIST-VIEW-CLICKABLE-002
+// Plataforma: Decks | Área: objects
+// Descripción: Validación de objetos visibles en lista de Decks (con reutilización de sesión).
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Decks/Decks-Full-Regression-ReuseDriver, Platforms/Decks/Decks-Objects-Validation-ReuseDriver
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testobject.TestObject

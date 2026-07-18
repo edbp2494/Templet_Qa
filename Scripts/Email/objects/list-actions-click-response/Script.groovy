@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-EMAIL-LIST-ACTIONS-RESPONSE-003
+// Plataforma: Email | Área: objects
+// Descripción: Hace click en cada acción del menú de List View y valida señal de respuesta UI.
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Email/Email-Full-Regression-ReuseDriver, Platforms/Email/Email-List-Actions-Response-ReuseDriver
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testobject.TestObject

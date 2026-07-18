@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-REQUEST-SMOKE-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC1 (login): Abre sesion SSO Microsoft, navega a blueprint/manager/power-user, descubre estructura DOM, botones y URLs de creacion disponibles. Captura evidencia para ajuste de TCs siguientes.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

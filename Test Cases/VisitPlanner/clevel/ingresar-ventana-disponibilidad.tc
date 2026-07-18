@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>ESQUELETO: C-Level - panel de cuentas priority, calendario 6 meses, ingresar ventana, pasaje comprado, briefs.</description>
+   <name>ingresar-ventana-disponibilidad</name>
+   <tag>visitplan,clevel,esqueleto</tag>
+   <comment>TC-VISITPLAN-CLEVEL-VENTANA-001</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>64d66f8a-bc8c-466b-8bca-4a06c2a7671f</testCaseGuid>
+</TestCaseEntity>

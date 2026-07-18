@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-DECKS-TEST-PROD-OBJECTS-004
+// Plataforma: Decks | Área: (raíz)
+// Descripción: Comparación de objetos entre TEST y PROD para Decks.
+// Suites: CrossPlatform/Compare-Test-Prod, Master/Full-Regression, Platforms/Decks/Smoke
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
 

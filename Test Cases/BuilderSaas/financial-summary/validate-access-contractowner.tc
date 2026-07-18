@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-FINSUMMARY-ACCESS-001 — [E9 · US-03] Login mock con ?role=ContractOwner, verifica "Financial Summary" visible en el sidebar (grupo Track; el plan decia Finance) y que el click navega a /financial-summary. Primer TC de la suite: abre el navegador.</description>
+   <name>validate-access-contractowner</name>
+   <tag>buildersaas,financial-summary,rbac,e9-us03</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7c2e4f8a-1d3b-4e9c-a5f7-8b2d6c4e9a13</testCaseGuid>
+</TestCaseEntity>

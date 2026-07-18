@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-FUNCTIONAL-SMOKE-001
+// Plataforma: Builders | Área: (raíz)
+// Descripción: Smoke funcional de Builders sobre landing pública y acceso a sign-in.
+// Suites: Master/Full-Regression, Platforms/Super-Suite-Validation, Platforms/Builders/Landing/Smoke
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.runPublicSignInSmoke'([
 	caseId: 'TC-BUILDERS-FUNCTIONAL-SMOKE-001',
 	platformLabel: 'Builders TEST',

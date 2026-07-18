@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "platform": "ArchitectMatching",
+    "screen": "Wizard /agendar (Cliente > GTM Kit > Cuándo y dónde > Resultados > Reservar)",
+    "environment_variable": "ARCHITECT_MATCHING_TEST_URL",
+    "fallback_url": "https://architect-matching-git-testing-daniel-templetios-projects.vercel.app/",
+    "direct_url_path": "agendar",
+    "auth": "Sin login. Vercel Protection Bypass: GlobalVariable VERCEL_BYPASS_TOKEN (o env VERCEL_AUTOMATION_BYPASS_SECRET) via query param x-vercel-protection-bypass + x-vercel-set-bypass-cookie=true. NUNCA hardcodear.",
+    "generated_at": "2026-07-07",
+    "for_skill": "katalon-testcase-creator",
+    "source": "Relevamiento en vivo (DOM) — apps de Oriana Hernandez, solo frontend/maqueta"
+  },
+  "groups": {
+    "home": [
+      {"name": "btn_ver_kits", "type": "button", "xpath_primary": "//button[normalize-space(.)='Ver kits'] | //a[normalize-space(.)='Ver kits']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "SOFT", "source_file": null, "notes": "Modulo Catalogo GTM Kits — pendiente mapeo de detalle"},
+      {"name": "btn_ver_cuentas", "type": "button", "xpath_primary": "//button[normalize-space(.)='Ver cuentas'] | //a[normalize-space(.)='Ver cuentas']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "SOFT", "source_file": null, "notes": "Modulo Ver una cuenta — pendiente mapeo de detalle"},
+      {"name": "btn_gestionar_plataforma", "type": "button", "xpath_primary": "//button[normalize-space(.)='Gestionar plataforma'] | //a[normalize-space(.)='Gestionar plataforma']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "SOFT", "source_file": null, "notes": "Pendiente mapeo de detalle"}
+    ],
+    "paso1_cliente": [
+      {"name": "card_cliente", "type": "card", "xpath_primary": "//*[normalize-space(text())='{nombre}']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Sin id propio, filtrar por texto exacto. Fixtures: Globex Inc (AM Sofía Ramírez), Intercorp (AM Ana Torres)"}
+    ],
+    "paso2_gtm_kit": [
+      {"name": "input_buscar_kit", "type": "input", "xpath_primary": "//input[@placeholder='Buscar kit...']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "type", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Placeholder literal"},
+      {"name": "combo_soluciones", "type": "combobox", "xpath_primary": "//*[@role='combobox'][contains(.,'Todas las soluciones')]", "xpath_fallback": "//button[contains(normalize-space(.),'Todas las soluciones')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": null, "notes": "Confirmar si es select nativo o combobox custom"},
+      {"name": "combo_etapas", "type": "combobox", "xpath_primary": "//*[@role='combobox'][contains(.,'Todas las etapas')]", "xpath_fallback": "//button[contains(normalize-space(.),'Todas las etapas')]", "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "SOFT", "source_file": null, "notes": null},
+      {"name": "card_kit", "type": "card", "xpath_primary": "//*[normalize-space(text())='{nombre}']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "SIEMPRE seleccionar por texto exacto: posible bug de indice/orden (card 'GTM Kit 1' mostro 'GTM Kit 3' en resumen). Kits: Discovery..., GTM Kit 1 (Data/Calificación/Propuesta), GTM Kit 2 (Cloud Platform/Propuesta/Negociación), GTM Kit 3 (Migraciones/Prospección), GTM KIT 5 (Migraciones/Negociación/Cierre)"}
+    ],
+    "paso3_cuando_donde": [
+      {"name": "combo_pais", "type": "combobox", "xpath_primary": "//*[@id='w-country']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "select", "expected_value": "Cualquier país", "assertion_type": "HARD", "source_file": null, "notes": "ID confirmado via DOM"},
+      {"name": "combo_ciudad", "type": "combobox", "xpath_primary": "//*[@id='w-city']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "select", "expected_value": "Cualquier ciudad", "assertion_type": "HARD", "source_file": null, "notes": "ID confirmado"},
+      {"name": "combo_modalidad", "type": "combobox", "xpath_primary": "//*[@id='w-modality']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "select", "expected_value": "Remoto", "assertion_type": "HARD", "source_file": null, "notes": "ID confirmado"},
+      {"name": "input_fecha_desde", "type": "input_date", "xpath_primary": "//*[@id='w-date']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "type", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Setear con JS + eventos input/change (React), formato yyyy-MM-dd"},
+      {"name": "input_fecha_hasta", "type": "input_date", "xpath_primary": "//*[@id='w-date-to']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "type", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Idem w-date"},
+      {"name": "btn_buscar_arquitectos", "type": "button", "xpath_primary": "//button[normalize-space(.)='Buscar arquitectos disponibles']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Por texto"}
+    ],
+    "paso4_resultados": [
+      {"name": "card_arquitecto", "type": "card", "xpath_primary": "//*[contains(normalize-space(text()),'{nombre}')]", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Nombre, ciudad/país, badge 'En la ubicación', 'Primera fecha disponible'. Fixtures: Daniel Okoro y Oriana Hernandez (Córdoba, Argentina)"},
+      {"name": "btn_agendar_arquitecto", "type": "button", "xpath_primary": "(//*[contains(normalize-space(.),'{nombre}')]/following::button[normalize-space(.)='Agendar'])[1]", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Heuristico: primer 'Agendar' despues del nombre en orden de documento"}
+    ],
+    "paso5_reservar": [
+      {"name": "combo_franja", "type": "combobox", "xpath_primary": "//*[@id='w-slot']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "select", "expected_value": "Día completo", "assertion_type": "HARD", "source_file": null, "notes": "ID confirmado"},
+      {"name": "combo_modalidad_reserva", "type": "combobox", "xpath_primary": "//*[@id='w-bmodality']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "select", "expected_value": "Remoto", "assertion_type": "HARD", "source_file": null, "notes": "ID confirmado"},
+      {"name": "textarea_notas", "type": "textarea", "xpath_primary": "//*[@id='w-notes']", "xpath_fallback": null, "selector_strength": "STABLE", "action": "type", "expected_value": null, "assertion_type": "SOFT", "source_file": null, "notes": "Opcional. ID confirmado"},
+      {"name": "btn_confirmar_taller", "type": "button", "xpath_primary": "//button[normalize-space(.)='Confirmar taller']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "BUG CONFIRMADO: dispara server error ERROR 3466207270 (Next.js RSC, sin requests /api/ previos)"},
+      {"name": "valor_resumen", "type": "text", "xpath_primary": "//*[normalize-space(text())='{label}']/following::*[normalize-space(text())!=''][1]", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "read", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "label = Cliente | GTM Kit | Arquitecto | Fecha"},
+      {"name": "msg_error_servidor", "type": "text", "xpath_primary": "//*[text()[contains(.,'A server error occurred')] or text()[contains(.,'3466207270')]]", "xpath_fallback": null, "selector_strength": "STABLE", "action": "verify_absent", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "Mensaje completo: This page couldn't load — A server error occurred. Reload to try again. ERROR 3466207270"}
+    ]
+  },
+  "selector_review": {"needs_data_testid": ["card_cliente", "card_kit", "card_arquitecto", "btn_agendar_arquitecto", "btn_confirmar_taller", "valor_resumen", "btn_ver_kits", "btn_ver_cuentas", "btn_gestionar_plataforma"], "stable_count": 9, "fragile_count": 13, "unknown_count": 0},
+  "known_issues": [
+    {"id": "BUG-CONFIRMAR-TALLER", "severity": "BLOCKER", "status": "CONFIRMADO", "test_case": "TC-ARCHMATCH-AGENDAR-BUGCONFIRMAR-002", "detail": "Server error ERROR 3466207270 al Confirmar taller (Globex Inc / Daniel Okoro / Día completo / Remoto)"},
+    {"id": "POSIBLE-MISMATCH-KIT", "severity": "MEDIA", "status": "A VERIFICAR", "test_case": "TC-ARCHMATCH-AGENDAR-KITMATCH-003", "detail": "Card 'GTM Kit 1' mostro 'GTM Kit 3' en el resumen — puede ser mal-click o bug de indice"}
+  ],
+  "next_step": "TC-ARCHMATCH-AGENDAR-HAPPY-001 / TC-ARCHMATCH-AGENDAR-BUGCONFIRMAR-002 / TC-ARCHMATCH-AGENDAR-KITMATCH-003"
+}

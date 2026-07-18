@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SHEETS-SMOKE-000
+// Plataforma: Sheets | Área: (raíz)
+// Descripción: Smoke base de Sheets TEST.
+// Suites: Master/Full-Regression, Platforms/Sheets/Smoke
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.util.KeywordUtil

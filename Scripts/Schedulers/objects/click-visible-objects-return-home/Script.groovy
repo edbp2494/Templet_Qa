@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SCHEDULERS-SIDEBAR-NAV-002
+// Plataforma: Schedulers | Área: objects
+// Descripción: Hace click en los objetos visibles seguros del home autenticado de Schedulers y vuelve al home.
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Schedulers/Objects/Visible-Clicks
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.runAuthenticatedSidebarSequence'([
 	caseId: 'TC-SCHEDULERS-SIDEBAR-NAV-002',
 	platformLabel: 'Schedulers TEST',

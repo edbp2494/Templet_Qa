@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Regresion conocida: reproduce el bug confirmado de server error al clickear Confirmar taller (ERROR 3466207270, Next.js RSC). FALLA POR DISENO mientras el bug exista.</description>
+   <name>regression-confirmar-taller-server-error</name>
+   <tag>archmatch,agendar,regression,bug</tag>
+   <comment>TC-ARCHMATCH-AGENDAR-BUGCONFIRMAR-002</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4b813429-18c9-4092-a8cb-ca92501e2dd7</testCaseGuid>
+</TestCaseEntity>

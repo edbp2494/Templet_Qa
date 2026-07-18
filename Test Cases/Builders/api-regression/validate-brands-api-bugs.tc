@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERS-API-BRANDS-001 — Regresión bugs US-04 Brand Properties: POST samples 500, GET formatting-props sin ?type 400, POST inválido 500, PATCH techtionary sin parcial</description>
+   <name>validate-brands-api-bugs</name>
+   <tag>api,regression,brands,us-04</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a3d1f8c2-6b47-4e91-b5a8-2f9c04d7e310</testCaseGuid>
+</TestCaseEntity>

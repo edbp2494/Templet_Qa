@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PLACEHOLDER: modulo Ver una cuenta (boton Ver cuentas) visto en el home, pendiente de mapeo de detalle.</description>
+   <name>ver-cuentas-pendiente</name>
+   <tag>archmatch,modulos,placeholder</tag>
+   <comment>TC-ARCHMATCH-MODULOS-CUENTAS-002</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bf8a3af6-5f2a-42a9-b6f3-84580040f855</testCaseGuid>
+</TestCaseEntity>

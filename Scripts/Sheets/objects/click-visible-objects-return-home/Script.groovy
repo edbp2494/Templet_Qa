@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SHEETS-SIDEBAR-NAV-002
+// Plataforma: Sheets | Área: objects
+// Descripción: Recorre los items visibles de la sidebar autenticada en Sheets, valida navegacion item por item, vuelve a Home y finaliza con Logout.
+// Suites: Master/Full-Regression, Platforms/Sheets/Objects/Visible-Clicks
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.runAuthenticatedSidebarSequence'([
 	caseId: 'TC-SHEETS-SIDEBAR-NAV-002',
 	platformLabel: 'Sheets TEST',

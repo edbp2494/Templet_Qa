@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-EMAIL-LIST-VIEW-CLICKABLE-002
+// Plataforma: Email | Área: objects
+// Descripción: Hace click en List y valida que objetos clave de la vista list sean visibles y clickeables.
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Email/Email-Full-Regression-ReuseDriver, Platforms/Email/Email-Objects-Validation-ReuseDriver
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testobject.TestObject

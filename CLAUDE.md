@@ -22,7 +22,7 @@
 
 - **Proyecto Katalon:** `Sheets.prj` (raíz: `C:\Users\e2494\Katalon Studio\Templet`)
 - **Lenguaje:** Groovy (Katalon DSL)
-- **Plataformas testeadas:** Builders, Sheets, Decks, Email, Schedulers
+- **Plataformas testeadas:** Builders, Sheets, Decks, Email, Schedulers, Architect Matching, Visit Planner
 - **Foco activo:** Builders Tracking — suite completa, lista para producción
 
 ### URLs de Ambientes (GlobalVariables)
@@ -33,6 +33,16 @@
 | `DECKS_TEST_URL` | `https://decks-test.templet.io/admin/manager.php` |
 | `EMAIL_TEST_URL` | `https://emails-test.templet.io/admin/manager.php` |
 | `SCHEDULERS_TEST_URL` | `https://testing-templet-schedulers.vercel.app/` |
+| `ARCHITECT_MATCHING_TEST_URL` | `https://architect-matching-git-testing-daniel-templetios-projects.vercel.app/` |
+| `VISIT_PLANNER_TEST_URL` | `https://escala-visit-planner-git-testing-daniel-templetios-projects.vercel.app/` |
+
+### Architect Matching + Visit Planner (apps de agendamiento, 07/2026)
+- Apps de Oriana Hernandez en Vercel (solo frontend, datos maqueta), **solo TESTING — nunca producción**. Sin login propio.
+- **Bypass de Vercel obligatorio:** GlobalVariable `VERCEL_BYPASS_TOKEN` (vacía en Git — cargar valor localmente o via `-g_VERCEL_BYPASS_TOKEN` / env `VERCEL_AUTOMATION_BYPASS_SECRET`). Viaja como query `x-vercel-protection-bypass` + `x-vercel-set-bypass-cookie=true` en la 1ra navegación. **Nunca hardcodear ni commitear el valor.**
+- Suites: `Test Suites/Platforms/ArchitectMatching/Agendar-Regression.ts` y `Test Suites/Platforms/VisitPlanner/Smoke.ts` (1 por plataforma; cada TC abre su propio browser).
+- 🔴 **Bug conocido (BLOCKER):** "Confirmar taller" rompe con `ERROR 3466207270` (Next.js RSC). `TC-ARCHMATCH-AGENDAR-BUGCONFIRMAR-002` **falla por diseño** mientras exista; si pasa (warning), desbloquear TODOs del happy path y retirarlo.
+- ⚠️ Posible mismatch de GTM Kit (card 1 → resumen 3): lo vigila `TC-ARCHMATCH-AGENDAR-KITMATCH-003`.
+- Visit Planner: solo la home mapeada; esqueletos con `// TODO: selectores pendientes de mapeo DOM en vivo` (prioridad flujo Comercial). Element-maps: `Include/config/element-maps/architect-matching-agendar.json` y `visit-planner-home.json`.
 
 ### Credenciales (nunca exponer)
 - Se leen desde `Include/config/templet-credentials.properties` (fuera de Git)
@@ -47,17 +57,19 @@
 ```
 C:\Users\e2494\Katalon Studio\Templet\
 ├── CLAUDE.md                                          ← este archivo
-├── BUILDERS_TRACKING_COMPLETION.md                    ← doc completa del estado
 ├── AGENTE-CLAUDE-SHEET.md                             ← prompt de inicio de sesión
+├── docs/
+│   ├── prompts/                                       ← SUPER-PROMPT-*.md, PROMPT-NUEVO-*.md
+│   └── reportes/                                      ← REPORTE_*.md, BUILDERS_TRACKING_COMPLETION.md
 ├── .github/
 │   ├── instructions/learnings.instructions.md         ← aprendizajes críticos
 │   └── workflows/builders-tracking-regression.yml     ← CI/CD preparado (manual)
 ├── Keywords/
 │   ├── TempletPortalKeywords.groovy                   ← ~3100 líneas, keyword principal
 │   ├── CommonKeywords.groovy                          ← utils: logSummary, getRequiredGlobal
+│   ├── AdminPhpKeywords.groovy                        ← flujos compartidos Sheets/Decks/Email (smoke, filters, sort, list-actions)
 │   ├── AsanaErrorTicketGenerator.groovy               ← genera tickets JSON de errores
 │   ├── AsanaErrorTicketGeneratorKeyword.groovy        ← ejecutado post-suite
-│   ├── SheetsKeywords.groovy                          ← keywords específicas Sheets
 │   ├── VisualKeywords.groovy                          ← comparación visual
 │   └── ObjectCaptureKeywords.groovy                   ← captura de objetos
 ├── Test Cases/Builders/tracking/
@@ -218,6 +230,29 @@ CustomKeywords.'CommonKeywords.logCaseSummary'('TC-001', failures, warnings)
 
 ---
 
+## API de Keywords — AdminPhpKeywords.groovy (Sheets/Decks/Email)
+
+Flujos compartidos de las plataformas admin.php, parametrizados por config map
+(caseId, urlVariableName, fallbackUrl, objetos OR opcionales, selectores CSS).
+Reemplazan a los 15 scripts duplicados (~3.400 líneas → scripts de ~20 líneas).
+
+| Método | Reemplaza a |
+|---|---|
+| `runFunctionalSmoke(Map config)` | `functional-smoke` de Sheets/Decks/Email |
+| `runClientInitiativeSortFlow(Map config)` | `filters/client-initiative-sort` ×3 |
+| `validateInitiativeContent(Map config)` | `filters/initiative-content-validation` ×3 |
+| `validateSortGridList(Map config)` | `validation/sort-grid-list-validation` ×3 |
+| `validateListActionsModal(Map config)` | `validation/list-actions-modal-response` ×3 |
+
+Convención del config: los objetos OR (`initiativeObj`, `sortObj`, `logoutObj`) son
+opcionales — si la plataforma no los tiene mapeados, la keyword usa el selector CSS
+(`initiativeCss`, `sortCss`) vía JS. Ver los scripts reducidos como ejemplos de uso.
+
+> Refactor OR + keywords 2026-07-18: árbol OR normalizado (`Builders/Tracking/` plano,
+> `Common/Auth/` para login MS, `Common/AdminPHP/` para objetos del admin clásico).
+> Todos los scripts llevan header estándar en español y los métodos públicos de
+> keywords tienen groovydoc. Validar con las Full-Regression de Sheets/Decks/Email.
+
 ## API de Keywords — AsanaErrorTicketGenerator.groovy / AsanaErrorTicketGeneratorKeyword.groovy
 
 ```groovy
@@ -253,8 +288,13 @@ CustomKeywords.'AsanaErrorTicketGeneratorKeyword.processBuildersTrackingErrors'(
 | Decks | Full-Regression, Objects-Validation, List-Actions-Response, Filters, Smoke |
 | Email | Full-Regression, Objects-Validation, List-Actions-Response, Filters, Smoke |
 | Schedulers | Smoke, Objects/Visible-Clicks |
-| Cross-Platform | `CrossPlatform-Compare-Test-Prod.ts`, `CrossPlatform-Functional-Smoke.ts` |
-| Full | `Full-Validation-All-Platforms.ts` |
+| Cross-Platform | `Test Suites/CrossPlatform/Compare-Test-Prod.ts`, `Test Suites/CrossPlatform/Functional-Smoke.ts` |
+| Master | `Test Suites/Master/Full-Regression.ts` (regresión total, 44 TCs) |
+| Full | `Test Suites/Platforms/Full-Validation-All-Platforms.ts`, `Super-Suite-Validation.ts` |
+| BuilderSaas | Smoke, Financial-Summary, API-Regression (`Test Suites/Platforms/BuilderSaas/`) |
+
+> Limpieza 2026-07-18: eliminados TCs/suites legacy Fase 1/2 (`Test Cases/Sheets/TC-*`, `Smoke-*.ts` raíz, `Suite-*`), suites duplicadas QA (`TS_Visual_*`, `TS_Smoke`, `TS_Integration_*`, `Demo.ts`, `Regression-Keywords-Refactor.ts`), `Editores/` (worktrees+backups) y `Object Repository/ValidarDemo-Cura`. Docs movidos a `docs/prompts/` y `docs/reportes/`.
+> Limpieza OR 2026-07-18: Object Repository reducido de 174 → 64 objetos (todos en uso). Eliminados: 67 auto-capturados de `Builders/Tracking`, carpeta `Tc1` (4 objetos usados migrados a `Common/AdminPHP/`), 7 login-MS de `Sheets/Filters`, 17 de `Sheets/Objects` + `SheetsKeywords.groovy` (keyword muerto). Los 9 objetos pendientes de `ArchitectMatching/Agendar` se conservan para el happy path bloqueado por bug.
 
 ---
 

@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BRAND-001
+// Plataforma: Builders | Área: brand
+// Descripción: Valida la pantalla Brand Properties (/brand): heading Active Brands, boton New Brand, columnas de tabla (Name, Client, # of Initiatives, # of Requests) y presencia de filas de datos.
+// Suites: Platforms/Builders/BrandBlueprint/Brand-Blueprint-Validation, Platforms/QA/Repos-Coverage-Builders
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

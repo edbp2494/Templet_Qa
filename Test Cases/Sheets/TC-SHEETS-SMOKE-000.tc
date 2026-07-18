@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>SMOKE: Abrir la página de Sheets TEST y verificar que carga correctamente</description>
-   <name>TC-SHEETS-SMOKE-000</name>
-   <tag>Smoke</tag>
-   <tag>Sheets</tag>
-   <comment>Primer test ejecutable. Solo abre la página TEST y toma screenshot. Sin login.</comment>
-   <testCaseGuid>tc000-smoke-0000-0000-000000000000</testCaseGuid>
-</TestCaseEntity>

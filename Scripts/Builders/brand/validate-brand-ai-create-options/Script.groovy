@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BRAND-AICREATE-001
+// Plataforma: Builders | Área: brand
+// Descripción: Valida que las opciones de generacion AI del menu "..." de un asset (Create HTML / IDML / PPTX / TEXT) abran ai.templet.io/drafts en pestaña nueva con el type correcto y la cierren. Opciones deshabilitadas para el asset -> warning (no fail).
+// Suites: Platforms/Builders/Brand/AI-Create-Options-Flow
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

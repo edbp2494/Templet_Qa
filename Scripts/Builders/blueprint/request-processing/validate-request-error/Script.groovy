@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-REQUEST-ERROR-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC5: Verifica manejo de errores del pipeline E6 (Notifications, Error Handling). Submit vacio -> verifica mensajes de validacion. URL invalida -> verifica que la sesion sobrevive. Captura evidencia de cada escenario.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>ESQUELETO (prioridad segun brief 02/07): Comercial reclama ventana de C-Level (min 15 dias) y crea Brief. Selectores pendientes de mapeo DOM en vivo.</description>
+   <name>reclamar-ventana-crear-brief</name>
+   <tag>visitplan,comercial,esqueleto</tag>
+   <comment>TC-VISITPLAN-COMERCIAL-BRIEF-001</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b5df93be-1616-48b1-b4ae-0f4388501d58</testCaseGuid>
+</TestCaseEntity>

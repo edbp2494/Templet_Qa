@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SCHEDULERS-FUNCTIONAL-SMOKE-001
+// Plataforma: Schedulers | Área: (raíz)
+// Descripción: Smoke funcional de Schedulers sobre landing pública y acceso a sign-in.
+// Suites: Master/Full-Regression, Platforms/Super-Suite-Validation, Platforms/Schedulers/Landing/Smoke
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.runPublicSignInSmoke'([
 	caseId: 'TC-SCHEDULERS-FUNCTIONAL-SMOKE-001',
 	platformLabel: 'Schedulers TEST',

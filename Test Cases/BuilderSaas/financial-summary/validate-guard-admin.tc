@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-FINSUMMARY-GUARD-ADMIN-003 — [E9 · US-03] Guard de rol permitido: role=Admin (el plan decia SuperAdmin; rol canonico real: Admin) accede a /financial-summary y el dashboard carga completo.</description>
+   <name>validate-guard-admin</name>
+   <tag>buildersaas,financial-summary,rbac,guard,e9-us03</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9a4c7e2d-6f8b-4c3a-9d5e-2b7f4a8c6e91</testCaseGuid>
+</TestCaseEntity>

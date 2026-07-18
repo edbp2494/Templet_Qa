@@ -1,0 +1,553 @@
+{
+  "meta": {
+    "platform": "BuilderSaas",
+    "screen": "Financial Summary",
+    "user_story": "E9 - US-03 Financial Summary Dashboard",
+    "environment_variable": "BUILDER_SAAS_TEST_URL",
+    "fallback_url": "https://testing-templet-builder-saas.vercel.app",
+    "direct_url_path": "financial-summary?role=ContractOwner",
+    "source_repo": "",
+    "source_dom": "DOM en vivo (Chrome) 2026-07-14 - repos/templet-builders esta desactualizado (2026-06-03) y no contiene esta pantalla",
+    "generated_at": "2026-07-14",
+    "for_skill": "katalon-testcase-creator",
+    "wave": 3,
+    "session_mode": "role-query-param",
+    "roles": {
+      "admin": "Admin",
+      "contract_owner": "ContractOwner",
+      "specialist": "Specialist",
+      "notes": "Valores canonicos tomados del atributo title del switcher DEV (esquina inferior derecha). El plan E9-US03 decia 'SuperAdmin' y 'Project Specialist': en la app real son 'Admin' y 'Specialist' (display: 'Project Specialist'). Sin cookies/localStorage: el rol viaja solo por ?role= y persiste en memoria durante la navegacion client-side. Reload sin param = Admin."
+    },
+    "known_issues": [
+      "RBAC NO implementado: /financial-summary renderiza completo con role=Specialist (guard del plan E9-US03 fallara por diseno hasta el fix)",
+      "Sidebar no oculta 'Financial Summary' para Specialist",
+      "Badge de rol del header hardcodeado 'Contract Owner' (se muestra igual con cualquier rol)",
+      "El grupo del sidebar es 'Track', no 'Finance' como decia el plan",
+      "No existe /api/financial-summary: data server-rendered via Next.js RSC (mock en servidor). Validar 'no hardcodeado' via consistencia aritmetica entre bloques",
+      "503 intermitentes en prefetches RSC del ambiente TESTING (ya reportados)"
+    ]
+  },
+  "groups": {
+    "sidebar": [
+      {
+        "name": "sidebar_group_track",
+        "type": "text",
+        "xpath_primary": "//aside//p[normalize-space(.)='Track']",
+        "xpath_fallback": "//aside//*[normalize-space(.)='Track']",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Track",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "El plan decia grupo 'Finance'; el grupo real es 'Track'."
+      },
+      {
+        "name": "link_financial_summary",
+        "type": "link",
+        "xpath_primary": "//aside//a[@href='/financial-summary']",
+        "xpath_fallback": "//aside//a[normalize-space(.)='Financial Summary']",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Financial Summary",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "@href es el hook mas confiable disponible (no hay data-testid en toda la app)."
+      },
+      {
+        "name": "link_financial_summary_active",
+        "type": "link",
+        "xpath_primary": "//aside//a[@href='/financial-summary' and contains(@class,'bg-[#00FF7F]')]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": null,
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Estado activo = clase Tailwind verde bg-[#00FF7F]; arbitraria, puede cambiar con el theme."
+      }
+    ],
+    "header": [
+      {
+        "name": "heading_financial_summary",
+        "type": "header",
+        "xpath_primary": "//h1[normalize-space(.)='Financial Summary']",
+        "xpath_fallback": "//*[self::h1 or self::h2][contains(normalize-space(.),'Financial Summary')]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Financial Summary",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "subtitle_period",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Budget & Revenue Overview')][not(*)]",
+        "xpath_fallback": "//*[contains(normalize-space(.),'Q3 2026')][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Q3 2026 · Budget & Revenue Overview",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "El separador es U+00B7; comparar por contains, no texto exacto."
+      },
+      {
+        "name": "badge_role",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Contract Owner']",
+        "xpath_fallback": "//*[normalize-space(.)='Contract Owner'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Contract Owner",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "BUG conocido: hardcodeado; muestra 'Contract Owner' incluso con role=Specialist."
+      }
+    ],
+    "kpis": [
+      {
+        "name": "kpi_total_spend_label",
+        "type": "metric",
+        "xpath_primary": "//p[normalize-space(.)='Total Spend']",
+        "xpath_fallback": "//*[normalize-space(.)='Total Spend'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Total Spend",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Card: bg-white border px-5 py-4."
+      },
+      {
+        "name": "kpi_total_spend_value",
+        "type": "metric",
+        "xpath_primary": "//div[p[normalize-space(.)='Total Spend']]//*[starts-with(normalize-space(.),'$')]",
+        "xpath_fallback": "//*[normalize-space(.)='$284k'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "$284k",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Valor de mock estable, pero SOFT por si actualizan el dataset."
+      },
+      {
+        "name": "kpi_budget_remaining_label",
+        "type": "metric",
+        "xpath_primary": "//p[normalize-space(.)='Budget Remaining']",
+        "xpath_fallback": "//*[normalize-space(.)='Budget Remaining'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Budget Remaining",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Nota inferior de la card: 'of $400k total'."
+      },
+      {
+        "name": "kpi_revenue_achieved_label",
+        "type": "metric",
+        "xpath_primary": "//p[normalize-space(.)='Revenue Achieved']",
+        "xpath_fallback": "//*[normalize-space(.)='Revenue Achieved'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Revenue Achieved",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Nota inferior: '40% of $1.2M target'."
+      },
+      {
+        "name": "kpi_pending_approvals_label",
+        "type": "metric",
+        "xpath_primary": "//p[normalize-space(.)='Pending Approvals']",
+        "xpath_fallback": "//*[normalize-space(.)='Pending Approvals'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Pending Approvals",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "El label aparece 2 veces en la pagina (KPI card y seccion inferior)."
+      }
+    ],
+    "budget_usage": [
+      {
+        "name": "section_budget_usage",
+        "type": "text",
+        "xpath_primary": "//p[normalize-space(.)='Budget Usage']",
+        "xpath_fallback": "//*[normalize-space(.)='Budget Usage'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Budget Usage",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "budget_usage_pct",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'% used')][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "71% used",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "71% coincide con $284k/$400k (chequeo aritmetico en TC CONTENT-002)."
+      },
+      {
+        "name": "budget_spent_label",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'spent')][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "$284k spent",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "budget_remaining_bar_label",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'remaining')][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "$116k remaining",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "progress_bars_all",
+        "type": "chart",
+        "xpath_primary": "//div[contains(@style,'width:') and contains(@style,'%')]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_count",
+        "expected_value": ">=18",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "18 barras: 1 budget + 5 category + 5 initiative + 5 revenue + 2 delivery. Depende del dataset mock."
+      }
+    ],
+    "spend_by_category": [
+      {
+        "name": "section_spend_by_category",
+        "type": "text",
+        "xpath_primary": "//p[normalize-space(.)='Spend by Category']",
+        "xpath_fallback": "//*[normalize-space(.)='Spend by Category'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Spend by Category",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Tabla: name / barra / pct / spend-budget."
+      },
+      {
+        "name": "cat_content_production",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Content Production']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Content Production",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Fila mock: 75% - $96k / $130k."
+      },
+      {
+        "name": "cat_design_branding",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Design & Branding']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Design & Branding",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "80% - $72k / $90k."
+      },
+      {
+        "name": "cat_events_webinars",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Events & Webinars']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Events & Webinars",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "68% - $54k / $80k."
+      },
+      {
+        "name": "cat_digital_campaigns",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Digital Campaigns']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Digital Campaigns",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "63% - $38k / $60k."
+      },
+      {
+        "name": "cat_tools_platforms",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Tools & Platforms']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Tools & Platforms",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "55% - $22k / $40k."
+      },
+      {
+        "name": "cat_amount_sample",
+        "type": "text",
+        "xpath_primary": "//*[normalize-space(.)='$96k / $130k'][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "$96k / $130k",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Muestra del formato 'spend / budget' de la tabla."
+      }
+    ],
+    "spend_by_initiative": [
+      {
+        "name": "section_spend_by_initiative",
+        "type": "text",
+        "xpath_primary": "//p[normalize-space(.)='Spend by Initiative']",
+        "xpath_fallback": "//*[normalize-space(.)='Spend by Initiative'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Spend by Initiative",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "init_cst_agent_workshop",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='CST Agent Workshop']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "CST Agent Workshop",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Cada nombre de iniciativa aparece x2 (Spend by Initiative y Revenue vs Target)."
+      },
+      {
+        "name": "init_selling_with_calix",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Selling with Calix']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Selling with Calix",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "init_2026_data_webinar",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='2026 Data Webinar']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "2026 Data Webinar",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "init_blueprint_automation",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Blueprint Automation']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Blueprint Automation",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "init_market_expansion_q3",
+        "type": "text",
+        "xpath_primary": "//span[normalize-space(.)='Market Expansion Q3']",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Market Expansion Q3",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      }
+    ],
+    "revenue_vs_target": [
+      {
+        "name": "section_revenue_vs_target",
+        "type": "text",
+        "xpath_primary": "//p[normalize-space(.)='Revenue vs Target']",
+        "xpath_fallback": "//*[normalize-space(.)='Revenue vs Target'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Revenue vs Target",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Bloque por iniciativa: 58/45/32/21/14%."
+      },
+      {
+        "name": "revenue_achieved_pct",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'% achieved')][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "40% achieved",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "40% coincide con $480k/$1.2M (chequeo aritmetico en TC CONTENT-002)."
+      },
+      {
+        "name": "revenue_label_actual",
+        "type": "text",
+        "xpath_primary": "//*[normalize-space(.)='Actual'][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Actual",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "revenue_label_target",
+        "type": "text",
+        "xpath_primary": "//*[normalize-space(.)='Target'][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Target",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": ""
+      },
+      {
+        "name": "revenue_value_target",
+        "type": "text",
+        "xpath_primary": "//*[normalize-space(.)='$1.2M'][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "$1.2M",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "$480k actual aparece tambien como KPI Revenue Achieved."
+      }
+    ],
+    "delivery_accuracy": [
+      {
+        "name": "section_delivery_accuracy",
+        "type": "text",
+        "xpath_primary": "//p[normalize-space(.)='Delivery Accuracy']",
+        "xpath_fallback": "//*[normalize-space(.)='Delivery Accuracy'][not(*)]",
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Delivery Accuracy",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Delivery Accuracy Rate: One-Off vs Blueprint (US-03)."
+      },
+      {
+        "name": "delivery_blueprint_rate_label",
+        "type": "metric",
+        "xpath_primary": "//*[normalize-space(.)='Blueprint Rate'][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Blueprint Rate",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Valor mock: 87%."
+      },
+      {
+        "name": "delivery_oneoff_rate_label",
+        "type": "metric",
+        "xpath_primary": "//*[normalize-space(.)='One-Off Rate'][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "One-Off Rate",
+        "assertion_type": "HARD",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Valor mock: 91% (barra verde)."
+      }
+    ],
+    "pending_approvals_section": [
+      {
+        "name": "section_pending_approvals",
+        "type": "text",
+        "xpath_primary": "(//p[normalize-space(.)='Pending Approvals'])[last()]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Pending Approvals",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "Posicional [last()] para distinguir de la KPI card superior."
+      },
+      {
+        "name": "pending_item_q3_campaign",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Q3 Campaign Budget Increase')][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Q3 Campaign Budget Increase",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "+$18,000. La cantidad de items (2) debe coincidir con la KPI Pending Approvals."
+      },
+      {
+        "name": "pending_item_webinar_sessions",
+        "type": "text",
+        "xpath_primary": "//*[contains(normalize-space(.),'Add 2 Webinar Sessions')][not(*)]",
+        "xpath_fallback": null,
+        "selector_strength": "FRAGILE",
+        "action": "verify_present",
+        "expected_value": "Add 2 Webinar Sessions",
+        "assertion_type": "SOFT",
+        "source_file": "live-dom /financial-summary (2026-07-14)",
+        "notes": "+$8,000."
+      }
+    ]
+  },
+  "selector_review": {
+    "needs_data_testid": [
+      "link_financial_summary",
+      "heading_financial_summary",
+      "badge_role",
+      "kpi_total_spend_label",
+      "kpi_budget_remaining_label",
+      "kpi_revenue_achieved_label",
+      "kpi_pending_approvals_label",
+      "section_budget_usage",
+      "section_spend_by_category",
+      "section_spend_by_initiative",
+      "section_revenue_vs_target",
+      "section_delivery_accuracy",
+      "section_pending_approvals",
+      "progress_bars_all"
+    ],
+    "stable_count": 0,
+    "fragile_count": 40,
+    "unknown_count": 0,
+    "summary": "La app Builder SaaS no expone ni un solo data-testid. Todo depende de texto visible, @href y clases Tailwind. Pedir al equipo dev data-testid para sidebar, secciones y KPIs (ver Include/config/SELECTORS-REVIEW.md)."
+  },
+  "next_step": "Consumido por Scripts/BuilderSaas/financial-summary/validate-dashboard-content via ReposCoverageKeywords.validateScreenFromElementMap"
+}

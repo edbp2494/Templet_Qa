@@ -1,46 +1,22 @@
-import com.kms.katalon.core.util.KeywordUtil
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import internal.GlobalVariable as GlobalVariable
-
-String caseId = 'TC-EMAIL-FUNCTIONAL-SMOKE-012'
-String startUrl = CommonKeywords.getRequiredGlobal('EMAIL_TEST_URL', 'https://emails-test.templet.io/admin/manager.php')
-List<String> failures = []
-
-try {
-	CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(startUrl)
-	CustomKeywords.'TempletPortalKeywords.captureCaseScreenshot'(caseId, 'post_login')
-
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('brand_email', "//*[contains(normalize-space(.),'email.templet')]", 8)) {
-		failures.add('Marca email.templet no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathText'('dashboard_h4', "//h4[contains(normalize-space(.),'Dashboard')]", 'Dashboard', 8)) {
-		failures.add('Dashboard no visible o con texto inesperado')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathText'('create_email', "//a[contains(normalize-space(.),'Create Email')]", 'Create Email', 8)) {
-		failures.add('Botón Create Email no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('client_placeholder', "//*[contains(normalize-space(.),'Select Client')]", 8)) {
-		failures.add('Placeholder Select Client no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('sort_default', "//*[contains(normalize-space(.),'Newest')]", 8)) {
-		failures.add('Orden default Newest no visible')
-	}
-
-	if (!CustomKeywords.'TempletPortalKeywords.clickXPathAndKeepValidSession'('create_email_click', "//a[contains(normalize-space(.),'Create Email')]", 8)) {
-		failures.add('No se pudo abrir la entrada de creación de Email con sesión válida')
-	}
-
-	WebUI.navigateToUrl(startUrl)
-	WebUI.waitForPageLoad(15)
-	if (!CustomKeywords.'TempletPortalKeywords.logoutAndVerify'()) {
-		failures.add('No se confirmó logout correctamente')
-	}
-
-	if (failures.isEmpty()) {
-		KeywordUtil.markPassed(caseId + ' OK. Login, dashboard, creación básica y logout validados en Email TEST.')
-	} else {
-		KeywordUtil.markFailed(caseId + ' falló: ' + failures.join(' | '))
-	}
-} finally {
-	CustomKeywords.'TempletPortalKeywords.safeCloseBrowser'()
-}
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-EMAIL-FUNCTIONAL-SMOKE-012
+// Objetivo: Smoke funcional de Email TEST — login MS, elementos base del
+//           dashboard, entrada de creación con sesión válida y logout verificado.
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// Lógica compartida: Keywords/AdminPhpKeywords.groovy → runFunctionalSmoke(config)
+// ─────────────────────────────────────────────────────────────────────────────
+CustomKeywords.'AdminPhpKeywords.runFunctionalSmoke'([
+	caseId          : 'TC-EMAIL-FUNCTIONAL-SMOKE-012',
+	urlVariableName : 'EMAIL_TEST_URL',
+	fallbackUrl     : 'https://emails-test.templet.io/admin/manager.php',
+	checks          : [
+		[name: 'brand_email', xpath: "//*[contains(normalize-space(.),'email.templet')]", failureMessage: 'Marca email.templet no visible'],
+		[name: 'dashboard_h4', xpath: "//h4[contains(normalize-space(.),'Dashboard')]", expectedText: 'Dashboard', failureMessage: 'Dashboard no visible o con texto inesperado'],
+		[name: 'create_email', xpath: "//a[contains(normalize-space(.),'Create Email')]", expectedText: 'Create Email', failureMessage: 'Botón Create Email no visible'],
+		[name: 'client_placeholder', xpath: "//*[contains(normalize-space(.),'Select Client')]", failureMessage: 'Placeholder Select Client no visible'],
+		[name: 'sort_default', xpath: "//*[contains(normalize-space(.),'Newest')]", failureMessage: 'Orden default Newest no visible']
+	],
+	createClickXPath: "//a[contains(normalize-space(.),'Create Email')]",
+	verifyLogoutAgainstStartUrl: false,
+	okMessage       : 'Login, dashboard, creación básica y logout validados en Email TEST.'
+])

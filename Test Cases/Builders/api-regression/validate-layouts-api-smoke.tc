@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERS-API-LAYOUTS-001 — Smoke regresión US-08 Brand Layouts: filtros brandId/contentTemplateId, CRUD, optimistic locking 409, duplicate</description>
+   <name>validate-layouts-api-smoke</name>
+   <tag>api,regression,layouts,us-08</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d1a4c136-5e70-4b24-9f83-0c6d7e3a8b49</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "platform": "VisitPlanner",
+    "screen": "Home — selector de perfil (UNICA pantalla relevada)",
+    "environment_variable": "VISIT_PLANNER_TEST_URL",
+    "fallback_url": "https://escala-visit-planner-git-testing-daniel-templetios-projects.vercel.app/",
+    "direct_url_path": "",
+    "auth": "Sin login. Vercel Protection Bypass: GlobalVariable VERCEL_BYPASS_TOKEN (o env VERCEL_AUTOMATION_BYPASS_SECRET). NUNCA hardcodear.",
+    "generated_at": "2026-07-07",
+    "for_skill": "katalon-testcase-creator",
+    "source": "Relevamiento parcial en vivo + brief de reunion 02/07 (flujos internos NO verificados en la app)",
+    "mapping_status": "INCOMPLETO — priorizar mapeo del flujo Comercial (reclamar ventana > crear brief)"
+  },
+  "groups": {
+    "home": [
+      {"name": "heading_perfil", "type": "header", "xpath_primary": "//*[contains(normalize-space(text()),'perfil desea ingresar')]", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "verify_present", "expected_value": "¿Con qué perfil desea ingresar?", "assertion_type": "HARD", "source_file": null, "notes": null},
+      {"name": "opcion_perfil", "type": "card", "xpath_primary": "//*[normalize-space(text())='{perfil}']", "xpath_fallback": null, "selector_strength": "FRAGILE", "action": "click", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "perfil = C-Level ('Marque su disponibilidad de viaje') | Comercial ('Agenda de reuniones por cliente') | Regional Manager ('Registro de visitas por región') | Gestionar plataforma"}
+    ],
+    "comercial_TODO": [
+      {"name": "ventanas_disponibilidad_clevel", "type": "TODO", "xpath_primary": null, "xpath_fallback": null, "selector_strength": "UNKNOWN", "action": "TODO", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "TODO: selectores pendientes de mapeo DOM en vivo. Ventanas de los 3 C-Levels de la region (Alejandro, Harold, Ignacio)"},
+      {"name": "btn_reclamar_ventana", "type": "TODO", "xpath_primary": null, "xpath_fallback": null, "selector_strength": "UNKNOWN", "action": "TODO", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "TODO. Regla: minimo 15 dias de anticipacion; alerta si feriado en ventana"},
+      {"name": "form_reunion", "type": "TODO", "xpath_primary": null, "xpath_fallback": null, "selector_strength": "UNKNOWN", "action": "TODO", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "TODO. Cuenta / pais / hora / modalidad / contacto"},
+      {"name": "form_brief", "type": "TODO", "xpath_primary": null, "xpath_fallback": null, "selector_strength": "UNKNOWN", "action": "TODO", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "TODO. Brief: objetivo, contexto, asistentes, temas, riesgos, proximos pasos"}
+    ],
+    "clevel_TODO": [
+      {"name": "panel_clevel", "type": "TODO", "xpath_primary": null, "xpath_fallback": null, "selector_strength": "UNKNOWN", "action": "TODO", "expected_value": null, "assertion_type": "HARD", "source_file": null, "notes": "TODO. Cuentas priority, calendario 6 meses, ingresar ventana, pasaje comprado, briefs. Regla: no desmarcar ventana con reuniones agendadas"}
+    ]
+  },
+  "business_rules": [
+    "Ventana NO reclamable si faltan menos de 15 dias (TC-VISITPLAN-COMERCIAL-15DIAS-002)",
+    "Alerta si hay feriado dentro de la ventana (TC-VISITPLAN-COMERCIAL-FERIADO-003)",
+    "C-Level no puede desmarcar ventana con reuniones agendadas (TC-VISITPLAN-CLEVEL-DESMARCAR-002)",
+    "Objetivo de negocio: 2 visitas/año por cuenta prioritaria. Regiones Comercial: Sola, Nola, México, Caribe"
+  ],
+  "selector_review": {"needs_data_testid": ["heading_perfil", "opcion_perfil"], "stable_count": 0, "fragile_count": 2, "unknown_count": 5},
+  "next_step": "Mapear DOM del flujo Comercial en vivo -> completar TC-VISITPLAN-COMERCIAL-BRIEF-001 (prioridad)"
+}

@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
 class TempletPortalKeywords {
+	/** Detecta el browser configurado en el perfil de ejecución; 'UNKNOWN' si no se puede determinar. */
 	@Keyword
 	static String detectConfiguredBrowser() {
 		try {
@@ -42,6 +43,7 @@ class TempletPortalKeywords {
 		return false
 	}
 
+	/** Verifica que el browser configurado esté soportado e instalado en el host; detiene el TC si no. */
 	@Keyword
 	static void assertBrowserSupportForHost() {
 		String browserType = detectConfiguredBrowser().toUpperCase()
@@ -85,6 +87,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Resuelve una credencial desde GlobalVariable, variable de entorno o templet-credentials.properties (en ese orden). */
 	@Keyword
 	static String resolveCredential(String primaryName, String secondaryName = null) {
 		List<String> candidateNames = [primaryName, secondaryName].findAll { it != null && it.trim() }
@@ -267,6 +270,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Retorna la URL actual sin lanzar excepción (cadena vacía si falla). */
 	@Keyword
 	static String currentUrlSafe() {
 		try {
@@ -281,6 +285,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Verifica que la URL actual no sea de Microsoft, es decir, que la sesión de la app es válida. */
 	@Keyword
 	static boolean isValidAppSession() {
 		String currentUrl = currentUrlSafe()
@@ -290,6 +295,7 @@ class TempletPortalKeywords {
 			!currentUrl.contains('live.com')
 	}
 
+	/** Captura screenshot con timestamp en Reports/Screenshots/<caso>/ y retorna la ruta generada. */
 	@Keyword
 	static String captureCaseScreenshot(String caseName, String label) {
 		String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern('yyyyMMdd_HHmmss'))
@@ -309,6 +315,7 @@ class TempletPortalKeywords {
 		return path
 	}
 
+	/** Cierra el browser sin lanzar excepción si no hay sesión activa. */
 	@Keyword
 	static void safeCloseBrowser() {
 		try {
@@ -378,6 +385,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Abre el browser, navega a la URL objetivo y hace login SSO Microsoft con reintentos (2x). */
 	@Keyword
 	static void openBrowserAndLoginWithMicrosoft(String targetUrl) {
 		assertBrowserSupportForHost()
@@ -416,6 +424,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Resuelve un setting opcional desde GlobalVariable o variable de entorno, con fallback. */
 	@Keyword
 	static String resolveOptionalSetting(String variableName, String fallback = '') {
 		if (variableName != null && variableName.trim()) {
@@ -433,6 +442,7 @@ class TempletPortalKeywords {
 		return fallback ?: ''
 	}
 
+	/** Valida que una URL directa redirige al destino esperado manteniendo sesión (config map). */
 	@Keyword
 	static void validateDirectRedirect(Map config) {
 		assertBrowserSupportForHost()
@@ -489,6 +499,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Ejecuta validateDirectRedirect para un lote de URLs definidas en el config map. */
 	@Keyword
 	static void validateDirectRedirectBatch(Map config) {
 		assertBrowserSupportForHost()
@@ -584,6 +595,7 @@ class TempletPortalKeywords {
 		return defaultValue
 	}
 
+	/** Smoke de landing pública: carga de página, objetos clave visibles y evidencia (config map). */
 	@Keyword
 	static void runPublicLandingSmoke(Map config) {
 		assertBrowserSupportForHost()
@@ -627,6 +639,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Smoke del flujo público de sign-in de la plataforma (config map). */
 	@Keyword
 	static void runPublicSignInSmoke(Map config) {
 		assertBrowserSupportForHost()
@@ -721,6 +734,7 @@ class TempletPortalKeywords {
 		return currentUrlSafe()?.contains(homeUrl)
 	}
 
+	/** Verifica que los objetos esperados de la landing estén visibles (config map). */
 	@Keyword
 	static void verifyLandingVisibleObjects(Map config) {
 		assertBrowserSupportForHost()
@@ -760,6 +774,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Clickea cada objeto de la landing y regresa a home tras cada interacción (config map). */
 	@Keyword
 	static void clickLandingObjectsAndReturnHome(Map config) {
 		assertBrowserSupportForHost()
@@ -959,6 +974,7 @@ class TempletPortalKeywords {
 		return result ?: [found: false, clicked: false, href: '', label: '']
 	}
 
+	/** Verifica objetos visibles tras autenticación (config map). */
 	@Keyword
 	static void verifyAuthenticatedVisibleObjects(Map config) {
 		assertBrowserSupportForHost()
@@ -998,6 +1014,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Clickea objetos autenticados y regresa a home tras cada interacción (config map). */
 	@Keyword
 	static void clickAuthenticatedVisibleObjectsAndReturnHome(Map config) {
 		assertBrowserSupportForHost()
@@ -1740,6 +1757,7 @@ class TempletPortalKeywords {
 		return result
 	}
 
+	/** Verifica únicamente el orden de los items del sidebar autenticado (config map). */
 	@Keyword
 	static void verifyAuthenticatedSidebarOrderOnly(Map config) {
 		assertBrowserSupportForHost()
@@ -1822,6 +1840,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Ejecuta la secuencia completa de navegación por el sidebar autenticado (config map). */
 	@Keyword
 	static void runAuthenticatedSidebarSequence(Map config) {
 		assertBrowserSupportForHost()
@@ -2390,6 +2409,7 @@ class TempletPortalKeywords {
 		return diffs
 	}
 
+	/** Valida el dashboard Tracking 'All' de Builders: SSO, título dinámico, switch Production, botón Load Data y snapshot JSON (config map, ver CLAUDE.md). */
 	@Keyword
 	static void validateBuildersTrackingAllDashboard(Map config) {
 		assertBrowserSupportForHost()
@@ -2405,19 +2425,19 @@ class TempletPortalKeywords {
 		List<String> warnings = []
 
 		List<Map<String, Object>> visualObjects = (List<Map<String, Object>>) (config.visualObjects ?: [
-			[alias: 'title', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/h1_Execution Tracking'],
-			[alias: 'subtitle', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/p_Real-time telemetry overview  May 2026'],
-			[alias: 'switchToggle', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/button_Production_data-source-switch'],
-			[alias: 'monthButton', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/button_May'],
-			[alias: 'yearButton', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/button_2026'],
-			[alias: 'loadDataButton', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/button_Load Data'],
-			[alias: 'totalExecutionsLabel', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/p_Total Executions'],
-			[alias: 'errorRateLabel', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/p_Error Rate'],
-			[alias: 'activeUsersLabel', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/p_Active Users'],
-			[alias: 'dailyExecutionsTitle', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/h2_Daily Executions'],
-			[alias: 'executionsByTraceTitle', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/div_Executions by TraceTotal completed  err_48fdf7'],
-			[alias: 'errorRateByTraceTitle', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/div_Error Rate by TracePercentage of operat_761d93'],
-			[alias: 'topActiveUsersTitle', objectPath: 'Object Repository/Builders/Tracking/All/Page_Builders App/h2_Top Active Users']
+			[alias: 'title', objectPath: 'Object Repository/Builders/Tracking/h1_Execution Tracking'],
+			[alias: 'subtitle', objectPath: 'Object Repository/Builders/Tracking/p_Real-time telemetry overview  May 2026'],
+			[alias: 'switchToggle', objectPath: 'Object Repository/Builders/Tracking/button_Production_data-source-switch'],
+			[alias: 'monthButton', objectPath: 'Object Repository/Builders/Tracking/button_May'],
+			[alias: 'yearButton', objectPath: 'Object Repository/Builders/Tracking/button_2026'],
+			[alias: 'loadDataButton', objectPath: 'Object Repository/Builders/Tracking/button_Load Data'],
+			[alias: 'totalExecutionsLabel', objectPath: 'Object Repository/Builders/Tracking/p_Total Executions'],
+			[alias: 'errorRateLabel', objectPath: 'Object Repository/Builders/Tracking/p_Error Rate'],
+			[alias: 'activeUsersLabel', objectPath: 'Object Repository/Builders/Tracking/p_Active Users'],
+			[alias: 'dailyExecutionsTitle', objectPath: 'Object Repository/Builders/Tracking/h2_Daily Executions'],
+			[alias: 'executionsByTraceTitle', objectPath: 'Object Repository/Builders/Tracking/div_Executions by TraceTotal completed  err_48fdf7'],
+			[alias: 'errorRateByTraceTitle', objectPath: 'Object Repository/Builders/Tracking/div_Error Rate by TracePercentage of operat_761d93'],
+			[alias: 'topActiveUsersTitle', objectPath: 'Object Repository/Builders/Tracking/h2_Top Active Users']
 		])
 
 		List<Map<String, Object>> compareRules = (List<Map<String, Object>>) (config.compareRules ?: [
@@ -2567,6 +2587,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Verifica presencia de un elemento por XPath; retorna boolean sin detener el TC. */
 	@Keyword
 	static boolean verifyXPathPresent(String name, String xpath, int timeoutSeconds) {
 		return WebUI.verifyElementPresent(xpathObject(name, xpath), timeoutSeconds, FailureHandling.OPTIONAL)
@@ -2881,6 +2902,7 @@ class TempletPortalKeywords {
 		return state ?: [:]
 	}
 
+	/** Valida un tab del Tracking de Builders (Blueprint/Task Creation/Login): tema de color, prefix de Daily Executions, cards requeridas y snapshot (config map, ver CLAUDE.md). */
 	@Keyword
 	static void validateBuildersTrackingTabDashboard(Map config) {
 		assertBrowserSupportForHost()
@@ -3338,6 +3360,7 @@ class TempletPortalKeywords {
 		}
 	}
 
+	/** Verifica que el texto del elemento (XPath) coincida exactamente con el esperado; retorna boolean. */
 	@Keyword
 	static boolean verifyXPathText(String name, String xpath, String expectedText, int timeoutSeconds) {
 		TestObject obj = xpathObject(name, xpath)
@@ -3348,6 +3371,7 @@ class TempletPortalKeywords {
 		return actual == expectedText
 	}
 
+	/** Click por XPath verificando que la sesión de la app siga válida tras el click; retorna boolean. */
 	@Keyword
 	static boolean clickXPathAndKeepValidSession(String name, String xpath, int timeoutSeconds) {
 		TestObject obj = xpathObject(name, xpath)
@@ -3363,6 +3387,7 @@ class TempletPortalKeywords {
 		return isValidAppSession()
 	}
 
+	/** Hace logout y verifica que la sesión quedó cerrada (opcionalmente revalidando contra una URL protegida). */
 	@Keyword
 	static boolean logoutAndVerify(String protectedUrl = '') {
 		boolean clicked = clickFirstPresent([
@@ -3405,7 +3430,7 @@ class TempletPortalKeywords {
 		}
 
 		boolean loginPromptVisible =
-			isPresentQuiet(findTestObject('Object Repository/Common/a_Log in with Microsoft'), 2) ||
+			isPresentQuiet(findTestObject('Object Repository/Common/Auth/a_Log in with Microsoft'), 2) ||
 			isPresentQuiet(xpathObject('signin_link_generic', "//a[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'sign in') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'log in') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'login') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'microsoft') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'iniciar sesi') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'acceder')]"), 2) ||
 			isPresentQuiet(xpathObject('ms_email_input_generic', "//input[@name='loginfmt' or @id='i0116']"), 2)
 
@@ -3441,7 +3466,7 @@ class TempletPortalKeywords {
 		List<String> handlesBeforeLoginClick = snapshotHandlesSafe()
 
 		clickFirstPresent([
-			findTestObject('Object Repository/Common/a_Log in with Microsoft'),
+			findTestObject('Object Repository/Common/Auth/a_Log in with Microsoft'),
 			xpathObject('login_signin_link', "//a[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'sign in') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'log in') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'login') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'microsoft')]"),
 			xpathObject('login_signin_button', "//button[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'sign in') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'log in') or contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'login')]")
 		], 5)
@@ -3468,7 +3493,7 @@ class TempletPortalKeywords {
 		}
 
 		if (msEmailVisible) {
-			WebUI.setText(findTestObject('Object Repository/Common/input_ms_email'), username)
+			WebUI.setText(findTestObject('Object Repository/Common/Auth/input_ms_email'), username)
 			clickFirstPresent([
 				xpathObject('ms_next_input', "//input[@id='idSIButton9' and @type='submit']"),
 				xpathObject('ms_next_button', "//button[contains(.,'Next') or contains(.,'Siguiente')]")
@@ -3480,7 +3505,7 @@ class TempletPortalKeywords {
 			for (int waitTick = 0; waitTick < 20 && !flowResolved; waitTick++) {
 				WebUI.delay(1)
 				if (existsByXPath("//input[@name='passwd' or @id='i0118' or (@type='password' and not(@aria-hidden='true'))]")) {
-					WebUI.setText(findTestObject('Object Repository/Common/input_ms_password'), password)
+					WebUI.setText(findTestObject('Object Repository/Common/Auth/input_ms_password'), password)
 					clickFirstPresent([
 						xpathObject('ms_signin_input', "//input[@id='idSIButton9' and @type='submit']"),
 						xpathObject('ms_signin_button', "//button[contains(.,'Sign in') or contains(.,'Iniciar')]")
@@ -3536,7 +3561,7 @@ class TempletPortalKeywords {
 			currentUrl = currentUrlSafe()
 
 			boolean loginButtonStillVisible = WebUI.verifyElementPresent(
-				findTestObject('Object Repository/Common/a_Log in with Microsoft'), 2, FailureHandling.OPTIONAL)
+				findTestObject('Object Repository/Common/Auth/a_Log in with Microsoft'), 2, FailureHandling.OPTIONAL)
 			boolean sessionActive = currentUrl != 'SESSION_LOST' &&
 				!currentUrl.contains('login.microsoftonline.com') &&
 				!currentUrl.contains('loginlive.com') &&

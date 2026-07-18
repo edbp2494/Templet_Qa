@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke de la unica pantalla relevada: selector de perfil con C-Level, Comercial, Regional Manager y Gestionar plataforma.</description>
+   <name>seleccion-perfil</name>
+   <tag>visitplan,smoke</tag>
+   <comment>TC-VISITPLAN-SMOKE-PERFIL-001</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c1994e3d-896c-4257-b1f0-926efa0e2f74</testCaseGuid>
+</TestCaseEntity>

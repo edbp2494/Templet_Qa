@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>ESQUELETO: regla de negocio - alerta si hay feriado dentro de la ventana.</description>
+   <name>alerta-feriado-en-ventana</name>
+   <tag>visitplan,comercial,esqueleto,regla-negocio</tag>
+   <comment>TC-VISITPLAN-COMERCIAL-FERIADO-003</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0babd2d7-c88f-4d06-92e3-847d2e4bc1e5</testCaseGuid>
+</TestCaseEntity>

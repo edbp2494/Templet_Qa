@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SHEETS-LIST-VIEW-CLICKABLE-002
+// Plataforma: Sheets | Área: objects
+// Descripción: Validación de objetos visibles en lista de Sheets (con reutilización de sesión).
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Sheets/Sheets-Full-Regression-ReuseDriver, Platforms/Sheets/Sheets-Objects-Validation-ReuseDriver
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testobject.TestObject
@@ -283,7 +290,7 @@ try {
     applySortOptions('View Grid')
 
     // STEP 5: Click View List
-    TestObject viewListBtn = findTestObject('Tc1/Page_sheets.templet.  Admin/a_View List')
+    TestObject viewListBtn = findTestObject('Common/AdminPHP/a_View List')
     WebUI.waitForElementVisible(viewListBtn, 10)
     WebUI.waitForElementClickable(viewListBtn, 10)
     WebUI.click(viewListBtn)
@@ -309,7 +316,7 @@ try {
     }
 
     // STEP 8: Export - validar PPTX e IDML
-    TestObject exportBtn = findTestObject('Tc1/Page_sheets.templet.  Admin/button_Exportar')
+    TestObject exportBtn = findTestObject('Common/AdminPHP/button_Exportar')
     WebUI.waitForElementVisible(exportBtn, 10)
     WebUI.waitForElementClickable(exportBtn, 10)
     WebUI.click(exportBtn)
@@ -403,7 +410,7 @@ try {
     WebUI.delay(1)
 
     // STEP 9: Create Document y cerrar modal
-    TestObject createDocBtn = findTestObject('Tc1/Page_sheets.templet.  Admin/a_Create Document')
+    TestObject createDocBtn = findTestObject('Common/AdminPHP/a_Create Document')
     WebUI.waitForElementVisible(createDocBtn, 10)
     WebUI.waitForElementClickable(createDocBtn, 10)
     WebUI.click(createDocBtn)
@@ -418,7 +425,7 @@ try {
     WebUI.delay(1)
 
     // STEP 10: Create Initiative y cerrar modal
-    TestObject createInitBtn = findTestObject('Tc1/Page_sheets.templet.  Admin/a_Create Initiative')
+    TestObject createInitBtn = findTestObject('Common/AdminPHP/a_Create Initiative')
     WebUI.waitForElementVisible(createInitBtn, 10)
     WebUI.waitForElementClickable(createInitBtn, 10)
     WebUI.click(createInitBtn)

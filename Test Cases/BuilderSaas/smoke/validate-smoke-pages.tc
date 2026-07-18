@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-SMOKE-PAGES-001 — Abre sesion MS y valida que Home, Brand Properties, Templates, Blueprints, Brand assets y QA rendericen sin "Failed to load" ni 404. Detecta la regresion del middleware (10/07/2026).</description>
+   <name>validate-smoke-pages</name>
+   <tag>buildersaas,smoke,pages,middleware</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f7c7a316-c476-4f97-bfa4-227afedec52c</testCaseGuid>
+</TestCaseEntity>

@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-EMAIL-TEST-PROD-OBJECTS-005
+// Plataforma: Email | Área: (raíz)
+// Descripción: Comparación de objetos entre TEST y PROD para Email.
+// Suites: CrossPlatform/Compare-Test-Prod, Master/Full-Regression, Platforms/Email/Smoke
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
 

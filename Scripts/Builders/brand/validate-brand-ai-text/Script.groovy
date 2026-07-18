@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BRAND-AITEXT-001
+// Plataforma: Builders | Área: brand
+// Descripción: Valida el flujo "Create TEXT" (la otra IA: ai.templet.io/drafts) desde Builders /brand: carga de pantallas (Active Brands -> brand detail -> tab Layouts), abrir y cerrar la pestaña Create TEXT 2 veces, intento de mensaje vacio (boton deshabilitado -> warning, no fail) y creacion de un mensaje con marcador generico capturando la respuesta de la IA.
+// Suites: Platforms/Builders/Brand/AI-Text-Generation-Flow
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

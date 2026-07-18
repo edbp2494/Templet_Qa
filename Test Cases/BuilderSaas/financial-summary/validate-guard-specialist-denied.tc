@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-FINSUMMARY-GUARD-DENY-004 — [E9 · US-03] Guard de rol denegado: role=Specialist NO debe acceder a /financial-summary. 🔴 FALLA POR DISEÑO desde 14/07/2026: RBAC no implementado, el dashboard renderiza completo (patron TC-ARCHMATCH-AGENDAR-BUGCONFIRMAR-002). Warnings adicionales: sidebar no oculta el item y badge hardcodeado "Contract Owner".</description>
+   <name>validate-guard-specialist-denied</name>
+   <tag>buildersaas,financial-summary,rbac,guard,bug-conocido,e9-us03</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4e8b2d7f-3a9c-4f6e-8c1d-7a5b3e9f2d64</testCaseGuid>
+</TestCaseEntity>

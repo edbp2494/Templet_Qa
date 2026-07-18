@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-REQUEST-TRACKING-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC4: Navega a /tracking, verifica que el dashboard muestra datos del Blueprint tab, captura cards y metricas. Verifica que el pipeline E6 (Records, Planning, Asana Execution) refleja el estado de la request enviada.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-FINSUMMARY-CONTENT-002 — [E9 · US-03] Valida el contenido del Financial Summary desde el element-map builder-saas-financial-summary.json (KPIs, Budget Usage, Spend by Category/Initiative, Revenue vs Target, Delivery Accuracy One-Off vs Blueprint) + consistencia aritmetica entre bloques (la data es server-rendered RSC, sin /api/*).</description>
+   <name>validate-dashboard-content</name>
+   <tag>buildersaas,financial-summary,content,element-map,e9-us03</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2f8d3a6c-9e4b-4a7d-b8c2-5e1f9d3a7c46</testCaseGuid>
+</TestCaseEntity>

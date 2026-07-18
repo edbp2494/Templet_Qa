@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Happy path del wizard de agendamiento: Cliente - GTM Kit - Cuando y donde - Resultados - Reservar - Confirmar. Incluye TODOs de persistencia/edicion/borrado bloqueados por bug conocido.</description>
+   <name>happy-path-agendar-taller</name>
+   <tag>archmatch,agendar,happy-path</tag>
+   <comment>TC-ARCHMATCH-AGENDAR-HAPPY-001. Bloqueado al confirmar por ERROR 3466207270.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8fe15bcd-ff1d-4897-a9f0-c7749978e393</testCaseGuid>
+</TestCaseEntity>

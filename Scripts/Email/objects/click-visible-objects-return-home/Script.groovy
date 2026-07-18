@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-EMAIL-SIDEBAR-NAV-002
+// Plataforma: Email | Área: objects
+// Descripción: Recorre los items visibles de la sidebar autenticada en Email, valida navegacion item por item, vuelve a Home y finaliza con Logout.
+// Suites: Master/Full-Regression, Platforms/Email/Objects/Visible-Clicks
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.runAuthenticatedSidebarSequence'([
 	caseId: 'TC-EMAIL-SIDEBAR-NAV-002',
 	platformLabel: 'Email TEST',

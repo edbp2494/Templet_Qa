@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>ESQUELETO: regla de negocio - ventana NO reclamable si faltan menos de 15 dias.</description>
+   <name>ventana-menor-15-dias-no-reclamable</name>
+   <tag>visitplan,comercial,esqueleto,regla-negocio</tag>
+   <comment>TC-VISITPLAN-COMERCIAL-15DIAS-002</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>00051eee-52f0-4254-aad3-23032d51c82a</testCaseGuid>
+</TestCaseEntity>

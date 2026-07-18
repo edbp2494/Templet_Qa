@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SCHEDULERS-SIDEBAR-ORDER-001
+// Plataforma: Schedulers | Área: objects
+// Descripción: Valida los objetos visibles del home autenticado de Schedulers.
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Schedulers/Objects/Visible-Clicks
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.verifyAuthenticatedSidebarOrderOnly'([
 	caseId: 'TC-SCHEDULERS-SIDEBAR-ORDER-001',
 	platformLabel: 'Schedulers TEST',

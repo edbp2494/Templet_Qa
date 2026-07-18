@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-REQUEST-FORM-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC2: Abre el formulario de creacion de Blueprint (via boton New Blueprint o URL directa), descubre campos disponibles via DOM, verifica inputs y selects visibles, captura estado para ajuste.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

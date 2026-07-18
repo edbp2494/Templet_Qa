@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-MANAGER-001
+// Plataforma: Builders | Área: blueprint
+// Descripción: Valida Blueprint Manager Power User (/blueprint/manager/power-user): heading, boton New Blueprint, boton Filter by brand, grid de cards y conteo de blueprints >= 1.
+// Suites: Platforms/Builders/BrandBlueprint/Brand-Blueprint-Validation
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

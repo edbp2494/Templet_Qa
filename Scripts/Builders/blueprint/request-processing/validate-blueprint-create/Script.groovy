@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-CREATE-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC6: Creacion completa de blueprint. Abre modal "Create New Blueprint", llena Name (timestamp), selecciona primera opcion disponible en dropdowns requeridos (Initiative, Parent Blueprint, Program Manager), hace click en "Save Blueprint" y verifica que el modal cierra y el blueprint aparece en la lista. Guarda el nombre creado en System property qa.blueprint.test.name para TC-DELETE.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

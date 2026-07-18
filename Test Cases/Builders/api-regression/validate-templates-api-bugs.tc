@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERS-API-TEMPLATES-001 — Regresión bugs US-07 Templates: POST sin validación crea registro vacío (debe 400), POST devuelve version 0 (PATCH inmediato 409)</description>
+   <name>validate-templates-api-bugs</name>
+   <tag>api,regression,templates,us-07</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b7e2a914-3c58-4f02-9d61-8a4b5c1e6f27</testCaseGuid>
+</TestCaseEntity>

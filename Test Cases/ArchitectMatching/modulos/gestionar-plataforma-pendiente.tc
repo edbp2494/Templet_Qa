@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PLACEHOLDER: modulo Gestionar plataforma visto en el home, pendiente de mapeo de detalle.</description>
+   <name>gestionar-plataforma-pendiente</name>
+   <tag>archmatch,modulos,placeholder</tag>
+   <comment>TC-ARCHMATCH-MODULOS-GESTION-003</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5e98de78-2470-49fd-b9bb-1419c6967b1b</testCaseGuid>
+</TestCaseEntity>

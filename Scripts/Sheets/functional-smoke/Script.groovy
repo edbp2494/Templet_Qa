@@ -1,49 +1,23 @@
-import com.kms.katalon.core.util.KeywordUtil
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import internal.GlobalVariable as GlobalVariable
-
-String caseId = 'TC-SHEETS-FUNCTIONAL-SMOKE-010'
-String startUrl = CommonKeywords.getRequiredGlobal('SHEETS_TEST_URL', 'https://sheets-test.templet.io/admin/manager.php')
-List<String> failures = []
-
-try {
-	CustomKeywords.'TempletPortalKeywords.openBrowserAndLoginWithMicrosoft'(startUrl)
-	CustomKeywords.'TempletPortalKeywords.captureCaseScreenshot'(caseId, 'post_login')
-
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathText'('dashboard_h4', "//h4[contains(normalize-space(.),'Dashboard')]", 'Dashboard', 8)) {
-		failures.add('Dashboard no visible o con texto inesperado')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathText'('create_document', "//a[contains(normalize-space(.),'Create Document')]", 'Create Document', 8)) {
-		failures.add('Botón Create Document no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathText'('logout', "//a[contains(normalize-space(.),'Log Out')]", 'Log Out', 8)) {
-		failures.add('Botón Log Out no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('label_client', "//label[contains(normalize-space(.),'Client')]", 8)) {
-		failures.add('Filtro Client no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('label_initiative', "//label[contains(normalize-space(.),'Initiative')]", 8)) {
-		failures.add('Filtro Initiative no visible')
-	}
-	if (!CustomKeywords.'TempletPortalKeywords.verifyXPathPresent'('label_sort', "//label[contains(normalize-space(.),'Sort')]", 8)) {
-		failures.add('Filtro Sort no visible')
-	}
-
-	if (!CustomKeywords.'TempletPortalKeywords.clickXPathAndKeepValidSession'('create_document_click', "//a[contains(normalize-space(.),'Create Document')]", 8)) {
-		failures.add('No se pudo abrir la entrada de creación de documento con sesión válida')
-	}
-
-	WebUI.navigateToUrl(startUrl)
-	WebUI.waitForPageLoad(15)
-	if (!CustomKeywords.'TempletPortalKeywords.logoutAndVerify'(startUrl)) {
-		failures.add('No se confirmó logout correctamente')
-	}
-
-	if (failures.isEmpty()) {
-		KeywordUtil.markPassed(caseId + ' OK. Login, dashboard, creación básica y logout validados en Sheets TEST.')
-	} else {
-		KeywordUtil.markFailed(caseId + ' falló: ' + failures.join(' | '))
-	}
-} finally {
-	CustomKeywords.'TempletPortalKeywords.safeCloseBrowser'()
-}
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-SHEETS-FUNCTIONAL-SMOKE-010
+// Objetivo: Smoke funcional de Sheets TEST — login MS, elementos base del
+//           dashboard, entrada de creación con sesión válida y logout verificado.
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// Lógica compartida: Keywords/AdminPhpKeywords.groovy → runFunctionalSmoke(config)
+// ─────────────────────────────────────────────────────────────────────────────
+CustomKeywords.'AdminPhpKeywords.runFunctionalSmoke'([
+	caseId          : 'TC-SHEETS-FUNCTIONAL-SMOKE-010',
+	urlVariableName : 'SHEETS_TEST_URL',
+	fallbackUrl     : 'https://sheets-test.templet.io/admin/manager.php',
+	checks          : [
+		[name: 'dashboard_h4', xpath: "//h4[contains(normalize-space(.),'Dashboard')]", expectedText: 'Dashboard', failureMessage: 'Dashboard no visible o con texto inesperado'],
+		[name: 'create_document', xpath: "//a[contains(normalize-space(.),'Create Document')]", expectedText: 'Create Document', failureMessage: 'Botón Create Document no visible'],
+		[name: 'logout', xpath: "//a[contains(normalize-space(.),'Log Out')]", expectedText: 'Log Out', failureMessage: 'Botón Log Out no visible'],
+		[name: 'label_client', xpath: "//label[contains(normalize-space(.),'Client')]", failureMessage: 'Filtro Client no visible'],
+		[name: 'label_initiative', xpath: "//label[contains(normalize-space(.),'Initiative')]", failureMessage: 'Filtro Initiative no visible'],
+		[name: 'label_sort', xpath: "//label[contains(normalize-space(.),'Sort')]", failureMessage: 'Filtro Sort no visible']
+	],
+	createClickXPath: "//a[contains(normalize-space(.),'Create Document')]",
+	verifyLogoutAgainstStartUrl: true,
+	okMessage       : 'Login, dashboard, creación básica y logout validados en Sheets TEST.'
+])

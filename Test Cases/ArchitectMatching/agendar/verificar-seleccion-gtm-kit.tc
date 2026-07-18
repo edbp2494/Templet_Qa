@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Selecciona un GTM Kit por texto exacto y valida que el resumen (paso 5) muestre el mismo kit. Vigila posible bug de mismatch de indice/orden (card GTM Kit 1 mostro GTM Kit 3).</description>
+   <name>verificar-seleccion-gtm-kit</name>
+   <tag>archmatch,agendar,bug-check</tag>
+   <comment>TC-ARCHMATCH-AGENDAR-KITMATCH-003. No confirma el taller para no disparar el bug 002.</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8337ba75-2b67-4707-a5e2-8c99b2d7eec7</testCaseGuid>
+</TestCaseEntity>

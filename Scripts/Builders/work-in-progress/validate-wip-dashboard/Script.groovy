@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-WIP-DASHBOARD-001
+// Plataforma: Builders | Área: work-in-progress
+// Descripción: Valida pantalla Work in Progress de Builders (Fase 2). Heading, filtros, columnas de grilla y desaparicion del loading async.
+// Suites: Platforms/QA/Repos-Coverage-Builders
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 // TC-BUILDERS-WIP-DASHBOARD-001 - Fase 2 (cobertura generada desde repos frontend Templet-Product-Team)
 // Element map: Include/config/element-maps/builders-work-in-progress.json
 // Patron: 1 login por suite (isReuseDriver=true); la keyword reusa el driver vivo

@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-SIDEBAR-NAV-002
+// Plataforma: Builders | Área: objects
+// Descripción: Recorre items de la toolbar izquierda de Builders, valida carga por item, vuelve a Home y termina con Logout.
+// Suites: Master/Full-Regression, Platforms/Full-Validation-All-Platforms, Platforms/Super-Suite-Validation, Platforms/Builders/Objects/Visible-Clicks
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 CustomKeywords.'TempletPortalKeywords.runAuthenticatedSidebarSequence'([
 	caseId: 'TC-BUILDERS-SIDEBAR-NAV-002',
 	platformLabel: 'Builders TEST',

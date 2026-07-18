@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-QA-CYCLE-REPORT-001
+// Plataforma: QA | Área: (raíz)
+// Descripción: Genera el dashboard de ciclo QA (24->24) corriendo qa-metrics/generate_cycle_report.py. Salida en docs/qa-cycles/latest.html + carpeta del ciclo. No hace push (el CI lo hace el dia 24).
+// Suites: QA/Generate-Cycle-Report
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 
 // TC-QA-CYCLE-REPORT-001 — Genera el dashboard de ciclo QA (docs/qa-cycles/latest.html)

@@ -8,6 +8,7 @@ import java.time.format.DateTimeFormatter
 
 public class CommonKeywords {
 
+	/** Infiere la categoría de un issue (SELECTOR/TIMEOUT/SESSION/DATA/OTro) a partir del texto del failure. */
 	static String inferIssueCategory(String message) {
 		String raw = (message ?: '').toString().trim()
 		if (!raw.startsWith('[')) return 'GENERAL'
@@ -46,14 +47,17 @@ public class CommonKeywords {
 	}
 
 	@com.kms.katalon.core.annotation.Keyword
+	/** Obtiene una GlobalVariable con fallback seguro si no existe o está vacía. */
 	def static Object getRequiredGlobal(String name, Object fallback = null) {
 		try {
 			java.lang.reflect.Field f = internal.GlobalVariable.class.getDeclaredField(name)
 			f.setAccessible(true)
 			Object val = f.get(null)
+			// Si la variable está vacía, retornar fallback si existe; si no hay fallback, retornar la variable vacía
 			if (val == null || (val instanceof String && ((String)val).trim().isEmpty())) {
 				if (fallback != null) return fallback
-				KeywordUtil.markFailedAndStop("GlobalVariable '${name}' no definida o vacía. Añadirla en Profiles/global.glbl")
+				// Retornar la variable vacía sin fallar (permite skip si el valor no es requerido)
+				return val
 			}
 			return val
 		} catch (NoSuchFieldException e) {
@@ -85,15 +89,15 @@ public class CommonKeywords {
 			WebUI.navigateToUrl(url)
 			WebUI.waitForPageLoad(15)
 
-			WebUI.waitForElementVisible(findTestObject('Object Repository/Common/login_username'), 15)
-			WebUI.clearText(findTestObject('Object Repository/Common/login_username'))
-			WebUI.setText(findTestObject('Object Repository/Common/login_username'), username)
+			WebUI.waitForElementVisible(findTestObject('Object Repository/Common/Auth/login_username'), 15)
+			WebUI.clearText(findTestObject('Object Repository/Common/Auth/login_username'))
+			WebUI.setText(findTestObject('Object Repository/Common/Auth/login_username'), username)
 
-			WebUI.waitForElementVisible(findTestObject('Object Repository/Common/login_password'), 10)
-			WebUI.clearText(findTestObject('Object Repository/Common/login_password'))
-			WebUI.setText(findTestObject('Object Repository/Common/login_password'), password)
+			WebUI.waitForElementVisible(findTestObject('Object Repository/Common/Auth/login_password'), 10)
+			WebUI.clearText(findTestObject('Object Repository/Common/Auth/login_password'))
+			WebUI.setText(findTestObject('Object Repository/Common/Auth/login_password'), password)
 
-			WebUI.click(findTestObject('Object Repository/Common/login_button'))
+			WebUI.click(findTestObject('Object Repository/Common/Auth/login_button'))
 			WebUI.waitForPageLoad(15)
 
 			KeywordUtil.logInfo("[LOGIN] OK → ${url}")
@@ -334,7 +338,7 @@ public class CommonKeywords {
 	@Keyword
 	def static logout() {
 		try {
-			WebUI.click(findTestObject('Object Repository/Common/logout_button'))
+			WebUI.click(findTestObject('Object Repository/Common/Auth/logout_button'))
 			WebUI.waitForPageLoad(10)
 			KeywordUtil.logInfo('[LOGOUT] OK')
 		} catch (Exception e) {

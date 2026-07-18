@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Captura pareada de 16 módulos: app vieja (builder.templet.io) vs app nueva (testing-templet-builder-saas.vercel.app). Genera vieja-XX-modulo.png y nueva-XX-modulo.png en Reports/Builders/Compare/</description>
+   <name>compare-old-new-app</name>
+   <tag></tag>
+   <uuid>builders-compare-001</uuid>
+   <selfSigned>false</selfSigned>
+   <testCaseGuid>builders-compare-001</testCaseGuid>
+   <testCaseVariables/>
+   <variableDefinitionId/>
+</TestCaseEntity>

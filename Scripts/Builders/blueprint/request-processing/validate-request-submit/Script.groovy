@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-REQUEST-SUBMIT-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC3: Intenta llenar y enviar el formulario de creacion de Blueprint con datos de prueba QA-AUTO-TEST. Verifica que el pipeline E6 (Intake -> Normalize -> Orchestration) procesa la request. Captura URL y estado post-submit.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

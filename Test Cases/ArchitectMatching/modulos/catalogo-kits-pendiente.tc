@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PLACEHOLDER: modulo Catalogo GTM Kits (boton Ver kits) visto en el home, pendiente de mapeo de detalle.</description>
+   <name>catalogo-kits-pendiente</name>
+   <tag>archmatch,modulos,placeholder</tag>
+   <comment>TC-ARCHMATCH-MODULOS-KITS-001</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5baebf44-ea8c-4d55-a327-2da3978999f0</testCaseGuid>
+</TestCaseEntity>

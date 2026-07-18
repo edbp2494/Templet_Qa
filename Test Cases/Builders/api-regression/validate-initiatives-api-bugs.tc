@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERS-API-INITIATIVES-001 — Regresión bugs US-09 Initiatives: POST sin validación (debe 400), version 0 en POST, criterio scope multi-valor</description>
+   <name>validate-initiatives-api-bugs</name>
+   <tag>api,regression,initiatives,us-09</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c9f3b025-4d69-4a13-8e72-9b5c6d2f7a38</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>ESQUELETO: regla de negocio - C-Level no puede desmarcar ventana con reuniones ya agendadas.</description>
+   <name>no-desmarcar-ventana-con-reuniones</name>
+   <tag>visitplan,clevel,esqueleto,regla-negocio</tag>
+   <comment>TC-VISITPLAN-CLEVEL-DESMARCAR-002</comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f3513303-00a9-4b89-8af3-04fed35d703a</testCaseGuid>
+</TestCaseEntity>

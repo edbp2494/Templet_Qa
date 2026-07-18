@@ -254,3 +254,43 @@ Generado desde Include/config/element-maps/*.json. Un data-testid por elemento e
 | Execution Tracking | `heading_execution_tracking` | `components/tracking/TrackingPage.tsx:158` |
 | Execution Tracking | `select_month` | `components/tracking/TrackingPage.tsx:164` |
 | Execution Tracking | `btn_load_data` | `components/tracking/TrackingPage.tsx:198` |
+
+---
+
+## 🆕 Architect Matching + Visit Planner (07/07/2026)
+
+Apps nuevas de agendamiento (Vercel, testing). Los IDs `#w-*` del wizard son **estables**; el resto son XPaths por texto **frágiles**.
+
+### Architect Matching — wizard `/agendar`
+
+| Elemento | Selector actual | Problema |
+|---|---|---|
+| Cards de cliente (paso 1) | `//*[normalize-space(text())='Globex Inc']` | Sin id propio; depende del texto y de que el click burbujee a la card. |
+| Cards de GTM Kit (paso 2) | `//*[normalize-space(text())='GTM Kit 1']` | Ídem + posible bug de índice/orden (card 1 → resumen 3). |
+| Botón "Agendar" por arquitecto (paso 4) | `(//*[contains(.,'Daniel Okoro')]/following::button[normalize-space()='Agendar'])[1]` | Heurístico por orden de documento; se rompe si el botón precede al nombre. |
+| Valores del resumen (paso 5) | `//*[normalize-space(text())='GTM Kit']/following::*[normalize-space(text())!=''][1]` | Heurístico label→siguiente-texto. |
+| Botones del home | `//button[normalize-space()='Ver kits'] \| //a[...]` | Texto visible. |
+
+**✅ IDs sugeridos**: `data-testid="card-cliente-{slug}"`, `data-testid="card-kit-{slug}"`, `data-testid="btn-agendar-{arquitecto}"`, `data-testid="resumen-{campo}"`, `data-testid="btn-confirmar-taller"`.
+
+### Visit Planner — home
+
+| Elemento | Selector actual | Problema |
+|---|---|---|
+| Opciones de perfil | `//*[normalize-space(text())='Comercial']` | Texto visible; se rompe con traducciones/copy. |
+
+**✅ IDs sugeridos**: `data-testid="perfil-{slug}"`. El resto del DOM (flujo Comercial/C-Level) está **pendiente de mapeo** — pedir `data-testid` desde el diseño.
+
+### Builder SaaS — `/financial-summary` [E9 · US-03] (mapeado 2026-07-14)
+
+La pantalla **no expone ni un solo `data-testid`** (verificado en DOM vivo). Todos los selectores dependen de texto visible, `@href` o clases Tailwind. Element map: `Include/config/element-maps/builder-saas-financial-summary.json`.
+
+| Elemento | Selector actual | Problema |
+|---|---|---|
+| Link sidebar Financial Summary | `//aside//a[@href='/financial-summary']` | `@href` es el hook más confiable disponible; el estado activo depende de la clase `bg-[#00FF7F]`. |
+| Títulos de sección (Budget Usage, Spend by Category, etc.) | `//p[normalize-space(.)='...']` | Texto visible; se rompe con cambios de copy/i18n. |
+| KPIs y valores ($284k, 71% used, etc.) | Texto exacto dentro de la card | Dependen del dataset mock; sin hook estructural. |
+| Barras de progreso | `//div[contains(@style,'width:')]` | Estilo inline; sin rol ARIA ni testid. |
+| Badge de rol | `//span[normalize-space(.)='Contract Owner']` | 🔴 Además está **hardcodeado** — muestra "Contract Owner" con cualquier rol. |
+
+**✅ IDs sugeridos**: `data-testid="sidebar-item-{slug}"`, `data-testid="fs-kpi-{slug}"`, `data-testid="fs-section-{slug}"`, `data-testid="fs-bar-{slug}"`, `data-testid="role-badge"`.

@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// TC: TC-BUILDERS-BLUEPRINT-DELETE-001
+// Plataforma: Builders | Área: blueprint/request-processing
+// Descripción: TC7: Eliminacion del blueprint creado por TC-CREATE. Lee el nombre desde System property qa.blueprint.test.name, localiza la fila en la lista, abre el menu de acciones, hace click en Delete, confirma en el dialog y verifica que el blueprint desaparece de la lista. Limpia el entorno de prueba post-suite.
+// Suites: Platforms/Builders/Blueprint/Request-Processing
+// Precondiciones: credenciales MS en Include/config/templet-credentials.properties
+// ─────────────────────────────────────────────────────────────────────────────
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling

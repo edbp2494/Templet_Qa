@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-BUILDERSAAS-AUTH-003 — Verifica que el middleware protege los /api/*: sin sesion deben responder 401. Llamada HttpClient anonima (sin navegador).</description>
+   <name>validate-auth-unauthorized</name>
+   <tag>buildersaas,smoke,auth,middleware</tag>
+   <comment></comment>
+   <origin>MANUAL</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6af0fba7-702c-4985-8487-170bc856486f</testCaseGuid>
+</TestCaseEntity>
